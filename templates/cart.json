@@ -1,1 +1,182 @@
-{"sections":{"heading":{"type":"main-heading","blocks":{"f5e0a175-c884-4746-b826-b312e2b772cb":{"type":"1","settings":{"heading":"Shopping Cart","hidden_on_mobile":false,"heading_size":"h3","text_color":"hdt-s-text","font_size_heading_lg":50,"font_size_heading_md":30,"font_size_heading":24,"font_weight_heading":600,"letter_spacing_heading":0}}},"block_order":["f5e0a175-c884-4746-b826-b312e2b772cb"],"settings":{"color_scheme":"","spacing_hd":5,"padding_top":50,"padding_bottom":50,"padding_rate":0}},"main":{"type":"main-cart","blocks":{"line_r33qDh":{"type":"line","settings":{}},"gift_EcKUVX":{"type":"gift","settings":{}},"subtotal_x7wRXy":{"type":"subtotal","settings":{}},"tax_k3XQn8":{"type":"tax","settings":{}},"agree_rbJhgw":{"type":"agree","settings":{"content":"I agree with the <a href=\"\/policies\/terms-of-service\" title=\"Terms of Service\"><strong>terms and conditions<\/strong><\/a>"}},"btn_checkout_r6dKHQ":{"type":"btn_checkout","settings":{"style_class":"","size":"m","icon":"none","icon_position":"before","icon_height":16,"icon_spacing":5}},"img_trust_rieJGw":{"type":"img_trust","settings":{"mess":"Guarantee Safe Checkout","source":"1","wimg":350,"svg":"visa,paypal,master,american_express,amazon_payments","height":25}}},"block_order":["line_r33qDh","gift_EcKUVX","subtotal_x7wRXy","tax_k3XQn8","agree_rbJhgw","btn_checkout_r6dKHQ","img_trust_rieJGw"],"settings":{"color_scheme":"scheme-1","show_cart_note":false,"show_free_shipping_bar":true,"use_countdown_cart":true,"countdown_cart_minutes":10,"countdown_cart_text":"Congrats! You've earned Free Shipping","padding_top":30,"padding_bottom":10,"padding_rate":50}},"related":{"type":"related-products","settings":{"sec_heading":"You may also like","heading_tag":"h3","heading_size":"h3","text_color":"hdt-s-text","heading_align":"center","sec_subheading":"","subheading_size":"lg","heading_reverse":false,"heading_gap":18,"sec_heading_spacing":50,"limit":10,"product_des":"1","image_ratio":"adapt_image","image_size":true,"show_vendor":false,"col_dk":"4","col_tb":"3","col_mb":"2","navUI":true,"btn_vi":"hover","nav_des":"default","nav_shape":"rounded","nav_size":"small","nav_pos":"middle_in","nav_icon":"chrvon","dotUI":false,"color_scheme":"scheme-2","full_width":false,"padding_top":12,"padding_bottom":80,"padding_rate":75}},"recently":{"type":"recently-products","disabled":true,"settings":{"sec_heading":"Recently Viewed","heading_tag":"h3","heading_size":"h4","text_color":"hdt-s-text","heading_align":"center","sec_subheading":"","subheading_size":"lg","heading_reverse":false,"heading_gap":18,"sec_heading_spacing":45,"limit":10,"product_des":"1","image_ratio":"custom-pr","image_size":true,"show_vendor":false,"col_dk":"4","col_tb":"3","col_mb":"2","navUI":true,"btn_vi":"hover","nav_des":"default","nav_shape":"rounded","nav_size":"small","nav_pos":"middle_in","nav_icon":"chrvon","dotUI":false,"color_scheme":"scheme-2","full_width":false,"padding_top":0,"padding_bottom":100,"padding_rate":75}}},"order":["heading","main","related","recently"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "main-heading",
+      "blocks": {
+        "f5e0a175-c884-4746-b826-b312e2b772cb": {
+          "type": "1",
+          "settings": {
+            "heading": "Shopping Cart",
+            "hidden_on_mobile": false,
+            "heading_size": "h3",
+            "text_color": "hdt-s-text",
+            "font_size_heading_lg": 50,
+            "font_size_heading_md": 30,
+            "font_size_heading": 24,
+            "font_weight_heading": 600,
+            "letter_spacing_heading": 0
+          }
+        }
+      },
+      "block_order": [
+        "f5e0a175-c884-4746-b826-b312e2b772cb"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_rate": 0
+      }
+    },
+    "main": {
+      "type": "main-cart",
+      "blocks": {
+        "line_r33qDh": {
+          "type": "line",
+          "settings": {}
+        },
+        "gift_EcKUVX": {
+          "type": "gift",
+          "settings": {}
+        },
+        "subtotal_x7wRXy": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "tax_k3XQn8": {
+          "type": "tax",
+          "settings": {}
+        },
+        "btn_checkout_r6dKHQ": {
+          "type": "btn_checkout",
+          "settings": {
+            "style_class": "",
+            "size": "m",
+            "icon": "none",
+            "icon_position": "before",
+            "icon_height": 16,
+            "icon_spacing": 5
+          }
+        },
+        "img_trust_rieJGw": {
+          "type": "img_trust",
+          "settings": {
+            "mess": "Guarantee Safe Checkout",
+            "source": "1",
+            "wimg": 350,
+            "svg": "visa,paypal,master,american_express,amazon_payments",
+            "height": 25
+          }
+        }
+      },
+      "block_order": [
+        "line_r33qDh",
+        "gift_EcKUVX",
+        "subtotal_x7wRXy",
+        "tax_k3XQn8",
+        "btn_checkout_r6dKHQ",
+        "img_trust_rieJGw"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "show_cart_note": false,
+        "show_free_shipping_bar": true,
+        "use_countdown_cart": true,
+        "countdown_cart_minutes": 10,
+        "countdown_cart_text": "Congrats! You've earned Free Shipping",
+        "padding_top": 30,
+        "padding_bottom": 10,
+        "padding_rate": 50
+      }
+    },
+    "related": {
+      "type": "related-products",
+      "settings": {
+        "sec_heading": "You may also like",
+        "heading_tag": "h3",
+        "heading_size": "h3",
+        "text_color": "hdt-s-text",
+        "heading_align": "center",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 50,
+        "limit": 10,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "btn_vi": "hover",
+        "nav_des": "default",
+        "nav_shape": "rounded",
+        "nav_size": "small",
+        "nav_pos": "middle_in",
+        "nav_icon": "chrvon",
+        "dotUI": false,
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "padding_top": 12,
+        "padding_bottom": 80,
+        "padding_rate": 75
+      }
+    },
+    "recently": {
+      "type": "recently-products",
+      "disabled": true,
+      "settings": {
+        "sec_heading": "Recently Viewed",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "text_color": "hdt-s-text",
+        "heading_align": "center",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 45,
+        "limit": 10,
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "btn_vi": "hover",
+        "nav_des": "default",
+        "nav_shape": "rounded",
+        "nav_size": "small",
+        "nav_pos": "middle_in",
+        "nav_icon": "chrvon",
+        "dotUI": false,
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "related",
+    "recently"
+  ]
+}

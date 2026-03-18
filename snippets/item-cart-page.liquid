@@ -36,32 +36,45 @@
 
               {%- assign value = property.last -%}
 
-              {%- comment -%} Build image url nếu chỉ có filename {%- endcomment -%}
-              {%- if value contains '/uploads/' -%}
-                {%- assign image_url = value -%}
-              {%- elsif value contains '.png' or value contains '.jpg' or value contains '.jpeg' or value contains '.webp' -%}
-                {%- assign image_url = '/uploads/' | append: value -%}
-              {%- else -%}
-                {%- assign image_url = blank -%}
-              {%- endif -%}
-
               <li class="hdt-product-option hdt-product-details__item hdt-product-details__item--property">
                 <span class="hdt-product-details__item-label">
                   <strong>{{ property.first }}:</strong>
                 </span>
 
                 <span class="hdt-product-details__item-value">
+                  {%- liquid
+                    assign values = value
+                    if value.first and value.size
+                      assign values = value
+                    else
+                      assign values = value | split: ','
+                    endif
+                  -%}
 
-                  {%- if image_url != blank -%}
-                    <img
-                      src="{{ image_url }}"
-                      alt="{{ property.first }}"
-                      loading="lazy"
-                      style="max-width:40px;height:auto;border-radius:6px;"
-                    >
-                  {%- else -%}
-                    {{ value }}
-                  {%- endif -%}
+                  {%- for v in values -%}
+                    {%- assign v_str = v | strip -%}
+                    {%- assign image_url = blank -%}
+                    {%- if v_str contains '/uploads/' -%}
+                      {%- assign image_url = v_str -%}
+                    {%- elsif v_str contains '.png' or v_str contains '.jpg' or v_str contains '.jpeg' or v_str contains '.webp' or v_str contains '.heic' -%}
+                      {%- assign image_url = '/uploads/' | append: v_str -%}
+                    {%- endif -%}
+
+                    {%- if image_url != blank -%}
+                      <img
+                        src="{{ image_url }}"
+                        alt="{{ property.first }}"
+                        loading="lazy"
+                        width="40"
+                        height="40"
+                        class="hdt-upload-lightbox"
+                        data-hdt-lightbox-src="{{ image_url }}"
+                        style="max-width:40px;height:auto;border-radius:6px;margin-left:6px;"
+                      >
+                    {%- elsif forloop.first -%}
+                      {{ value }}
+                    {%- endif -%}
+                  {%- endfor -%}
                 </span>
               </li>
 
@@ -82,3 +95,124 @@
     </div>
   </div>
 </hdt-line-item>
+
+<style>
+  .hdt-upload-lightbox { cursor: zoom-in; }
+  .hdt-lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 9999;
+  }
+  .hdt-lightbox-dialog {
+    position: relative;
+    max-width: min(980px, 92vw);
+    max-height: 86vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hdt-lightbox-img {
+    max-width: 100%;
+    max-height: 86vh;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    background: #fff;
+    object-fit: contain;
+  }
+  .hdt-lightbox-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255,255,255,.92);
+    color: #111;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  }
+  @media (max-width: 767px) {
+    .hdt-lightbox-overlay { padding: 10px; }
+    .hdt-lightbox-dialog { max-width: 96vw; max-height: 82vh; }
+    .hdt-lightbox-img { max-height: 82vh; border-radius: 8px; }
+    .hdt-lightbox-close { top: -8px; right: -8px; width: 34px; height: 34px; line-height: 34px; }
+  }
+</style>
+
+<script>
+  (() => {
+    if (window.__hdtCartLightboxInit) return;
+    window.__hdtCartLightboxInit = true;
+
+    const createModal = () => {
+      const overlay = document.createElement('div');
+      overlay.className = 'hdt-lightbox-overlay';
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.hidden = true;
+
+      const dialog = document.createElement('div');
+      dialog.className = 'hdt-lightbox-dialog';
+
+      const img = document.createElement('img');
+      img.className = 'hdt-lightbox-img';
+      img.alt = '';
+
+      const close = document.createElement('button');
+      close.type = 'button';
+      close.className = 'hdt-lightbox-close';
+      close.setAttribute('aria-label', 'Close');
+      close.innerHTML = '✕';
+
+      dialog.appendChild(img);
+      dialog.appendChild(close);
+      overlay.appendChild(dialog);
+      document.body.appendChild(overlay);
+
+      const doClose = () => {
+        overlay.hidden = true;
+        img.src = '';
+        document.body.style.overflow = '';
+      };
+      close.addEventListener('click', doClose);
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) doClose();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.hidden && e.key === 'Escape') doClose();
+      });
+
+      return {
+        open: (src, alt) => {
+          img.src = src;
+          img.alt = alt || '';
+          overlay.hidden = false;
+          document.body.style.overflow = 'hidden';
+        }
+      };
+    };
+
+    let modal;
+    document.addEventListener('click', (e) => {
+      const el = e.target;
+      if (!(el instanceof Element)) return;
+      const img = el.closest('img.hdt-upload-lightbox');
+      if (!img) return;
+      const src = img.getAttribute('data-hdt-lightbox-src') || img.getAttribute('src');
+      if (!src) return;
+      modal ||= createModal();
+      modal.open(src, img.getAttribute('alt'));
+    }, true);
+  })();
+</script>

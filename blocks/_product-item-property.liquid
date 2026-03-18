@@ -118,6 +118,7 @@
   else
     assign property_name = '_' | append: block.settings.title | escape
   endif
+  assign property_name_upload = block.settings.title | escape
   assign product_form_id = 'product-form-' | append: section.id | append: product.id
 -%}
 <div class="hdt-product-info__item hdt-product__property" data-type="{{ block.type }}" {{ block.shopify_attributes }}>
@@ -258,17 +259,20 @@
       {%- when 'upload' -%}
       <div class="hdt-line-item-property">
         <input
-          id="photo-upload"
+          id="photo-upload-{{ block.id }}"
           type="file"
           class="hdt-field__input hdt-upload-input"
           accept="image/*"
           multiple
           form="{{ product_form_id }}"
-          name="properties[{{ property_name }}][]"
+          name="__hdt_upload_picker__"
+          data-property-label="{{ property_name_upload }}"
+          data-product-form-id="{{ product_form_id }}"
+          data-required="{% if block.settings.use_required %}true{% else %}false{% endif %}"
           hidden
         >
 
-        <label for="photo-upload" class="upload-img-custom">
+        <label for="photo-upload-{{ block.id }}" class="upload-img-custom">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -279,6 +283,9 @@
           <p><strong>Click to upload photos</strong> (jpg, png, heic)</p>
           <p class="text-xs">You can upload multiple images</p>
         </label>
+
+        <!-- Real inputs for submit (one per file) -->
+        <div class="hdt-upload-file-inputs" data-for-upload="{{ block.id }}" hidden></div>
 
         <!-- Preview -->
         <div class="hdt-upload-preview" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;"></div>
@@ -330,6 +337,8 @@
                       src="{{ color_image | image_url: width: 200 }}"
                       alt="{{ color_name }}"
                       loading="lazy"
+                      width="100"
+                      height="50"
                     >
                   </span>
 
@@ -350,72 +359,237 @@
 </div>
 
 <script>
-let selectedFiles = [];
+(() => {
+  const filesByPicker = new WeakMap();
+  const filesByFormAndLabel = (window.__hdtUploadFilesByFormAndLabel ||= {});
+  const cssEscape = (window.CSS && typeof window.CSS.escape === 'function')
+    ? window.CSS.escape
+    : (v) => String(v).replace(/[^a-zA-Z0-9_-]/g, '\\$&');
 
-document.addEventListener('change', function (e) {
-  const input = e.target;
-  if (!input.classList.contains('hdt-upload-input')) return;
+  // Patch fetch once to inject upload files into cart/add.js FormData.
+  if (!window.__hdtUploadFetchPatched) {
+    window.__hdtUploadFetchPatched = true;
+    const origFetch = window.fetch;
+    window.fetch = async (input, init) => {
+      try {
+        const url = typeof input === 'string' ? input : (input instanceof Request ? input.url : input?.url);
+        // init takes precedence; otherwise Request.body may exist but isn't directly readable in JS.
+        const opts = init || undefined;
+        const body = opts?.body;
 
-  const preview = input
-    .closest('.hdt-line-item-property')
-    .querySelector('.hdt-upload-preview');
+        if (url && String(url).includes('cart/add.js') && body instanceof FormData) {
+          let formId = body.get('__hdt_upload_form_id');
 
-  Array.from(input.files).forEach(file => {
-    // tránh duplicate theo name + size
-    const exists = selectedFiles.some(
-      f => f.name === file.name && f.size === file.size
-    );
-    if (!exists) selectedFiles.push(file);
-  });
+          // If the marker is missing (some themes), but we have exactly one known form mapping, use it.
+          if (!formId) {
+            const keys = Object.keys(filesByFormAndLabel);
+            if (keys.length === 1) formId = keys[0];
+          }
 
-  renderPreview(preview);
-  input.value = ''; // 🔥 reset input để tránh add lại
-});
+          if (formId && filesByFormAndLabel[formId]) {
+            // Remove picker field (not needed)
+            body.delete('__hdt_upload_picker__');
 
-function renderPreview(preview) {
-  preview.innerHTML = '';
-
-  selectedFiles.forEach((file, index) => {
-    const reader = new FileReader();
-    reader.onload = e => {
-      const wrapper = document.createElement('div');
-      wrapper.style.position = 'relative';
-
-      const img = document.createElement('img');
-      img.src = e.target.result;
-      img.style.width = '120px';
-      img.style.height = '120px';
-      img.style.objectFit = 'cover';
-      img.style.borderRadius = '8px';
-
-      // nút xoá
-      const remove = document.createElement('button');
-      remove.innerHTML = '✕';
-      remove.style.cssText = `
-        position:absolute;
-        top:4px;
-        right:4px;
-        background:#000;
-        color:#fff;
-        border:none;
-        border-radius:50%;
-        width:20px;
-        height:20px;
-        cursor:pointer;
-      `;
-
-      remove.onclick = () => {
-        selectedFiles.splice(index, 1);
-        renderPreview(preview);
-      };
-
-      wrapper.appendChild(img);
-      wrapper.appendChild(remove);
-      preview.appendChild(wrapper);
+            for (const [label, files] of Object.entries(filesByFormAndLabel[formId])) {
+              if (!Array.isArray(files) || files.length === 0) continue;
+              files.forEach((file, idx) => {
+                if (!(file instanceof File)) return;
+                body.append(`properties[${label} ${idx + 1}]`, file, file.name);
+              });
+            }
+          }
+        }
+      } catch (_) {}
+      return origFetch(input, init);
     };
-    reader.readAsDataURL(file);
+  }
+
+  function ensureFiles(input) {
+    let files = filesByPicker.get(input);
+    if (!files) {
+      files = [];
+      filesByPicker.set(input, files);
+    }
+    return files;
+  }
+
+  function getForm(input) {
+    const formId = input.dataset.productFormId;
+    if (formId) return document.getElementById(formId);
+    return input.form;
+  }
+
+  function rebuildSubmitInputs(pickerInput) {
+    const files = ensureFiles(pickerInput);
+    const propertyLabel = pickerInput.dataset.propertyLabel || 'Upload';
+    const form = getForm(pickerInput);
+    if (!form) return;
+
+    // Store files for this form+label so our fetch interceptor can attach them reliably.
+    filesByFormAndLabel[form.id] ||= {};
+    filesByFormAndLabel[form.id][propertyLabel] = files.slice();
+
+    // Ensure form id is passed to cart/add.js request.
+    let marker = form.querySelector('input[name="__hdt_upload_form_id"]');
+    if (!marker) {
+      marker = document.createElement('input');
+      marker.type = 'hidden';
+      marker.name = '__hdt_upload_form_id';
+      form.appendChild(marker);
+    }
+    marker.value = form.id;
+
+    // Keep picker field under a neutral name (we append real properties in fetch hook).
+    pickerInput.name = '__hdt_upload_picker__';
+  }
+
+  function renderPreview(pickerInput) {
+    const root = pickerInput.closest('.hdt-line-item-property');
+    const preview = root?.querySelector('.hdt-upload-preview');
+    if (!preview) return;
+
+    const files = ensureFiles(pickerInput);
+    preview.innerHTML = '';
+
+    files.forEach((file, index) => {
+      const reader = new FileReader();
+      reader.onload = e => {
+        const wrapper = document.createElement('div');
+        wrapper.style.position = 'relative';
+
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.style.width = '120px';
+        img.style.height = '120px';
+        img.style.objectFit = 'cover';
+        img.style.borderRadius = '8px';
+
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.innerHTML = '✕';
+        remove.style.cssText = `
+          position:absolute;
+          top:4px;
+          right:4px;
+          background:#000;
+          color:#fff;
+          border:none;
+          border-radius:50%;
+          width:20px;
+          height:20px;
+          cursor:pointer;
+        `;
+
+        remove.onclick = () => {
+          files.splice(index, 1);
+          renderPreview(pickerInput);
+          rebuildSubmitInputs(pickerInput);
+        };
+
+        wrapper.appendChild(img);
+        wrapper.appendChild(remove);
+        preview.appendChild(wrapper);
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function prepareUploadInputsForForm(form) {
+    if (!form || !form.id) return;
+    const pickers = document.querySelectorAll(
+      `input.hdt-upload-input[data-product-form-id="${cssEscape(form.id)}"]`
+    );
+
+    if (pickers.length) {
+      pickers.forEach((picker) => rebuildSubmitInputs(picker));
+      return;
+    }
+
+    // Fallback for themes submitting a different form (e.g. sticky ATC form).
+    // Reuse the first upload picker found on the page and attach its files to this form id.
+    const anyPicker = document.querySelector('input.hdt-upload-input');
+    if (!anyPicker) return;
+
+    const files = ensureFiles(anyPicker);
+    if (!files.length) return;
+
+    const propertyLabel = anyPicker.dataset.propertyLabel || 'Upload';
+    filesByFormAndLabel[form.id] ||= {};
+    filesByFormAndLabel[form.id][propertyLabel] = files.slice();
+
+    let marker = form.querySelector('input[name="__hdt_upload_form_id"]');
+    if (!marker) {
+      marker = document.createElement('input');
+      marker.type = 'hidden';
+      marker.name = '__hdt_upload_form_id';
+      form.appendChild(marker);
+    }
+    marker.value = form.id;
+  }
+
+  document.addEventListener('change', (e) => {
+    const input = e.target;
+    if (!(input instanceof HTMLInputElement)) return;
+    if (!input.classList.contains('hdt-upload-input')) return;
+
+    const files = ensureFiles(input);
+    Array.from(input.files || []).forEach((file) => {
+      const exists = files.some(
+        (f) => f.name === file.name && f.size === file.size && f.lastModified === file.lastModified
+      );
+      if (!exists) files.push(file);
+    });
+
+    renderPreview(input);
+    rebuildSubmitInputs(input);
+    // Clear so user can select the same file again later without duplicates.
+    input.value = '';
   });
-}
+
+  // Some themes intercept the submit button click and build FormData(form)
+  // without triggering a native submit event. Prepare inputs as early as possible.
+  document.addEventListener('click', (e) => {
+    const el = e.target;
+    if (!(el instanceof Element)) return;
+
+    const submitEl = el.closest('button[type="submit"], input[type="submit"]');
+    if (!submitEl) return;
+
+    const formIdAttr = submitEl.getAttribute && submitEl.getAttribute('form');
+    const formFromAttr = formIdAttr ? document.getElementById(formIdAttr) : null;
+    const form = formFromAttr || submitEl.closest('form') || (submitEl.form instanceof HTMLFormElement ? submitEl.form : null);
+    if (!form) return;
+    prepareUploadInputsForForm(form);
+  }, true);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter') return;
+    const el = e.target;
+    if (!(el instanceof Element)) return;
+    const form = el.closest('form');
+    if (!form) return;
+    prepareUploadInputsForForm(form);
+  }, true);
+
+  document.addEventListener('submit', (e) => {
+    const form = e.target;
+    if (!(form instanceof HTMLFormElement)) return;
+
+    // Upload pickers are often OUTSIDE the <form> and linked via form/id, so we must find them globally.
+    const pickers = document.querySelectorAll(
+      `input.hdt-upload-input[data-product-form-id="${cssEscape(form.id)}"]`
+    );
+    pickers.forEach((picker) => {
+      rebuildSubmitInputs(picker);
+      const required = picker.dataset.required === 'true';
+      const files = ensureFiles(picker);
+      if (required && files.length === 0) {
+        e.preventDefault();
+        picker.focus?.();
+      }
+    });
+  }, true);
+})();
 </script>
 
 

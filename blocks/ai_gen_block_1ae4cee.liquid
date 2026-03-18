@@ -1,0 +1,613 @@
+{% doc %}
+  @prompt
+    Dưới đây là đoạn prompt bằng tiếng Anh được tối ưu hóa để AI có thể hiểu và thiết kế cho bạn một block Testimonial chuyên nghiệp, đúng cấu trúc phân tầng như ảnh bạn cung cấp:
+    
+    The Prompt
+    "Design a Testimonial Section for a website with a split-screen layout: content on one side and a large image on the other. The structure must follow this specific hierarchy using spacers for a clean, breathable look:
+    
+    Heading: A clear title, e.g., 'What Our Pet Parents Say'.
+    
+    Quote Icon: A stylized double quotation mark icon to set the tone.
+    
+    Rating Stars: A row of 5 stars (gold or orange color).
+    
+    Testimonial Body Text: A placeholder for the customer's story (emphasizing warmth and emotional connection).
+    
+    User Info: The customer's name in bold (e.g., 'Robert Smith').
+    
+    Navigation Controls: Simple left and right arrow buttons for a slider effect.
+    
+    Main Image Area: A large, prominent image container with soft rounded corners on the opposite side of the text. This image must be easily replaceable and act as the visual centerpiece.
+    
+    Visual Style: Use a neutral, elegant background (like light beige or off-white) and Serif fonts for headings to create a premium, artistic feel. Ensure the 'Spacer' elements are utilized between every component to prevent a cluttered appearance.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-testimonial-split-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding }}px 0;
+  }
+
+  .ai-testimonial-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-testimonial-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.grid_gap }}px;
+    align-items: center;
+  }
+
+  .ai-testimonial-content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.content_spacing }}px;
+    {% if block.settings.layout == 'image_left' %}
+      order: 2;
+    {% else %}
+      order: 1;
+    {% endif %}
+  }
+
+  .ai-testimonial-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    font-weight: {{ block.settings.heading_weight }};
+    color: {{ block.settings.heading_color }};
+    margin: 0;
+    line-height: 1.2;
+    font-family: var(--f_family_1);
+  }
+
+  .ai-testimonial-quote-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.quote_icon_size }}px;
+    height: {{ block.settings.quote_icon_size }}px;
+    color: {{ block.settings.quote_icon_color }};
+  }
+
+  .ai-testimonial-stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 4px;
+  }
+
+  .ai-testimonial-star-{{ ai_gen_id }} {
+    width: {{ block.settings.star_size }}px;
+    height: {{ block.settings.star_size }}px;
+    color: {{ block.settings.star_color }};
+  }
+
+  .ai-testimonial-body-{{ ai_gen_id }} {
+    font-size: {{ block.settings.body_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.body_color }};
+    margin: 0;
+  }
+
+  .ai-testimonial-author-{{ ai_gen_id }} {
+    font-size: {{ block.settings.author_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.author_color }};
+    margin: 0;
+  }
+
+  .ai-testimonial-navigation-{{ ai_gen_id }} {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .ai-testimonial-nav-button-{{ ai_gen_id }} {
+    width: {{ block.settings.nav_button_size }}px;
+    height: {{ block.settings.nav_button_size }}px;
+    border-radius: 50%;
+    border: 2px solid {{ block.settings.nav_button_border }};
+    background-color: {{ block.settings.nav_button_bg }};
+    color: {{ block.settings.nav_button_color }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .ai-testimonial-nav-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.nav_button_hover_bg }};
+    color: {{ block.settings.nav_button_hover_color }};
+    border-color: {{ block.settings.nav_button_hover_border }};
+  }
+
+  .ai-testimonial-nav-button-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-testimonial-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    {% if block.settings.layout == 'image_left' %}
+      order: 1;
+    {% else %}
+      order: 2;
+    {% endif %}
+  }
+
+  .ai-testimonial-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-testimonial-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    position: relative;
+  }
+
+  .ai-testimonial-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .ai-testimonial-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-testimonial-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .ai-testimonial-content-{{ ai_gen_id }} {
+      order: 2 !important;
+    }
+
+    .ai-testimonial-image-wrapper-{{ ai_gen_id }} {
+      order: 1 !important;
+      min-height: 300px;
+    }
+
+    .ai-testimonial-image-placeholder-{{ ai_gen_id }} {
+      min-height: 300px;
+    }
+
+    .ai-testimonial-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.7 }}px;
+    }
+
+    .ai-testimonial-body-{{ ai_gen_id }} {
+      font-size: {{ block.settings.body_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<testimonial-split-{{ ai_gen_id }}
+  class="ai-testimonial-split-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-testimonial-container-{{ ai_gen_id }}">
+    <div class="ai-testimonial-grid-{{ ai_gen_id }}">
+      <div class="ai-testimonial-content-{{ ai_gen_id }}">
+        {% if block.settings.heading != blank %}
+          <h2 class="ai-testimonial-heading-{{ ai_gen_id }}">
+            {{ block.settings.heading }}
+          </h2>
+        {% endif %}
+
+        <svg
+          class="ai-testimonial-quote-icon-{{ ai_gen_id }}"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+        </svg>
+
+        <div class="ai-testimonial-stars-{{ ai_gen_id }}">
+          {% for i in (1..5) %}
+            <svg
+              class="ai-testimonial-star-{{ ai_gen_id }}"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+          {% endfor %}
+        </div>
+
+        {% if block.settings.testimonial_text != blank %}
+          <div class="ai-testimonial-body-{{ ai_gen_id }}">
+            {{ block.settings.testimonial_text }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.author_name != blank %}
+          <p class="ai-testimonial-author-{{ ai_gen_id }}">
+            {{ block.settings.author_name }}
+          </p>
+        {% endif %}
+
+        <div class="ai-testimonial-navigation-{{ ai_gen_id }}">
+          <button
+            class="ai-testimonial-nav-button-{{ ai_gen_id }}"
+            aria-label="Previous testimonial"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button
+            class="ai-testimonial-nav-button-{{ ai_gen_id }}"
+            aria-label="Next testimonial"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="ai-testimonial-image-wrapper-{{ ai_gen_id }}">
+        {% if block.settings.testimonial_image %}
+          <img
+            src="{{ block.settings.testimonial_image | image_url: width: 1000 }}"
+            alt="{{ block.settings.testimonial_image.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.testimonial_image.width }}"
+            height="{{ block.settings.testimonial_image.height }}"
+            class="ai-testimonial-image-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-testimonial-image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-testimonial-empty-state-{{ ai_gen_id }}">
+              Add a testimonial image
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</testimonial-split-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class TestimonialSplit{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.navButtons = this.querySelectorAll('.ai-testimonial-nav-button-{{ ai_gen_id }}');
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.navButtons.forEach((button, index) => {
+          button.addEventListener('click', () => {
+            console.log(index === 0 ? 'Previous testimonial' : 'Next testimonial');
+          });
+        });
+      }
+    }
+
+    customElements.define('testimonial-split-{{ ai_gen_id }}', TestimonialSplit{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Testimonial split",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "image_left",
+          "label": "Left"
+        },
+        {
+          "value": "image_right",
+          "label": "Right"
+        }
+      ],
+      "default": "image_right"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container width",
+      "min": 1000,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Space between content and image",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "content_spacing",
+      "label": "Space between elements",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#fbf7f2"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What Our Pet Parents Say"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "heading_weight",
+      "label": "Weight",
+      "min": 300,
+      "max": 700,
+      "step": 100,
+      "default": 400
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color",
+      "default": "#3e2816"
+    },
+    {
+      "type": "header",
+      "content": "Quote icon"
+    },
+    {
+      "type": "range",
+      "id": "quote_icon_size",
+      "label": "Size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "color",
+      "id": "quote_icon_color",
+      "label": "Color",
+      "default": "#be5737"
+    },
+    {
+      "type": "header",
+      "content": "Rating stars"
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "label": "Size",
+      "min": 12,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Color",
+      "default": "#e8a531"
+    },
+    {
+      "type": "header",
+      "content": "Testimonial text"
+    },
+    {
+      "type": "richtext",
+      "id": "testimonial_text",
+      "label": "Text",
+      "default": "<p>We've been using this product for our golden retriever for months now, and the difference is remarkable. His coat is shinier, he has more energy, and we feel confident knowing we're giving him the best natural care possible. Highly recommend to all pet parents!</p>"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Color",
+      "default": "#3e2816"
+    },
+    {
+      "type": "header",
+      "content": "Author"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "author_name",
+      "label": "Name",
+      "default": "Robert Smith"
+    },
+    {
+      "type": "range",
+      "id": "author_size",
+      "label": "Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "author_color",
+      "label": "Color",
+      "default": "#3e2816"
+    },
+    {
+      "type": "header",
+      "content": "Navigation buttons"
+    },
+    {
+      "type": "range",
+      "id": "nav_button_size",
+      "label": "Size",
+      "min": 30,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 44
+    },
+    {
+      "type": "color",
+      "id": "nav_button_bg",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_color",
+      "label": "Icon color",
+      "default": "#3e2816"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_border",
+      "label": "Border",
+      "default": "#ebebeb"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_hover_bg",
+      "label": "Hover background",
+      "default": "#be5737"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_hover_color",
+      "label": "Hover icon color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_hover_border",
+      "label": "Hover border",
+      "default": "#be5737"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "testimonial_image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial split"
+    }
+  ]
+}
+{% endschema %}

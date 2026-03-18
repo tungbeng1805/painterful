@@ -1,0 +1,111 @@
+<div class="custom-accordion">
+
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>{{ _block.settings.name_tab_1 }}</span>
+      <span class="accordion-icon">+</span>
+    </div>
+    <div class="accordion-content">
+      {{ _block.settings.data_tab_1 }}
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>{{ _block.settings.name_tab_2 }}</span>
+      <span class="accordion-icon">+</span>
+    </div>
+    <div class="accordion-content">
+      {{ _block.settings.data_tab_2 }}
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>{{ _block.settings.name_tab_3 }}</span>
+      <span class="accordion-icon">+</span>
+    </div>
+    <div class="accordion-content">
+      {{ _block.settings.data_tab_3 }}
+    </div>
+  </div>
+
+</div>
+
+<style>
+.custom-accordion {
+    display: none;
+}
+.custom-accordion * {
+    color: rgb(var(--color-foreground));
+}
+.custom-accordion .accordion-item{
+  border-bottom:1px solid #eee;
+}
+
+.accordion-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 0;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.accordion-icon{
+  font-size:18px;
+  font-weight:bold;
+  transition:0.2s;
+}
+
+.accordion-content{
+  display:none;
+  padding:10px 10px 16px 10px;
+}
+
+.accordion-item.active .accordion-content{
+  display:block;
+}
+
+.accordion-item.active .accordion-icon{
+  content:"-";
+}
+@media(max-width: 575px){
+        .custom-accordion {
+        display: block;
+    }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const items = document.querySelectorAll(".custom-accordion .accordion-item");
+
+  items.forEach(item => {
+
+    const header = item.querySelector(".accordion-header");
+    const icon = item.querySelector(".accordion-icon");
+
+    header.addEventListener("click", function(){
+
+      const isActive = item.classList.contains("active");
+
+      // đóng tất cả
+      items.forEach(i=>{
+        i.classList.remove("active");
+        i.querySelector(".accordion-icon").textContent = "+";
+      });
+
+      // mở cái được click
+      if(!isActive){
+        item.classList.add("active");
+        icon.textContent = "-";
+      }
+
+    });
+
+  });
+
+});
+</script>

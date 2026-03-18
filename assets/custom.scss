@@ -1,0 +1,337 @@
+.hdt-slide_inner .hdt-content {
+    padding: 48px;
+    background-color: #F5F1EB;
+    .hdt-content-inner {
+        .hdt-h_custom {
+            line-height: 1;
+        }
+    }
+}
+
+.hdt-card-product.hdt-pr-style1 {
+    .hdt-card-product__wrapper {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px;
+            border-radius: 10px;
+            overflow: hidden;
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px;
+            animation-duration: .3s;
+            transition-duration: .3s;
+        }
+        height: 100%;
+    }
+    .hdt-card-product__media {
+            border-radius: 0px;
+    }
+    .hdt-card-product__media+.hdt-card-product__info {
+            padding: 0 10px 20px 10px;
+    }
+}
+
+.hdt-card-product.hdt-pr-style1 {
+    padding-bottom: 30px;
+}
+
+.hdt-card-product__info {
+    .hdt-money {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+.hdt-section-testimonials {
+    .hdt-testimonials-3 .hdt-testimonial-inner {
+        background-color: #fff;
+        .hdt-testimonial-info {
+                    justify-content: center;
+        }
+    }
+
+    .hdt-testimonials-3 .hdt-testimonial-inner {
+        flex-direction: column;
+        .hdt-poropost-image {
+            max-width: 100%;
+        }
+    }
+    .hdt-testimonials-3 .hdt-testimonial-info {
+        margin-left: 20px;
+    }
+    .hdt-testimonials-3 .hdt-testimonial-content, .hdt-testimonials-3 .hdt-testimonial-rating {
+        margin-bottom: 10px;
+    }
+    .hdt-testimonials-3 .hdt-testimonial-inner {
+        gap: 15px;
+    }
+}
+
+.how-it-work {
+    .hdt-grid-system {
+        padding: 30px;
+    }
+    .hdt-column {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            border-radius: 20px;
+            overflow: hidden;
+        img {
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+        p {
+            padding: 0 20px;
+        }
+        .hdt-text-warry h6 {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #be5637;
+            color: #fff;
+            font-weight: 600;
+            z-index: 10;
+            text-align: center;
+            border-radius: 50%;
+            padding: 0px;
+            margin-inline: auto;
+            font-size: 40px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .hdt-column_inner {
+                    place-self: normal;
+        }
+    }
+
+    .hdt-rounded-full {
+        box-shadow: none !important;
+    }
+}
+
+.hdt-product-info__list>.hdt-product__title {
+    font-weight: 700;
+}
+
+.hdt-product-info__list {
+    .hdt-money {
+        font-size: 30px;
+        font-weight: 700;
+    }
+}
+
+.upload-img-custom {
+    background: #F5EEEC;
+    margin-top: 20px;
+    border: 2px solid #be56374d;
+    display: block;
+    border-style: dashed;
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+    svg {
+        margin-inline: auto;
+    }
+}
+
+.hdt-contents .hdt-accordion-item {
+  border: 1px solid #ececec;
+  background-color: #F6F3EF;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  summary {
+    border-bottom: none !important;
+  }
+}
+
+.hdt-tabs-collections {
+    .hdt-tabs-item-title {
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: all .5s linear;
+        &:before {
+            display: none;
+        }
+        &:hover {
+            background-color: #BE5637 !important;
+            color: #fff !important;
+            transition: all .5s linear;
+        }
+    }
+    .hdt-slider__slide:not(:first-child) {
+        padding-left: 10px;
+    }
+}
+
+.hdt-tabs-underline .hdt-tabs-list .hdt-tabs-item-title[aria-current=true] {
+    background-color: #BE5637 !important;
+    color: #fff !important;
+}
+
+.hdt-cart-page__items {
+        background-color: #F6F3EE;
+    padding: 20px 25px;
+    border: 1px solid #e0d9d1;
+    border-radius: 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.hdt-page-cart__quantity {
+    .hdt-quantity-cart-item {
+            background: #fff !important;
+    }
+} 
+
+.hdt-page-cart__item {
+    .hdt-price {
+        .hdt-money {
+            font-weight: 600;
+        }
+    }
+}
+
+.hdt-page-cart__content {
+    background: #fff !important;
+    border-radius: 12px !important;
+}
+
+.hdt-totals__total-value, .hdt-cart-checkbox label strong, .hdt-cart-checkbox label a {
+    color: #BE5637 !important;
+}
+
+.hdt-totals__total-value {
+        font-weight: 700;
+}
+
+.hdt-main-cart__button-checkout {
+    background-color: #BE5637 !important;
+        font-size: 18px;
+    text-transform: uppercase;
+}
+
+input[type=radio]:checked+.hdt-product-form_value.is-type-block {
+    background: transparent !important;
+    color: #be5637 !important;
+    svg {
+        color: #be5637 !important;
+    }
+}
+
+.hdt-product-form_value.is-type-block {
+    svg {
+        width: 16px;
+        color: #847062;
+    }
+}
+
+.hdt-product-form__label {
+    font-weight: 600;
+}
+
+.hdt-collection-style1 {
+    .hdt-collection-title {
+        height: auto !important;
+        flex-direction: column;
+        line-height: 1 !important;
+        padding: 6px 16px !important;
+        text-transform: uppercase;
+        border-radius: 5px !important;
+        margin-top: 10px;
+    }
+    .hdt-collection-content {
+        text-align: center;
+        h3 {
+            font-size: 18px;
+            color: #281d15;
+        }
+        p {
+            font-size: 12px;
+            color: #847062;
+        }
+    }
+    .hdt-collection-title-text {
+        font-size: 12px;
+    }
+    position: relative;
+    display: block;
+    overflow: hidden !important;
+    aspect-ratio: 4 / 3 !important;
+    height: auto !important;
+}
+
+.hdt-testimonials-3 {
+    .hdt-poropost-image {
+        img {
+            margin-top: 10px !important;
+        }
+    }
+}
+
+.btn-customize-yours {
+    font-size: 14px;
+    width: 100%;
+    background-color: #BE5737;
+    text-align: center;
+    padding: 8px 0;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#template--16917651816503__image_text_XTVtpw {
+    background: #FBF7F2;
+}
+
+.bring-your {
+    .hdt-collection-item .hdt-collection-content {
+        background-color: #f9f7f5cc;
+        padding: 15px 15px 10px 15px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        bottom: 0;
+        }
+        .hdt-collection-style1 .hdt-collection-title {
+        background-color: #c16347;
+        color: #fff;
+        }
+}
+
+@media(max-width: 575px) {
+    .how-it-work {
+        .hdt-grid-system {
+            padding: 10px;
+        }
+        .hdt-section--custom .hdt-column {
+            padding: 0px;
+        }
+    }
+    .hdt-slide_inner .hdt-content { 
+        padding: 10px;
+    }
+    .bring-your {
+        .hdt-masonry-collections {
+            grid: auto-flow dense 220px / repeat(var(--cols), minmax(0, 1fr)) !important;
+        }
+        .hdt-collection-style1 {
+            height: 100% !important;
+            h3 {
+                font-size: 16px;
+                color: #fff;
+                margin-bottom: 5px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 12px;
+                color: #fff;
+                line-height: 1.2;
+            }
+        }
+        .hdt-collection-content {
+            background-color: transparent !important;
+            padding: 5px !important;
+        }
+        .hdt-full-width-link {
+            background-image: linear-gradient(to top, rgb(0 0 0 / .5), transparent, transparent);
+        }
+        .hdt-collection-title {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,717 @@
+{% doc %}
+  @prompt
+    Tuyệt vời! Đây là đoạn prompt tổng hợp và chi tiết nhất, bao gồm tất cả các yêu cầu từ đầu và được cập nhật thêm tính năng 3-slide Carousel (slider) với các nội dung riêng biệt.
+    
+    The Comprehensive Testimonial Section Prompt
+    "Design a complete Customer Testimonial Section for a premium pet portrait website. The section should feature a clean, elegant two-column layout, with review content on the left and a prominent, easily replaceable image on the right. This section must function as a 3-slide interactive carousel (slider), allowing users to navigate between different testimonials.
+    
+    Core Structure and Components for Each Slide (Left Column - Content Area):
+    
+    Main Heading: 'Our Valued Customers' or 'What Our Pet Parents Say'.
+    
+    Quote Icon: A stylish, distinct quotation mark icon to visually represent a testimonial.
+    
+    Rating Stars: A clear display of 5 gold or orange rating stars.
+    
+    Testimonial Text: A placeholder for a heartfelt customer story. The text should have generous line spacing and be presented in an elegant Serif font.
+    
+    User Information: The customer's full name, prominently displayed in bold.
+    
+    Navigation Arrows: Clear left and right arrow buttons positioned below the user information, enabling users to cycle through the slides.
+    
+    Right Column - Image Area:
+    
+    Large Image Placeholder: A spacious, responsive image container with softly rounded corners. This container must clearly indicate that the image within is easily replaceable and should visually complement the accompanying testimonial. The image should update dynamically with each slide.
+    
+    Carousel Functionality:
+    
+    Slide Synchronization: Ensure that when the navigation arrows are clicked, both the testimonial text/user info and the corresponding image update simultaneously to the next slide.
+    
+    Pagination Indicators: Include small, subtle dot indicators (pagination) positioned centrally at the bottom of the entire block to show which slide (1, 2, or 3) is currently active.
+    
+    Smooth Transition: The design should incorporate a smooth visual transition effect (e.g., fade or gentle slide) when moving between testimonials.
+    
+    Visual Aesthetic & Spacing:
+    
+    Elegant Design: The overall aesthetic should be premium, clean, and reflect an artistic brand. Use a soft, neutral background color (like off-white or light beige) for the entire block.
+    
+    Strategic Spacing: Utilize ample 'Spacer' elements (padding/margin) between each component (Heading, Icon, Stars, Text, User Info) and around the main columns to ensure a breathable, uncluttered, and visually appealing layout.
+    
+    Content Focus for the 3 Dynamic Slides (Provide placeholders for each):
+    
+    Slide 1 Content: Focus on the emotional impact of the portrait, especially for a memorial piece or capturing a pet's unique personality.
+    
+    Image Suggestion: A heartwarming photo of a pet portrait in a home setting.
+    
+    User Info: [Placeholder for Name 1]
+    
+    Slide 2 Content: Highlight the portrait as a perfect gift, emphasizing the recipient's joy and the quality of the artwork.
+    
+    Image Suggestion: An image of the portrait being unwrapped or displayed beautifully.
+    
+    User Info: [Placeholder for Name 2]
+    
+    Slide 3 Content: Praise the artistic detail, likeness to the real pet, and overall high quality of the materials and craftsmanship.
+    
+    Image Suggestion: A side-by-side photo of the real pet and its portrait, or a close-up of the canvas texture.
+    
+    User Info: [Placeholder for Name 3]
+    
+    The output should be a detailed description of this design, ready for implementation.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-testimonial-carousel-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding }}px;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-testimonial-carousel__container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-testimonial-carousel__heading-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    font-weight: 600;
+  }
+
+  .ai-testimonial-carousel__slides-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-testimonial-carousel__slide-{{ ai_gen_id }} {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  .ai-testimonial-carousel__slide-{{ ai_gen_id }}.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    opacity: 1;
+  }
+
+  .ai-testimonial-carousel__content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.content_spacing }}px;
+  }
+
+  .ai-testimonial-carousel__quote-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.quote_icon_size }}px;
+    height: {{ block.settings.quote_icon_size }}px;
+    color: {{ block.settings.quote_icon_color }};
+  }
+
+  .ai-testimonial-carousel__stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 4px;
+  }
+
+  .ai-testimonial-carousel__star-{{ ai_gen_id }} {
+    width: {{ block.settings.star_size }}px;
+    height: {{ block.settings.star_size }}px;
+    color: {{ block.settings.star_color }};
+  }
+
+  .ai-testimonial-carousel__text-{{ ai_gen_id }} {
+    font-family: {{ block.settings.text_font.family }}, serif;
+    font-size: {{ block.settings.text_size }}px;
+    line-height: {{ block.settings.text_line_height }};
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-testimonial-carousel__user-{{ ai_gen_id }} {
+    font-weight: 700;
+    font-size: {{ block.settings.user_name_size }}px;
+    color: {{ block.settings.user_name_color }};
+  }
+
+  .ai-testimonial-carousel__navigation-{{ ai_gen_id }} {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .ai-testimonial-carousel__arrow-{{ ai_gen_id }} {
+    width: {{ block.settings.arrow_size }}px;
+    height: {{ block.settings.arrow_size }}px;
+    border: 2px solid {{ block.settings.arrow_color }};
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .ai-testimonial-carousel__arrow-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.arrow_color }};
+    color: {{ block.settings.background_color }};
+  }
+
+  .ai-testimonial-carousel__arrow-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+    stroke: {{ block.settings.arrow_color }};
+    transition: stroke 0.3s ease;
+  }
+
+  .ai-testimonial-carousel__arrow-{{ ai_gen_id }}:hover svg {
+    stroke: {{ block.settings.background_color }};
+  }
+
+  .ai-testimonial-carousel__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-testimonial-carousel__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-testimonial-carousel__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-testimonial-carousel__image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .ai-testimonial-carousel__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-testimonial-carousel__pagination-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .ai-testimonial-carousel__dot-{{ ai_gen_id }} {
+    width: {{ block.settings.dot_size }}px;
+    height: {{ block.settings.dot_size }}px;
+    border-radius: 50%;
+    background-color: {{ block.settings.dot_inactive_color }};
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .ai-testimonial-carousel__dot-{{ ai_gen_id }}.active {
+    background-color: {{ block.settings.dot_active_color }};
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-testimonial-carousel__slide-{{ ai_gen_id }}.active {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .ai-testimonial-carousel__image-wrapper-{{ ai_gen_id }} {
+      min-height: 300px;
+    }
+
+    .ai-testimonial-carousel__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.7 }}px;
+    }
+
+    .ai-testimonial-carousel__text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<testimonial-carousel-{{ ai_gen_id }} class="ai-testimonial-carousel-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-testimonial-carousel__container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-testimonial-carousel__heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="ai-testimonial-carousel__slides-{{ ai_gen_id }}">
+      {% for i in (1..3) %}
+        {% liquid
+          assign slide_text_key = 'slide_' | append: i | append: '_text'
+          assign slide_user_key = 'slide_' | append: i | append: '_user_name'
+          assign slide_image_key = 'slide_' | append: i | append: '_image'
+
+          assign slide_text = block.settings[slide_text_key]
+          assign slide_user = block.settings[slide_user_key]
+          assign slide_image = block.settings[slide_image_key]
+        %}
+
+        <div class="ai-testimonial-carousel__slide-{{ ai_gen_id }} {% if i == 1 %}active{% endif %}" data-slide="{{ i }}">
+          <div class="ai-testimonial-carousel__content-{{ ai_gen_id }}">
+            <svg class="ai-testimonial-carousel__quote-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+            </svg>
+
+            <div class="ai-testimonial-carousel__stars-{{ ai_gen_id }}">
+              {% for star in (1..5) %}
+                <svg class="ai-testimonial-carousel__star-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+              {% endfor %}
+            </div>
+
+            <div class="ai-testimonial-carousel__text-{{ ai_gen_id }}">
+              {% if slide_text != blank %}
+                {{ slide_text }}
+              {% else %}
+                <p>Add your customer testimonial here. Share their heartfelt story about how your pet portrait touched their lives.</p>
+              {% endif %}
+            </div>
+
+            <div class="ai-testimonial-carousel__user-{{ ai_gen_id }}">
+              {% if slide_user != blank %}
+                {{ slide_user }}
+              {% else %}
+                Customer Name
+              {% endif %}
+            </div>
+
+            <div class="ai-testimonial-carousel__navigation-{{ ai_gen_id }}">
+              <button class="ai-testimonial-carousel__arrow-{{ ai_gen_id }} ai-testimonial-carousel__prev-{{ ai_gen_id }}" aria-label="Previous testimonial">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button class="ai-testimonial-carousel__arrow-{{ ai_gen_id }} ai-testimonial-carousel__next-{{ ai_gen_id }}" aria-label="Next testimonial">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="ai-testimonial-carousel__image-wrapper-{{ ai_gen_id }}">
+            {% if slide_image %}
+              <img
+                src="{{ slide_image | image_url: width: 800 }}"
+                alt="{{ slide_image.alt | escape }}"
+                loading="lazy"
+                width="{{ slide_image.width }}"
+                height="{{ slide_image.height }}"
+                class="ai-testimonial-carousel__image-{{ ai_gen_id }}"
+              >
+            {% else %}
+              <div class="ai-testimonial-carousel__image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+                <div class="ai-testimonial-carousel__empty-state-{{ ai_gen_id }}">
+                  Add testimonial image for slide {{ i }}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="ai-testimonial-carousel__pagination-{{ ai_gen_id }}">
+      {% for i in (1..3) %}
+        <button
+          class="ai-testimonial-carousel__dot-{{ ai_gen_id }} {% if i == 1 %}active{% endif %}"
+          data-slide="{{ i }}"
+          aria-label="Go to slide {{ i }}"
+        ></button>
+      {% endfor %}
+    </div>
+  </div>
+</testimonial-carousel-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class TestimonialCarousel{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentSlide = 1;
+        this.totalSlides = 3;
+      }
+
+      connectedCallback() {
+        this.slides = this.querySelectorAll('.ai-testimonial-carousel__slide-{{ ai_gen_id }}');
+        this.dots = this.querySelectorAll('.ai-testimonial-carousel__dot-{{ ai_gen_id }}');
+        this.prevButtons = this.querySelectorAll('.ai-testimonial-carousel__prev-{{ ai_gen_id }}');
+        this.nextButtons = this.querySelectorAll('.ai-testimonial-carousel__next-{{ ai_gen_id }}');
+
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.prevButtons.forEach(button => {
+          button.addEventListener('click', () => this.previousSlide());
+        });
+
+        this.nextButtons.forEach(button => {
+          button.addEventListener('click', () => this.nextSlide());
+        });
+
+        this.dots.forEach(dot => {
+          dot.addEventListener('click', (e) => {
+            const slideNumber = parseInt(e.target.getAttribute('data-slide'));
+            this.goToSlide(slideNumber);
+          });
+        });
+      }
+
+      previousSlide() {
+        this.currentSlide = this.currentSlide === 1 ? this.totalSlides : this.currentSlide - 1;
+        this.updateSlides();
+      }
+
+      nextSlide() {
+        this.currentSlide = this.currentSlide === this.totalSlides ? 1 : this.currentSlide + 1;
+        this.updateSlides();
+      }
+
+      goToSlide(slideNumber) {
+        this.currentSlide = slideNumber;
+        this.updateSlides();
+      }
+
+      updateSlides() {
+        this.slides.forEach((slide, index) => {
+          if (index + 1 === this.currentSlide) {
+            slide.classList.add('active');
+          } else {
+            slide.classList.remove('active');
+          }
+        });
+
+        this.dots.forEach((dot, index) => {
+          if (index + 1 === this.currentSlide) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+    }
+
+    customElements.define('testimonial-carousel-{{ ai_gen_id }}', TestimonialCarousel{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Customer testimonials",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Our Valued Customers</p>"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section padding",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "content_spacing",
+      "label": "Content spacing",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Slide 1"
+    },
+    {
+      "type": "richtext",
+      "id": "slide_1_text",
+      "label": "Testimonial text",
+      "default": "<p>The portrait of our beloved Max brought tears to my eyes. It captured his spirit perfectly and now hangs in our living room as a beautiful memorial. The attention to detail and the emotional depth in the artwork is simply extraordinary.</p>"
+    },
+    {
+      "type": "text",
+      "id": "slide_1_user_name",
+      "label": "Customer name",
+      "default": "Sarah Johnson"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Slide 2"
+    },
+    {
+      "type": "richtext",
+      "id": "slide_2_text",
+      "label": "Testimonial text",
+      "default": "<p>I ordered this as a gift for my mother, and she absolutely loved it! The portrait of her cat Luna was so lifelike and beautifully crafted. The quality of the canvas and framing exceeded our expectations. Best gift I've ever given!</p>"
+    },
+    {
+      "type": "text",
+      "id": "slide_2_user_name",
+      "label": "Customer name",
+      "default": "Michael Chen"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Slide 3"
+    },
+    {
+      "type": "richtext",
+      "id": "slide_3_text",
+      "label": "Testimonial text",
+      "default": "<p>The artistic detail is phenomenal! Every whisker, every fur texture, and the sparkle in Bella's eyes were captured perfectly. The side-by-side comparison with the real photo shows incredible likeness. Premium quality materials and outstanding craftsmanship!</p>"
+    },
+    {
+      "type": "text",
+      "id": "slide_3_user_name",
+      "label": "Customer name",
+      "default": "Emily Rodriguez"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#fbf7f2"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#3e2816"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#3e2816"
+    },
+    {
+      "type": "color",
+      "id": "quote_icon_color",
+      "label": "Quote icon",
+      "default": "#be5737"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star rating",
+      "default": "#e8a531"
+    },
+    {
+      "type": "color",
+      "id": "user_name_color",
+      "label": "Customer name",
+      "default": "#3e2816"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Navigation arrows",
+      "default": "#3e2816"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_color",
+      "label": "Active dot",
+      "default": "#be5737"
+    },
+    {
+      "type": "color",
+      "id": "dot_inactive_color",
+      "label": "Inactive dot",
+      "default": "#d4c4b8"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "text_font",
+      "label": "Testimonial font",
+      "default": "playfair_display_n4"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "text_line_height",
+      "label": "Text line height",
+      "min": 1,
+      "max": 2,
+      "step": 0.1,
+      "default": 1.8
+    },
+    {
+      "type": "range",
+      "id": "user_name_size",
+      "label": "Customer name size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Elements"
+    },
+    {
+      "type": "range",
+      "id": "quote_icon_size",
+      "label": "Quote icon size",
+      "min": 30,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "label": "Star size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "arrow_size",
+      "label": "Arrow button size",
+      "min": 40,
+      "max": 70,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "dot_size",
+      "label": "Pagination dot size",
+      "min": 8,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customer testimonials"
+    }
+  ]
+}
+{% endschema %}

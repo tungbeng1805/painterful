@@ -1,0 +1,204 @@
+<style>
+    .badges-container-2 {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 12px;
+      justify-content: space-around;
+      padding-top: 20px;
+    }
+
+    /* Mỗi badge item */
+    .badge-item-2 {
+
+    }
+
+    .badge-icon-2 {
+      flex-shrink: 0;
+      text-align: center;
+      align-content: center;
+      border-radius: 50%;
+      margin-inline: auto;
+    }
+
+    .badge-text-2 {
+      font-size: 18px;
+      color: #3e2816;
+      font-weight: 500;
+    }
+
+    .badge-text-p-2 {
+      color: #3e2816;
+    }
+
+    .badge-icon-2 svg {
+      width: 40px;
+      height: 40px;
+      {% comment %} stroke: #be5637; {% endcomment %}
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      margin: 0 auto;
+     fill: #000;
+    }
+
+    .badge-icon-2.primary {
+      color: #3b82f6;
+    }
+
+    .content-trust img {
+        margin-inline: auto;
+    }
+
+    .text-trust {
+        font-size: 24px;
+        color: #B99C5B;
+        max-width: 290px; 
+        margin-inline: auto;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    @media(max-width: 575px){
+      .badge-icon-2 {
+        background-color: transparent;
+      }
+      .badge-icon-2 svg {
+
+      }
+      .badge-text-p-2 {
+        display: none;
+      }
+      .badges-container-2 {
+            align-items: flex-start;
+        }
+      .badge-text-2 {
+        font-size: 14px;
+    }
+
+    }
+</style>
+
+<div class="badges-container-2">
+  <div class="badge-item-2">
+    <div class="badge-icon-2 primary">
+        {{ block.settings.svg1 }}
+    </div>
+    <div>
+      <div class="badge-text-2">{{ block.settings.text1 }}</div>
+    </div>
+  </div>
+
+  <div class="badge-item-2">
+    <div class="badge-icon-2 primary">
+        {{ block.settings.svg2 }}
+    </div>
+    <div>
+      <div class="badge-text-2">{{ block.settings.text2 }}</div>
+    </div>
+  </div>
+
+  <div class="badge-item-2">
+    <div class="badge-icon-2 primary">
+      {{ block.settings.svg3 }}
+    </div>
+    <div>
+      <div class="badge-text-2">{{ block.settings.text3 }}</div>
+    </div>
+  </div>
+</div>
+
+<div>
+    <div class="text-trust">
+        {{ block.settings.text_trust }}
+    </div>
+    <div class="content-trust">
+        {% if block.settings.img_trust %}
+            {{ block.settings.img_trust 
+                | image_url: width: 250 
+                | image_tag: 
+                    loading: 'lazy',
+                    alt: 'Trust Image',
+                    class: 'trust-image'
+            }}
+        {% endif %}
+
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trust badges 2",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Box 1"
+    },
+    {
+      "type": "textarea",
+      "id": "svg1",
+      "label": "Svg 1"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "Title 1",
+      "default": "100% Hand-Drawn"
+    },
+    {
+      "type": "header",
+      "content": "Box 2"
+    },
+    {
+      "type": "textarea",
+      "id": "svg2",
+      "label": "Svg 2"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "Title 2",
+      "default": "Approve"
+    },
+    {
+      "type": "header",
+      "content": "Box 3"
+    },
+    {
+      "type": "textarea",
+      "id": "svg3",
+      "label": "Svg 3"
+    },
+    {
+      "type": "text",
+      "id": "text3",
+      "label": "Title 3",
+      "default": "Fast US Shipping"
+    },
+    {
+      "type": "header",
+      "content": "Content trust"
+    },
+    {
+      "type": "text",
+      "id": "text_trust",
+      "label": "Title 2",
+      "default": "Approve"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_trust",
+      "label": "Image trust"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust badges 2",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

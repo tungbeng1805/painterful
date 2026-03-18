@@ -1,0 +1,75 @@
+<div class="testimonial-slider">
+  <div class="testimonial-track">
+
+    {% assign testimonials = 
+      "The detail is absolutely stunning. My cat looks like royalty, just as she deserves!||Michael T., cat dad
+      :::Absolutely blown away by the quality. This portrait captured my dog’s personality perfectly!||Sarah L., dog mom
+      :::Worth every penny. The artwork feels alive and full of emotion.||Daniel R., pet lover" 
+      | split: ":::" %}
+
+    {% for t in testimonials %}
+      {% assign parts = t | split: "||" %}
+      <div class="testimonial-slide">
+        <div class="stars">★★★★★</div>
+        <p class="quote">“{{ parts[0] }}”</p>
+        <span class="author">— {{ parts[1] }}</span>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+<style>
+.testimonial-slider {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.testimonial-slide {
+  min-width: 100%;
+  padding: 20px;
+  color: #fff;
+}
+
+.testimonial-slide .stars {
+  color: #f6c344;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.testimonial-slide .quote {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.testimonial-slide .author {
+  font-size: 14px;
+  opacity: 0.85;
+}
+@media(max-width: 575px){
+  .testimonial-slide {
+    padding: 0px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const track = document.querySelector('.testimonial-track');
+  const slides = document.querySelectorAll('.testimonial-slide');
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 4000);
+});
+</script>

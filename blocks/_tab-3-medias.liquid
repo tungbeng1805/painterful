@@ -1,0 +1,66 @@
+{% render 'tab-3-medias', _block: block, mobile: true %}
+{% schema %}
+{
+  "name": "3 Tab",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Setup Tab"
+    },
+    {
+      "type": "select",
+      "id": "type",
+      "label": "Display type",
+      "options": [
+        {
+          "value": "tab",
+          "label": "Tabs"
+        },
+        {
+          "value": "accordion",
+          "label": "Accordion"
+        }
+      ],
+      "default": "tab"
+    },
+    {
+      "type": "text",
+      "id": "name_tab_1",
+      "label": "Name tab 1",
+      "default": "Tab 1"
+    },
+    {
+      "type": "richtext",
+      "id": "data_tab_1",
+      "label": "Data tab 1"
+    },
+    {
+      "type": "text",
+      "id": "name_tab_2",
+      "label": "Name tab 2",
+      "default": "Tab 2"
+    },
+    {
+      "type": "richtext",
+      "id": "data_tab_2",
+      "label": "Data tab 2"
+    },
+    {
+      "type": "text",
+      "id": "name_tab_3",
+      "label": "Name tab 3",
+      "default": "Tab 3"
+    },
+    {
+      "type": "richtext",
+      "id": "data_tab_3",
+      "label": "Data tab 3"
+    },
+  ],
+  "presets": [
+    {
+      "name": "3 Tab",
+    }
+  ]
+}
+{% endschema %}

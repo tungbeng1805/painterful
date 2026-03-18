@@ -1,0 +1,538 @@
+{% doc %}
+  @prompt
+    Viết 1 section collection, gồm 6 cục, dạng grid 2 hàng 3 cột, có hiển thị ảnh collection và tên, responsive
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-collection-grid-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .ai-collection-grid__container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-collection-grid__heading-{{ ai_gen_id }} {
+    text-align: {{ block.settings.heading_alignment }};
+    margin-bottom: 40px;
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+  }
+
+  .ai-collection-grid__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+  }
+
+  .ai-collection-grid__item-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ block.settings.card_radius }}px;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-collection-grid__item-{{ ai_gen_id }}:hover {
+    transform: translateY(-5px);
+  }
+
+  .ai-collection-grid__link-{{ ai_gen_id }} {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .ai-collection-grid__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: {{ block.settings.image_ratio }}%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+  }
+
+  .ai-collection-grid__image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-collection-grid__item-{{ ai_gen_id }}:hover .ai-collection-grid__image-{{ ai_gen_id }} {
+    transform: scale(1.05);
+  }
+
+  .ai-collection-grid__image-wrapper-{{ ai_gen_id }} svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-collection-grid__overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: {{ block.settings.overlay_color }};
+    opacity: {{ block.settings.overlay_opacity }};
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-collection-grid__item-{{ ai_gen_id }}:hover .ai-collection-grid__overlay-{{ ai_gen_id }} {
+    opacity: {{ block.settings.overlay_hover_opacity }};
+  }
+
+  .ai-collection-grid__content-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 2;
+  }
+
+  .ai-collection-grid__title-{{ ai_gen_id }} {
+    margin: 0;
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    font-weight: 600;
+    text-align: {{ block.settings.title_alignment }};
+  }
+
+  .ai-collection-grid__count-{{ ai_gen_id }} {
+    margin-top: 5px;
+    font-size: {{ block.settings.count_size }}px;
+    color: {{ block.settings.count_color }};
+    text-align: {{ block.settings.title_alignment }};
+  }
+
+  .ai-collection-grid__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-collection-grid__grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ai-collection-grid__heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.8);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-collection-grid__grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+      gap: {{ block.settings.grid_gap_mobile }}px;
+    }
+
+    .ai-collection-grid__title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.9);
+    }
+
+    .ai-collection-grid__count-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.count_size }}px * 0.9);
+    }
+  }
+{% endstyle %}
+
+<ai-collection-grid-{{ ai_gen_id }}
+  class="ai-collection-grid-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-collection-grid__container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-collection-grid__heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+    {% if block.settings.sub_heading != blank %}
+      <div class="">{{ block.settings.sub_heading }}</div>
+    {% endif %}
+
+    <div class="ai-collection-grid__grid-{{ ai_gen_id }}">
+      {% for i in (1..6) %}
+        {% liquid
+          assign collection_key = 'collection_' | append: i
+          assign collection = block.settings[collection_key]
+        %}
+
+        <div class="ai-collection-grid__item-{{ ai_gen_id }}">
+          {% if collection != blank %}
+            <a
+              href="{{ collection.url }}"
+              class="ai-collection-grid__link-{{ ai_gen_id }}"
+            >
+              <div class="ai-collection-grid__image-wrapper-{{ ai_gen_id }}">
+                {% if collection.image %}
+                  <img
+                    src="{{ collection.image | image_url: width: 800 }}"
+                    alt="{{ collection.image.alt | escape }}"
+                    loading="lazy"
+                    width="800"
+                    height="{{ 800 | times: block.settings.image_ratio | divided_by: 100 }}"
+                    class="ai-collection-grid__image-{{ ai_gen_id }}"
+                  >
+                {% elsif collection.products.first and collection.products.first.featured_image %}
+                  <img
+                    src="{{ collection.products.first.featured_image | image_url: width: 800 }}"
+                    alt="{{ collection.products.first.featured_image.alt | escape }}"
+                    loading="lazy"
+                    width="800"
+                    height="{{ 800 | times: block.settings.image_ratio | divided_by: 100 }}"
+                    class="ai-collection-grid__image-{{ ai_gen_id }}"
+                  >
+                {% else %}
+                  {{ 'collection-1' | placeholder_svg_tag }}
+                {% endif %}
+                <div class="ai-collection-grid__overlay-{{ ai_gen_id }}"></div>
+              </div>
+              <div class="ai-collection-grid__content-{{ ai_gen_id }}">
+                <h3 class="ai-collection-grid__title-{{ ai_gen_id }}">{{ collection.title }}</h3>
+                {% if block.settings.show_product_count %}
+                  <div class="ai-collection-grid__count-{{ ai_gen_id }}">
+                    {{ collection.products_count }}
+                    {% if collection.products_count == 1 %}
+                      {{ block.settings.product_text }}
+                    {% else %}
+                      {{ block.settings.products_text }}
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            </a>
+          {% else %}
+            <div class="ai-collection-grid__link-{{ ai_gen_id }}">
+              <div class="ai-collection-grid__image-wrapper-{{ ai_gen_id }}">
+                {{ 'collection-1' | placeholder_svg_tag }}
+                <div class="ai-collection-grid__empty-state-{{ ai_gen_id }}">
+                  Chọn bộ sưu tập {{ i }}
+                </div>
+              </div>
+              <div class="ai-collection-grid__content-{{ ai_gen_id }}">
+                <h3 class="ai-collection-grid__title-{{ ai_gen_id }}">Bộ sưu tập {{ i }}</h3>
+                {% if block.settings.show_product_count %}
+                  <div class="ai-collection-grid__count-{{ ai_gen_id }}">0 sản phẩm</div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</ai-collection-grid-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class AiCollectionGrid{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.init();
+      }
+
+      init() {
+        const items = this.querySelectorAll('.ai-collection-grid__item-{{ ai_gen_id }}');
+        items.forEach((item, index) => {
+          item.style.animationDelay = `${index * 0.1}s`;
+        });
+      }
+    }
+
+    customElements.define('ai-collection-grid-{{ ai_gen_id }}', AiCollectionGrid{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Collection grid",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Nội dung"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Tiêu đề",
+      "default": "Khám phá bộ sưu tập"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "sub_heading",
+      "label": "Tiêu đề phụ"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Căn chỉnh tiêu đề",
+      "options": [
+        {
+          "value": "left",
+          "label": "Trái"
+        },
+        {
+          "value": "center",
+          "label": "Giữa"
+        },
+        {
+          "value": "right",
+          "label": "Phải"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Bộ sưu tập"
+    },
+    {
+      "type": "collection",
+      "id": "collection_1",
+      "label": "Bộ sưu tập 1"
+    },
+    {
+      "type": "collection",
+      "id": "collection_2",
+      "label": "Bộ sưu tập 2"
+    },
+    {
+      "type": "collection",
+      "id": "collection_3",
+      "label": "Bộ sưu tập 3"
+    },
+    {
+      "type": "collection",
+      "id": "collection_4",
+      "label": "Bộ sưu tập 4"
+    },
+    {
+      "type": "collection",
+      "id": "collection_5",
+      "label": "Bộ sưu tập 5"
+    },
+    {
+      "type": "collection",
+      "id": "collection_6",
+      "label": "Bộ sưu tập 6"
+    },
+    {
+      "type": "header",
+      "content": "Hiển thị"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_count",
+      "label": "Hiển thị số lượng sản phẩm",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "product_text",
+      "label": "Văn bản đơn sản phẩm",
+      "default": "sản phẩm"
+    },
+    {
+      "type": "text",
+      "id": "products_text",
+      "label": "Văn bản nhiều sản phẩm",
+      "default": "sản phẩm"
+    },
+    {
+      "type": "header",
+      "content": "Bố cục"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "min": 1000,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "Chiều rộng container",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Khoảng cách giữa các ô",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "grid_gap_mobile",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Khoảng cách (mobile)",
+      "default": 15
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Số cột trên mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "range",
+      "id": "image_ratio",
+      "min": 50,
+      "max": 150,
+      "step": 5,
+      "unit": "%",
+      "label": "Tỷ lệ hình ảnh",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Bo góc thẻ",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Màu sắc"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Màu tiêu đề",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Màu tên bộ sưu tập",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "count_color",
+      "label": "Màu số lượng",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Màu lớp phủ",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Độ mờ lớp phủ",
+      "default": 0.3
+    },
+    {
+      "type": "range",
+      "id": "overlay_hover_opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Độ mờ khi hover",
+      "default": 0.5
+    },
+    {
+      "type": "header",
+      "content": "Kiểu chữ"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Cỡ chữ tiêu đề",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Cỡ chữ tên bộ sưu tập",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Căn chỉnh tên",
+      "options": [
+        {
+          "value": "left",
+          "label": "Trái"
+        },
+        {
+          "value": "center",
+          "label": "Giữa"
+        },
+        {
+          "value": "right",
+          "label": "Phải"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "count_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Cỡ chữ số lượng",
+      "default": 14
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection grid"
+    }
+  ]
+}
+{% endschema %}

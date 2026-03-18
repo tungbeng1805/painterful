@@ -1,0 +1,714 @@
+<style>
+.hdt-color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 14px 10px;
+  margin-top: 10px;
+}
+
+.hdt-color-item {
+  text-align: center;
+}
+
+.hdt-color-item input {
+  display: none;
+}
+
+
+
+.hdt-color-name {
+  font-size: 12px;
+  line-height: 1.2;
+  color: #333;
+}
+
+/* Ẩn radio */
+.hdt-color-item input {
+  display: none;
+}
+
+/* Cho label clickable */
+.hdt-color-item label {
+  cursor: pointer;
+  display: block;
+}
+
+/* Khung ảnh */
+.hdt-color-image {
+  display: block;
+  width: 100px;
+  height: 50px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin: 0 auto 6px;
+}
+
+/* Ảnh fill full */
+.hdt-color-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Khi được chọn */
+.hdt-color-item input:checked + label .hdt-color-image {
+  outline: 2px solid #be5637;
+  outline-offset: 2px;
+}
+
+@media(max-width: 575px){
+  .hdt-color-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hdt-color-image {
+    width: 100%;
+  }
+}
+
+
+</style>
+{%- liquid
+  unless product
+    assign product = section.settings.product
+  endunless
+  if block.settings.visibility == 'all'
+  elsif block.settings.visibility == 'collection'
+    assign collection_based_title = block.settings.collection_based | map: 'title'
+    if collection_based_title.size == 0
+      continue
+    endif
+    assign pr_title_and_collections = product.collections | map: 'title' | concat: collection_based_title
+    assign pr_title_and_collections_uniq = pr_title_and_collections | uniq
+    if pr_title_and_collections_uniq.size == pr_title_and_collections.size
+      continue
+    endif
+  elsif block.settings.visibility == 'type'
+    if product.type == blank
+      continue
+    endif
+    assign type_based = block.settings.type_based | remove: '  ' | replace: ', ', ',' | replace: ' ,', ',' | split: ','
+    unless type_based contains product.type
+      continue
+    endunless
+  elsif block.settings.visibility == 'tag'
+    if product.tags.size == 0
+      continue
+    endif
+    assign tag_based = block.settings.tag_based | remove: '  ' | replace: ', ', ',' | replace: ' ,', ',' | split: ','
+    assign pr_tag_and_tags = product.tags | concat: tag_based
+    assign pr_tag_and_tags_uniq = pr_tag_and_tags | uniq
+    if pr_tag_and_tags_uniq.size == pr_tag_and_tags.size
+      continue
+    endif
+  elsif block.settings.visibility == 'product'
+    assign product_based_title = block.settings.product_based | map: 'title'
+    unless product_based_title contains product.title
+      continue
+    endunless
+  elsif block.settings.visibility == 'metafield'
+    unless product.metafields.theme.visibility_customizable
+      continue
+    endunless
+  endif
+  assign id = 'property' | append: block.id
+  assign property_type = block.settings.property_type
+  if block.settings.show_at_ck_cart
+    assign property_name = block.settings.title | escape
+  else
+    assign property_name = '_' | append: block.settings.title | escape
+  endif
+  assign product_form_id = 'product-form-' | append: section.id | append: product.id
+-%}
+<div class="hdt-product-info__item hdt-product__property" data-type="{{ block.type }}" {{ block.shopify_attributes }}>
+  <div class="hdt-s-text hdt-product-form__label">{{ block.settings.title_content }}</div>
+  {%- case property_type -%}
+    {%- when 'checkbox' -%}
+      <hdt-block-required
+        detect="checked"
+        event="change"
+        class="hdt-line-item-property hdt-line-item-property--{{ property_type }}"
+        {{ block.shopify_attributes }}
+      >
+        <input
+          form="{{ product_form_id }}"
+          class="hdt-grid-1x1"
+          type="checkbox"
+          id="{{ id }}"
+          {% if block.settings.use_required %}
+            required
+          {% endif %}
+          name="properties[{{ property_name }}]"
+          value="{{ block.settings.ck_value | escape }}"
+        >
+        <label for="{{ id }}" class="hdt-s-text hdt-inline-block">{{ block.settings.title }}</label>
+      </hdt-block-required>
+
+    {%- when 'text' -%}
+      <hdt-block-required
+        detect="length"
+        event="input"
+        class="hdt-line-item-property hdt-line-item-property--{{ property_type }}"
+        {{ block.shopify_attributes }}
+      >
+        <div class="hdt-field">
+          {%- if block.settings.type_text == 'short' -%}
+            <input
+              class="hdt-field__input hdt-input"
+              placeholder="{{ block.settings.title | escape }}"
+              type="text"
+              id="{{ id }}"
+              form="{{ product_form_id }}"
+              {% if block.settings.use_required %}
+                required
+              {% endif %}
+              name="properties[{{ property_name }}]"
+              {% if block.settings.max_characters > 0 %}
+                maxlength="{{ block.settings.max_characters }}"
+              {% endif %}
+            >
+            <label class="hdt-s-text hdt-font-medium hdt-block hdt-field__label">
+              {{- block.settings.title | escape -}}
+            </label>
+          {%- else -%}
+            <label class="hdt-s-text hdt-font-medium hdt-block">{{ block.settings.title | escape }}</label>
+            <textarea
+              class="hdt-field__input hdt-textarea"
+              rows="4"
+              id="{{ id }}"
+              form="{{ product_form_id }}"
+              {% if block.settings.use_required %}
+                required
+              {% endif %}
+              name="properties[{{ property_name }}]"
+              {% if block.settings.max_characters > 0 %}
+                maxlength="{{ block.settings.max_characters }}"
+              {% endif -%}
+            ></textarea>
+          {%- endif -%}
+          {% comment %} <label class="hdt-field__label" for="{{ id }}">{{ block.settings.title }}</label> {% endcomment %}
+        </div>
+      </hdt-block-required>
+
+    {%- when 'options' -%}
+      {%- liquid
+        assign arr_options = block.settings.options | newline_to_br | split: '<br />'
+        if arr_options.size == 0
+          continue
+        endif
+      -%}
+      <hdt-block-required
+        detect="checked"
+        event="change"
+        class="hdt-line-item-property hdt-line-item-property--{{ property_type }}"
+        {{ block.shopify_attributes }}
+      >
+        <label class="hdt-s-text hdt-block">{{ block.settings.title }}</label>
+        {%- if block.settings.type_options == 'radio' -%}
+          {%- for option in arr_options -%}
+            <div class="hdt-property-option">
+              <input
+                id="{{ id }}__{{ forloop.index }}"
+                type="radio"
+                form="{{ product_form_id }}"
+                {% if block.settings.use_required %}
+                  required
+                {% endif %}
+                name="properties[{{ property_name }}]"
+                value="{{ option | strip | escape }}"
+              >
+              <label for="{{ id }}__{{ forloop.index }}" class="hdt-s-text">{{ option }}</label>
+            </div>
+          {%- endfor -%}
+        {%- elsif block.settings.type_options == 'select' -%}
+          <select
+            class="hdt-select hdt-s-text"
+            id="{{ id }}"
+            form="{{ product_form_id }}"
+            name="properties[{{ property_name }}]"
+          >
+            {%- for option in arr_options %}
+              <option value="{{ option | strip | escape }}">{{ option }}</option>
+            {% endfor -%}
+          </select>
+        {%- else -%}
+          {%- for option in arr_options -%}
+            <div class="hdt-property-option">
+              <input
+                id="{{ id }}__{{ forloop.index }}"
+                type="checkbox"
+                sync-name="properties[{{ property_name }}]"
+                value="{{ option | strip | escape }}"
+              >
+              <label for="{{ id }}__{{ forloop.index }}" class="hdt-s-text">{{ option }}</label>
+            </div>
+          {%- endfor -%}
+          <input
+            type="hidden"
+            form="{{ product_form_id }}"
+            id="{{ id }}"
+            name="properties[{{ property_name }}]"
+            {% if block.settings.use_required %}
+              required
+            {% endif %}
+          >
+        {%- endif -%}
+      </hdt-block-required>
+
+      {%- when 'upload' -%}
+      <div class="hdt-line-item-property">
+        <input
+          id="photo-upload"
+          type="file"
+          class="hdt-field__input hdt-upload-input"
+          accept="image/*"
+          multiple
+          form="{{ product_form_id }}"
+          name="properties[{{ property_name }}][]"
+          hidden
+        >
+
+        <label for="photo-upload" class="upload-img-custom">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" x2="12" y1="3" y2="15"></line>
+          </svg>
+
+          <p><strong>Click to upload photos</strong> (jpg, png, heic)</p>
+          <p class="text-xs">You can upload multiple images</p>
+        </label>
+
+        <!-- Preview -->
+        <div class="hdt-upload-preview" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;"></div>
+      </div>
+
+
+      
+      {%- when 'color' -%}
+      <hdt-block-required
+        detect="checked"
+        event="change"
+        class="hdt-line-item-property hdt-line-item-property--color"
+      >
+        <label class="hdt-s-text hdt-block hdt-product-form__label">
+          {{ block.settings.title }}
+        </label>
+
+        <div class="hdt-color-grid">
+
+          {%- assign has_checked = false -%}
+
+          {%- for i in (1..9) -%}
+
+            {%- assign name_key = 'color_name_' | append: i -%}
+            {%- assign image_key = 'color_image_' | append: i -%}
+
+            {%- assign color_name = block.settings[name_key] -%}
+            {%- assign color_image = block.settings[image_key] -%}
+
+            {%- if color_image != blank -%}
+
+              <div class="hdt-color-item">
+                <input
+                  type="radio"
+                  id="{{ id }}__{{ i }}"
+                  name="properties[{{ property_name }}]"
+                  value="{{ color_name }}"
+                  form="{{ product_form_id }}"
+                  {% if has_checked == false %}
+                    checked
+                    {%- assign has_checked = true -%}
+                  {% endif %}
+                  {% if block.settings.use_required %}required{% endif %}
+                >
+
+                <label for="{{ id }}__{{ i }}">
+                  <span class="hdt-color-image">
+                    <img
+                      src="{{ color_image | image_url: width: 200 }}"
+                      alt="{{ color_name }}"
+                      loading="lazy"
+                    >
+                  </span>
+
+                  <span class="hdt-color-name">
+                    {{ color_name }}
+                  </span>
+                </label>
+              </div>
+
+            {%- endif -%}
+
+          {%- endfor -%}
+
+        </div>
+      </hdt-block-required>
+
+  {%- endcase -%}
+</div>
+
+<script>
+let selectedFiles = [];
+
+document.addEventListener('change', function (e) {
+  const input = e.target;
+  if (!input.classList.contains('hdt-upload-input')) return;
+
+  const preview = input
+    .closest('.hdt-line-item-property')
+    .querySelector('.hdt-upload-preview');
+
+  Array.from(input.files).forEach(file => {
+    // tránh duplicate theo name + size
+    const exists = selectedFiles.some(
+      f => f.name === file.name && f.size === file.size
+    );
+    if (!exists) selectedFiles.push(file);
+  });
+
+  renderPreview(preview);
+  input.value = ''; // 🔥 reset input để tránh add lại
+});
+
+function renderPreview(preview) {
+  preview.innerHTML = '';
+
+  selectedFiles.forEach((file, index) => {
+    const reader = new FileReader();
+    reader.onload = e => {
+      const wrapper = document.createElement('div');
+      wrapper.style.position = 'relative';
+
+      const img = document.createElement('img');
+      img.src = e.target.result;
+      img.style.width = '120px';
+      img.style.height = '120px';
+      img.style.objectFit = 'cover';
+      img.style.borderRadius = '8px';
+
+      // nút xoá
+      const remove = document.createElement('button');
+      remove.innerHTML = '✕';
+      remove.style.cssText = `
+        position:absolute;
+        top:4px;
+        right:4px;
+        background:#000;
+        color:#fff;
+        border:none;
+        border-radius:50%;
+        width:20px;
+        height:20px;
+        cursor:pointer;
+      `;
+
+      remove.onclick = () => {
+        selectedFiles.splice(index, 1);
+        renderPreview(preview);
+      };
+
+      wrapper.appendChild(img);
+      wrapper.appendChild(remove);
+      preview.appendChild(wrapper);
+    };
+    reader.readAsDataURL(file);
+  });
+}
+</script>
+
+
+{% schema %}
+{
+  "name": "t:sections.main-product.blocks.line_item_property.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_content",
+      "label": "Title optional"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-product.blocks.line_item_property.settings.paragraph"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.property_label.label",
+      "default": "Your label"
+    },
+    {
+      "type": "select",
+      "id": "property_type",
+      "options": [
+        {
+          "value": "text",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.property_type.options__1.label"
+        },
+        {
+          "value": "checkbox",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.property_type.options__2.label"
+        },
+        {
+          "value": "options",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.property_type.options__3.label"
+        },
+        {
+          "value": "upload",
+          "label": "Image"
+        },
+        {
+          "value": "color",
+          "label": "Color"
+        }
+      ],
+      "default": "text",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.property_type.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_required",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.use_required.label",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.use_required.info",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_at_ck_cart",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.show_at_ck_cart.label",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.show_at_ck_cart.info",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Config image background"
+    },
+    {
+      "type": "text",
+      "id": "color_name_1",
+      "label": "Color name 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "color_image_1",
+      "label": "Color image 1"
+    },
+    {
+      "type": "text",
+      "id": "color_name_2",
+      "label": "Color name 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "color_image_2",
+      "label": "Color image 2"
+    },
+    {
+      "type": "text",
+      "id": "color_name_3",
+      "label": "Color name 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "color_image_3",
+      "label": "Color image 3"
+    },
+        {
+      "type": "text",
+      "id": "color_name_4",
+      "label": "Color name 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "color_image_4",
+      "label": "Color image 4"
+    },
+    {
+      "type": "text",
+      "id": "color_name_5",
+      "label": "Color name 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "color_image_5",
+      "label": "Color image 5"
+    },
+    {
+      "type": "text",
+      "id": "color_name_6",
+      "label": "Color name 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "color_image_6",
+      "label": "Color image 6"
+    },
+        {
+      "type": "text",
+      "id": "color_name_7",
+      "label": "Color name 7"
+    },
+    {
+      "type": "image_picker",
+      "id": "color_image_7",
+      "label": "Color image 7"
+    },
+        {
+      "type": "text",
+      "id": "color_name_8",
+      "label": "Color name 8"
+    },
+    {
+      "type": "image_picker",
+      "id": "color_image_8",
+      "label": "Color image 8"
+    },
+        {
+      "type": "text",
+      "id": "color_name_9",
+      "label": "Color name 9"
+    },
+    {
+      "type": "image_picker",
+      "id": "color_image_9",
+      "label": "Color image 9"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-product.blocks.line_item_property.settings.header__1.content",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.header__1.info"
+    },
+    {
+      "type": "select",
+      "id": "type_text",
+      "options": [
+        {
+          "value": "short",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.type_text.options__1.label"
+        },
+        {
+          "value": "long",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.type_text.options__2.label"
+        }
+      ],
+      "default": "short",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.type_text.label"
+    },
+    {
+      "type": "number",
+      "id": "max_characters",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.max_characters.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-product.blocks.line_item_property.settings.header__2.content",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.header__2.info"
+    },
+    {
+      "type": "text",
+      "id": "ck_value",
+      "default": "Yes",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.ck_value.label",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.ck_value.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-product.blocks.line_item_property.settings.header__3.content",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.header__3.info"
+    },
+    {
+      "type": "select",
+      "id": "type_options",
+      "options": [
+        {
+          "value": "select",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.type_options.options__1.label"
+        },
+        {
+          "value": "radio",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.type_options.options__2.label"
+        }
+      ],
+      "default": "select",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.type_options.label"
+    },
+    {
+      "type": "textarea",
+      "id": "options",
+      "default": "option1\noption2",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.options.label",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.options.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-product.blocks.line_item_property.settings.header__4.content"
+    },
+    {
+      "type": "radio",
+      "id": "visibility",
+      "default": "all",
+      "options": [
+        {
+          "value": "all",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.visibility.options__1.label"
+        },
+        {
+          "value": "collection",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.visibility.options__2.label"
+        },
+        {
+          "value": "type",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.visibility.options__3.label"
+        },
+        {
+          "value": "tag",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.visibility.options__4.label"
+        },
+        {
+          "value": "product",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.visibility.options__5.label"
+        },
+        {
+          "value": "metafield",
+          "label": "t:sections.main-product.blocks.line_item_property.settings.visibility.options__6.label"
+        }
+      ],
+      "label": "t:sections.main-product.blocks.line_item_property.settings.visibility.label",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.visibility.info"
+    },
+    {
+      "type": "collection_list",
+      "id": "collection_based",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.collection_based.label",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.collection_based.info"
+    },
+    {
+      "type": "textarea",
+      "id": "type_based",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.type_based.label",
+      "placeholder": "type1, type2",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.type_based.info"
+    },
+    {
+      "type": "textarea",
+      "id": "tag_based",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.tag_based.label",
+      "placeholder": "tag1, tag2",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.tag_based.info"
+    },
+    {
+      "type": "product_list",
+      "id": "product_based",
+      "label": "t:sections.main-product.blocks.line_item_property.settings.product_based.label",
+      "info": "t:sections.main-product.blocks.line_item_property.settings.product_based.info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main-product.blocks.line_item_property.name"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,68 @@
+<style>
+    .group-img-text {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .gi-svg {
+          min-width: 56px;
+        width: 56px;
+        height: 56px;
+        background-color: #563c2933;
+        text-align: center;
+        align-content: center;
+        border-radius: 50%;
+    }
+    .gi-svg svg {
+          margin-inline: auto;
+          color: #563c29;
+    }
+    .group-img-text h3 {
+      font-size: 18px;
+      color: #281d15;
+    }
+    .group-img-text p {
+      font-size: 16px;
+      color: #847062;
+    }
+</style>
+
+<div class="group-img-text" style="">
+  <div class="gi-svg">
+      {{ block.settings.svg }}
+  </div>
+  <div class="flex-1">
+    <h3 class="">{{ block.settings.title }}</h3>
+    <p class="">
+      {{ block.settings.sub_title }}
+    </p>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Text width image",
+  "settings": [
+    {
+        "type": "textarea",
+        "id": "svg",
+        "label": "SVG"      
+    },
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+    },
+    {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Title"
+    }
+  ],
+    "presets": [
+        {
+            "name": "Text width image"
+        }
+    ]
+}
+{% endschema %}

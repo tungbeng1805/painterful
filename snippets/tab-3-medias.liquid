@@ -1,0 +1,190 @@
+<div class="custom-tabs">
+  <div class="tabs-header">
+    <button class="tab-btn active" data-tab="tab1">{{ _block.settings.name_tab_1 }}</button>
+    <button class="tab-btn" data-tab="tab2">{{ _block.settings.name_tab_2 }}</button>
+    <button class="tab-btn" data-tab="tab3">{{ _block.settings.name_tab_3 }}</button>
+  </div>
+
+  <div class="tabs-content">
+    <div class="tab-panel active" id="tab1">
+      <p>{{ _block.settings.data_tab_1 }}</p>
+    </div>
+
+    <div class="tab-panel" id="tab2">
+      <p>{{ _block.settings.data_tab_2 }}</p>
+    </div>
+
+    <div class="tab-panel" id="tab3">
+      <p>{{ _block.settings.data_tab_3 }}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.custom-tabs {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 2px solid #eee;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+  border-bottom: 2px solid #000;
+}
+
+.tabs-content {
+  padding: 20px 0;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+.tab-panel .content {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+@media(max-width: 575px){
+  .custom-tabs {
+    display: none;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const tabs = document.querySelectorAll(".tab-btn");
+  const panels = document.querySelectorAll(".tab-panel");
+
+  tabs.forEach(tab => {
+
+    tab.addEventListener("click", function(){
+
+      tabs.forEach(t => t.classList.remove("active"));
+      panels.forEach(p => p.classList.remove("active"));
+
+      tab.classList.add("active");
+
+      const target = tab.getAttribute("data-tab");
+      document.getElementById(target).classList.add("active");
+
+    });
+
+  });
+
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const CHAR_LIMIT = 600; // ~ tương đương ~200 từ
+
+  function truncateHTML(node, limit) {
+    let count = 0;
+
+    function walk(currentNode) {
+      if (count >= limit) return null;
+
+      if (currentNode.nodeType === Node.TEXT_NODE) {
+        const text = currentNode.textContent;
+        const remaining = limit - count;
+
+        if (text.length <= remaining) {
+          count += text.length;
+          return document.createTextNode(text);
+        } else {
+          count += remaining;
+          return document.createTextNode(text.slice(0, remaining) + "...");
+        }
+      }
+
+      if (currentNode.nodeType === Node.ELEMENT_NODE) {
+        const clone = currentNode.cloneNode(false);
+
+        for (let child of currentNode.childNodes) {
+          const truncatedChild = walk(child);
+          if (truncatedChild) {
+            clone.appendChild(truncatedChild);
+          } else {
+            break;
+          }
+        }
+
+        return clone;
+      }
+
+      return null;
+    }
+
+    const wrapper = document.createElement("div");
+    for (let child of node.childNodes) {
+      const truncated = walk(child);
+      if (truncated) {
+        wrapper.appendChild(truncated);
+      } else {
+        break;
+      }
+    }
+
+    return wrapper.innerHTML;
+  }
+
+  document.querySelectorAll(".tab-panel").forEach(panel => {
+    const originalHTML = panel.innerHTML.trim();
+    const plainText = panel.innerText.trim();
+
+    if (plainText.length <= CHAR_LIMIT) return;
+
+    const shortHTML = truncateHTML(panel, CHAR_LIMIT);
+
+    panel.innerHTML = `
+      <div class="content collapsed">${shortHTML}</div>
+      <div class="content full" style="display:none;">${originalHTML}</div>
+      <span class="read-more-btn">Read more</span>
+    `;
+
+    const btn = panel.querySelector(".read-more-btn");
+    const collapsed = panel.querySelector(".collapsed");
+    const full = panel.querySelector(".full");
+
+    let expanded = false;
+
+    btn.addEventListener("click", function () {
+      expanded = !expanded;
+
+      collapsed.style.display = expanded ? "none" : "block";
+      full.style.display = expanded ? "block" : "none";
+      btn.innerText = expanded ? "Read less" : "Read more";
+    });
+  });
+});
+</script>

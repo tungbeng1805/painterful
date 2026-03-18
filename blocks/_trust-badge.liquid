@@ -1,0 +1,181 @@
+
+<style>
+    .badges-container {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 12px;
+      justify-content: space-between;
+      padding-top: 20px;
+      border-top: 1px solid #e0d9d1;
+    }
+
+    /* Mỗi badge item */
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-icon {
+      width: 40px; 
+      height: 40px;
+      color: #3b82f6;
+      flex-shrink: 0;
+      text-align: center;
+      align-content: center;
+      background-color: #be56371a;
+      border-radius: 50%;
+    }
+
+    .badge-text {
+      font-size: 14px;
+      color: #3e2816;
+      font-weight: 500;
+    }
+
+    .badge-text-p {
+      color: #3e2816;
+    }
+
+    .badge-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: #be5637;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      margin: 0 auto;
+    }
+
+    .badge-icon.primary {
+      color: #3b82f6;
+    }
+
+    @media(max-width: 575px){
+      .badges-container {
+            flex-direction: column;
+      }
+      .badge-icon {
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+      }
+      .badge-icon svg {
+        width: 15px;
+      }
+      .badge-text-p {
+        display: none;
+      }
+    }
+  </style>
+
+  <div class="badges-container">
+    <div class="badge-item">
+      <div class="badge-icon primary">
+          {{ block.settings.svg1 }}
+      </div>
+      <div>
+        <div class="badge-text">{{ block.settings.text1 }}</div>
+        <p class="badge-text-p">{{ block.settings.sub_text1 }}</p>
+      </div>
+    </div>
+
+    <div class="badge-item">
+      <div class="badge-icon primary">
+          {{ block.settings.svg2 }}
+      </div>
+      <div>
+        <div class="badge-text">{{ block.settings.text2 }}</div>
+        <p class="badge-text-p">{{ block.settings.sub_text2 }}</p>
+      </div>
+    </div>
+
+    <div class="badge-item">
+      <div class="badge-icon primary">
+        {{ block.settings.svg3 }}
+      </div>
+      <div>
+        <div class="badge-text">{{ block.settings.text3 }}</div>
+        <p class="badge-text-p">{{ block.settings.sub_text3 }}</p>
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "Trust badges",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Box 1"
+    },
+    {
+      "type": "textarea",
+      "id": "svg1",
+      "label": "Svg 1"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "Title 1",
+      "default": "100% Hand-Drawn"
+    },
+    {
+      "type": "text",
+      "id": "sub_text1",
+      "label": "Sub Title 1",
+      "default": "Quality"
+    },
+    {
+      "type": "header",
+      "content": "Box 2"
+    },
+    {
+      "type": "textarea",
+      "id": "svg2",
+      "label": "Svg 2"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "Title 2",
+      "default": "Approve"
+    },
+    {
+      "type": "text",
+      "id": "sub_text2",
+      "label": "Sub Title 2",
+      "default": "Before Print"
+    },
+    {
+      "type": "header",
+      "content": "Box 3"
+    },
+    {
+      "type": "textarea",
+      "id": "svg3",
+      "label": "Svg 3"
+    },
+    {
+      "type": "text",
+      "id": "text3",
+      "label": "Title 3",
+      "default": "Fast US Shipping"
+    },
+    {
+      "type": "text",
+      "id": "sub_text3",
+      "label": "Sub Title 3",
+      "default": "3-5 Days"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust badges",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

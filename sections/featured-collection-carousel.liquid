@@ -30,7 +30,24 @@
 {%- capture sizes -%}
   (min-width: 1150px) calc(({{ current_width }} -  ({{ space_item }} * ( {{ section.settings.col_dk }} - 1 ))) * 1 / {{ section.settings.col_dk }}),(min-width: 768px) calc( ({{ current_width_tb }} - ({{ space_item_tb }} * ( {{ section.settings.col_tb }} - 1 ))) * 1 / {{ section.settings.col_tb }}), calc( ({{ current_width_mb }} - ({{ space_item_mb }} * ( {{ section.settings.col_mb }} - 1 ) )) * 1 / {{ section.settings.col_mb }})
 {%- endcapture -%}
-{%- style -%}.hdt-has-bg-img{position:relative}.hdt-has-bg-img .hdt-section-bg-img img{width:100%;height:100%;object-fit:cover;object-position:center}@media(max-width:1149px){.hdt-container-full.lg\:hdt-ps-max{max-width:var(--container-max-width-padding-md);padding-inline-start:3rem}}@media(max-width:767px){.hdt-container-full.lg\:hdt-ps-max{max-width:100vw;padding-inline-start:1.5rem}}{%- endstyle -%}
+{%- style -%}
+.hdt-has-bg-img{position:relative}
+.hdt-has-bg-img .hdt-section-bg-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+@media(max-width:1149px){.hdt-container-full.lg\:hdt-ps-max{max-width:var(--container-max-width-padding-md);padding-inline-start:3rem}}
+@media(max-width:767px){.hdt-container-full.lg\:hdt-ps-max{max-width:100vw;padding-inline-start:1.5rem}}
+
+/* Mobile: 2 rows per "page" (JS groups slides) */
+@media (max-width: 767px){
+  #{{ section.id }} .hdt-slide-group__grid{
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.col_mb | default: 2 }}, minmax(0, 1fr));
+    gap: var(--slide-spacing);
+  }
+  #{{ section.id }} .hdt-slide-group__item{
+    min-width: 0;
+  }
+}
+{%- endstyle -%}
 <div id="{{ section.id }}" class="hdt-section-spacing hdt-s-gradient{% if section.settings.bg_image != blank %} hdt-has-bg-img{% endif %}{% if section.settings.half_item %} hdt-half_item{% endif %}" style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px; --section-prate:{{ section.settings.padding_rate }};" color-scheme="{{ section.settings.color_scheme }}">
   {%- if section.settings.bg_image != blank -%}
     <div class="hdt-section-bg-img hdt-absolute hdt-top-0 hdt-left-0 hdt-right-0 hdt-bottom-0 hdt-pe-none" hdt-reveal="slide-in" timeline>
@@ -221,6 +238,77 @@
       el.innerText = `${rating} (${formattedReviews} reviews)`;
     });
   });
+</script>
+
+<script>
+  (() => {
+    const sliderId = "Slider-{{ section.id }}";
+    const slider = document.getElementById(sliderId);
+    if (!slider) return;
+
+    const mq = window.matchMedia("(max-width: 767px)");
+    const groupSize = ({{ section.settings.col_mb | default: 2 }} * 2);
+
+    const isGrouped = () => slider.hasAttribute("data-hdt-grouped");
+    const container = () => slider.querySelector(".hdt-slider__container");
+
+    const groupSlides = () => {
+      const c = container();
+      if (!c) return;
+      if (isGrouped()) return;
+
+      // Save original markup for restore
+      slider.dataset.hdtOriginalSlides ||= c.innerHTML;
+
+      const slides = Array.from(c.children).filter(el => el.classList && el.classList.contains("hdt-slider__slide"));
+      if (slides.length <= groupSize) return; // nothing to group
+
+      c.innerHTML = "";
+
+      for (let i = 0; i < slides.length; i += groupSize) {
+        const group = document.createElement("div");
+        group.className = "hdt-slider__slide hdt-slide-group";
+
+        const grid = document.createElement("div");
+        grid.className = "hdt-slide-group__grid";
+
+        slides.slice(i, i + groupSize).forEach(slide => {
+          slide.classList.remove("hdt-slider__slide");
+          slide.classList.add("hdt-slide-group__item");
+          slide.style.paddingInlineStart = "0";
+          grid.appendChild(slide);
+        });
+
+        group.appendChild(grid);
+        c.appendChild(group);
+      }
+
+      slider.style.setProperty("--slide-size", "100%");
+      slider.setAttribute("data-hdt-grouped", "true");
+      if (typeof slider.reInit === "function") slider.reInit();
+    };
+
+    const ungroupSlides = () => {
+      const c = container();
+      if (!c) return;
+      if (!isGrouped()) return;
+      if (!slider.dataset.hdtOriginalSlides) return;
+
+      c.innerHTML = slider.dataset.hdtOriginalSlides;
+      slider.style.removeProperty("--slide-size");
+      slider.removeAttribute("data-hdt-grouped");
+      if (typeof slider.reInit === "function") slider.reInit();
+    };
+
+    const apply = () => {
+      if (mq.matches) groupSlides();
+      else ungroupSlides();
+    };
+
+    apply();
+    mq.addEventListener?.("change", apply);
+    window.addEventListener("resize", apply, { passive: true });
+  })();
 </script>
 
 {% schema %}

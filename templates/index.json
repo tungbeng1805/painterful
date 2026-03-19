@@ -1979,7 +1979,7 @@
               "type": "heading",
               "name": "Heading",
               "settings": {
-                "heading": "<p><strong>Witness the Magic Unfold.</strong></p>",
+                "heading": "<p><strong>Witness the Magic Unfold</strong></p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "heading_size": "h2",

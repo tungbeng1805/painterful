@@ -1,1 +1,2437 @@
-{"sections":{"breadcrumb":{"type":"brc-nav-product","disabled":true,"custom_css":[".hdt-s-gradient {border: 1px solid #e0d9d180;}"],"settings":{"back_next_pr":true,"color_scheme":"scheme-3fd2c3d1-d752-42b9-a4d2-17bfc10b6555","padding_top":15,"padding_bottom":15,"padding_rate":75}},"main-product":{"type":"main-product","blocks":{"group_product_rjwCiM":{"type":"_group-product","settings":{},"blocks":{"product_title_JjxmKw":{"type":"_product-title","settings":{"hdt_pr_title_size":"h4"},"blocks":{}},"custom_liquid_w6AbyN":{"type":"_custom-liquid","name":"Custom liquid","settings":{"liquid":"<div class=\"vote-star\"><div class=\"loox-rating\" data-id=\"{{ product.id }}\" data-rating=\"{{ product.metafields.loox.avg_rating }}\" data-raters=\"{{ product.metafields.loox.num_reviews }}\"><\/div>\n<a href=\"#looxReviews\" style=\"color: #be5637; text-decoration: underline;\">Read Reviews<\/a><\/div>"},"blocks":{}},"product_badges_3qxfaW":{"type":"_product-badges","disabled":true,"settings":{"special":"","min":4,"max":80,"content":"Selling fast! [count] people have this in their carts.","icon_svg":"flash","ani":"none"},"blocks":{}},"product_price_VhBaXe":{"type":"_product-price","settings":{},"blocks":{}},"product_description_xNEez4":{"type":"_product-description","name":"t:sections.main-product.blocks.description.name","disabled":true,"settings":{"des":"2","short_des":"{{ closest.product.metafields.custom.short_description | metafield_tag }}","readm":false,"length":30,"readm_txt":"Read more","readl_txt":"Read less"},"blocks":{}},"product_countdown_kTqkaR":{"type":"_product-countdown","settings":{"color_scheme":"","icon":"none","svg_upload":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" class=\"hdt-ani-tada is--infinite hdt-inine-block\" width=\"14\" height=\"14\" viewBox=\"0 0 14 14\"><path d=\"M6.7796 0.828412C3.1501 0.828412 0.193808 3.7847 0.193808 7.41421C0.193808 11.0437 3.1501 14 6.7796 14C10.4091 14 13.3654 11.0437 13.3654 7.41421C13.3654 3.7847 10.4091 0.828412 6.7796 0.828412ZM6.7796 12.5365C3.95503 12.5365 1.65732 10.2388 1.65732 7.41421C1.65732 4.58963 3.95503 2.29192 6.7796 2.29192C9.60418 2.29192 11.9019 4.58963 11.9019 7.41421C11.9019 10.2388 9.60418 12.5365 6.7796 12.5365ZM0.252349 2.65048C-0.0549885 2.38705 -0.0842587 1.91873 0.179173 1.61871C0.669449 1.05526 1.24754 0.550345 1.88416 0.125928C2.22077 -0.100916 2.67446 -0.0131058 2.9013 0.323501C3.12814 0.660109 3.04033 1.1138 2.70373 1.34064C2.17686 1.69188 1.70122 2.1163 1.29144 2.58462C1.14509 2.75293 0.947516 2.83342 0.742624 2.83342C0.564631 2.83384 0.392712 2.76872 0.259666 2.65048H0.252349ZM10.8555 1.34064C10.5189 1.1138 10.4311 0.660109 10.6579 0.323501C10.8847 -0.0131058 11.3384 -0.100916 11.675 0.125928C12.3117 0.550345 12.8824 1.05526 13.38 1.61871C13.6435 1.92604 13.6142 2.38705 13.3069 2.65048C13.2349 2.71418 13.1511 2.76303 13.0602 2.79421C12.9693 2.82539 12.8732 2.83829 12.7773 2.83217C12.6814 2.82605 12.5876 2.80102 12.5015 2.75854C12.4153 2.71606 12.3383 2.65695 12.2751 2.58462C11.859 2.1117 11.3844 1.69368 10.8628 1.34064H10.8555ZM8.71875 8.1606C9.01877 8.43135 9.04804 8.89235 8.77729 9.19237C8.63094 9.35336 8.43337 9.44117 8.22848 9.44117C8.05286 9.44117 7.88455 9.38263 7.74552 9.25823L6.28933 7.96302C6.13566 7.82399 6.04053 7.62642 6.04053 7.41421V4.48719C6.04053 4.08472 6.36982 3.75543 6.77228 3.75543C7.17475 3.75543 7.50404 4.08472 7.50404 4.48719V7.08492L8.71875 8.1606Z\"><\/path><\/svg>","ani":"hdt-ani-tada","content":"HURRY UP! SALE ENDS IN:","alignment":"center","effect_cd":"move_top"},"blocks":{}},"product_variant_picker_RJxUVf":{"type":"_product-variant-picker","settings":{"enable_historystate":true,"color_picker_type":"color_rounded","color_size":"small","picker_type":"block","size_chart_source":"image","size_chart_page":"","title":"Variant picker"},"blocks":{}},"product_item_property_AFM39k":{"type":"_product-item-property","name":"t:sections.main-product.blocks.line_item_property.name","settings":{"title_content":"Select Phone Model","title":"Please check compatibility images first","property_type":"options","use_required":false,"show_at_ck_cart":true,"color_name_1":"","color_name_2":"","color_name_3":"","color_name_4":"","color_name_5":"","color_name_6":"","color_name_7":"","color_name_8":"","color_name_9":"","type_text":"short","ck_value":"Yes","type_options":"select","options":"iPhone 7\niPhone 7 Plus\niPhone 8\niPhone 8 Plus\niPhone X\niPhone XR\niPhone XS\niPhone XS MAX\niPhone 11\niPhone 11 Pro\niPhone 11 Pro Max\niPhone 12\niPhone 12 Mini\niPhone 12 Pro\niPhone 12 Pro Max\niPhone 13\niPhone 13 Mini\niPhone 13 Pro\niPhone 13 Pro Max\niPhone 14\niPhone 14 Pro\niPhone 14 Pro Max\niPhone 14 Plus\niPhone 15\niPhone 15 Pro\niPhone 15 Pro Max\niPhone 15 Plus\niPhone 16\niPhone 16 Pro\niPhone 16 Pro Max\niPhone 16 Plus\niPhone 17\niPhone 17 Air\niPhone 17 Pro\niPhone 17 Pro Max\nSamsung Galaxy S20 FE\nSamsung Galaxy S20 Ultra\nSamsung Galaxy S20+\nSamsung Galaxy S20\nSamsung Galaxy S21\nSamsung Galaxy S21 Plus\nSamsung Galaxy S21 Ultra\nSamsung Galaxy S22\nSamsung Galaxy S22 Plus\nSamsung Galaxy S22 Ultra\nSamsung Galaxy S23\nSamsung Galaxy S23 Plus\nSamsung Galaxy S23 Ultra\nSamsung Galaxy S24\nSamsung Galaxy S24 Plus\nSamsung Galaxy S24 Ultra\nSamsung Galaxy S25\nSamsung Galaxy S25 Plus\nSamsung Galaxy S25 Ultra","visibility":"product","collection_based":[],"type_based":"","tag_based":"","product_based":["signature-modern-pet-portrait-phone-case"]},"blocks":{}},"product_item_property_zUDRAY":{"type":"_product-item-property","name":"t:sections.main-product.blocks.line_item_property.name","settings":{"title_content":"","title":"Select Background","property_type":"color","use_required":false,"show_at_ck_cart":true,"color_name_1":"Soft White","color_image_1":"shopify:\/\/shop_images\/soft-white-custom-portrait-background.jpg","color_name_2":"Blush Sand","color_image_2":"shopify:\/\/shop_images\/blush-sand-custom-portrait-background.jpg","color_name_3":"Charcoal Black","color_image_3":"shopify:\/\/shop_images\/charcoal-black-custom-portrait-background.jpg","color_name_4":"Olive Muted","color_image_4":"shopify:\/\/shop_images\/olive-muted-custom-portrait-background.jpg","color_name_5":"Warm Taupe","color_image_5":"shopify:\/\/shop_images\/warm-taupe-custom-portrait-background.jpg","color_name_6":"Deep Navy","color_image_6":"shopify:\/\/shop_images\/deep-navy-custom-portrait-background.jpg","color_name_7":"Botanical Whisper","color_image_7":"shopify:\/\/shop_images\/botanical-whisper-custom-portrait-background.jpg","color_name_8":"Gallery Flow","color_image_8":"shopify:\/\/shop_images\/gallery-flow-custom-portrait-background.jpg","color_name_9":"Natural Linen","color_image_9":"shopify:\/\/shop_images\/natural-linen-custom-portrait-background.jpg","type_text":"short","ck_value":"Yes","type_options":"select","options":"option1\noption2","visibility":"product","collection_based":[],"type_based":"","tag_based":"","product_based":["signature-modern-pet-portrait","chic-minimalist-human-portrait","lifelike-realistic-human-portrait","signature-modern-pet-portrait-velveteen-blanket","signature-modern-pet-portrait-phone-case"]},"blocks":{}},"product_item_property_MfnMNC":{"type":"_product-item-property","name":"t:sections.main-product.blocks.line_item_property.name","settings":{"title_content":"Color Scheme Options","title":"","property_type":"options","use_required":false,"show_at_ck_cart":true,"color_name_1":"","color_name_2":"","color_name_3":"","color_name_4":"","color_name_5":"","color_name_6":"","color_name_7":"","color_name_8":"","color_name_9":"","type_text":"short","ck_value":"Yes","type_options":"select","options":"Blue\nPink\nGreen\nGray","visibility":"product","collection_based":[],"type_based":"","tag_based":"","product_based":["custom-90s-vintage-pet-tshirt","custom-90s-vintage-pet-sweatshirt","custom-90s-vintage-pet-hoodie"]},"blocks":{}},"product_extra_link_Hq4nxF":{"type":"_product-extra-link","name":"t:sections.main-product.blocks.extra_link.name","settings":{},"blocks":{"product_size_chart_pWpBdQ":{"type":"_product-size-chart","name":"Size chart","settings":{"title":"Photo Guide","size_chart":"3","size_chart_source":"page","size_chart_page":"pet-photo-guide","size_chart_image":"shopify:\/\/shop_images\/1be59897a1f62fa876e7.jpg"},"blocks":{}}},"block_order":["product_size_chart_pWpBdQ"]},"product_item_property_JrCQWy":{"type":"_product-item-property","name":"t:sections.main-product.blocks.line_item_property.name","settings":{"title_content":" Upload Your Photo","title":"Image","property_type":"upload","use_required":true,"show_at_ck_cart":true,"color_name_1":"","color_name_2":"","color_name_3":"","color_name_4":"","color_name_5":"","color_name_6":"","color_name_7":"","color_name_8":"","color_name_9":"","type_text":"short","ck_value":"Yes","type_options":"select","options":"option1\noption2","visibility":"all","collection_based":[],"type_based":"","tag_based":"","product_based":[]},"blocks":{}},"product_item_property_PCUwwC":{"type":"_product-item-property","name":"t:sections.main-product.blocks.line_item_property.name","settings":{"title_content":"Pet's Name \/ Text (Optional)","title":"Pet's name","property_type":"text","use_required":false,"show_at_ck_cart":true,"color_name_1":"","color_name_2":"","color_name_3":"","color_name_4":"","color_name_5":"","color_name_6":"","color_name_7":"","color_name_8":"","color_name_9":"","type_text":"short","ck_value":"Yes","type_options":"select","options":"option1\noption2","visibility":"all","collection_based":[],"type_based":"","tag_based":"","product_based":[]},"blocks":{}},"product_item_property_E4dNbb":{"type":"_product-item-property","name":"t:sections.main-product.blocks.line_item_property.name","settings":{"title_content":"Optional Note","title":"Anything else we should know? (e.g., specific colors, removing details, or special layout requests)","property_type":"text","use_required":false,"show_at_ck_cart":true,"color_name_1":"","color_name_2":"","color_name_3":"","color_name_4":"","color_name_5":"","color_name_6":"","color_name_7":"","color_name_8":"","color_name_9":"","type_text":"short","ck_value":"Yes","type_options":"select","options":"option1\noption2","visibility":"all","collection_based":[],"type_based":"","tag_based":"","product_based":[]},"blocks":{}},"quantity_selector_6zJAfX":{"type":"_quantity-selector","disabled":true,"settings":{},"blocks":{}},"product_buy_button_9gRLMx":{"type":"_product-buy-button","settings":{"show_dynamic_checkout":false,"show_gift_card_recipient":false,"show_wishlist":false,"show_compare":false,"show_price_variant":false},"blocks":{}},"custom_liquid_bzYDTG":{"type":"_custom-liquid","name":"Custom liquid","settings":{"liquid":"{% render 'delivery' %}"},"blocks":{}},"product_back_instock_qNYiT7":{"type":"_product_back_instock","settings":{"only_show_soldout":true},"blocks":{}},"3_accordion_yPtQxm":{"type":"_3-accordion","name":"3 Accordion","settings":{"name_tab_1":"Description","data_tab_1":"{{ closest.product.description }}","name_tab_2":"Shipping & Return","data_tab_2":"<p><strong>Custom Artwork Creation Time<\/strong><br\/>• Artwork previews will be sent to you via email within 1-3 days.<br\/>• Once approved, production will begin within 2-4 business days.<br\/><\/p><p><strong>Shipping Times<\/strong><br\/>Shipping times vary by destination and may increase slightly during peak holiday seasons.<br\/>• <strong>USA:<\/strong> 4–8 business days<br\/>• <strong>UK, CA, AUS:<\/strong> 7–14 business days<br\/>• <strong>Europe:<\/strong> 7–21 business days<br\/><em>(All orders are shipped fully tracked)<br\/><\/em><\/p><p><strong>Returns & Replacements<\/strong><br\/>Because all of our products are 100% custom-made specifically for your pet, we cannot accept returns or exchanges for a change of mind. However, if your item arrives damaged, has printing errors, or if you receive the wrong product, please let us know. We will gladly arrange a replacement for you immediately—<strong>no questions asked!<\/strong><\/p>","name_tab_3":"Satisfaction Guarantee","data_tab_3":"<p>We want you to be absolutely thrilled with your custom art! That is why we make sure you are part of the process from start to finish.<br\/><\/p><p>We will send you a digital preview of your portrait as soon as it's finished. You can request <strong>unlimited revisions<\/strong> until the artwork is absolutely perfect. We guarantee that your design will <strong>never<\/strong> be sent to print until you give us the final thumbs up!<br\/><\/p><p>Having crafted custom portraits for years and earning thousands of <strong>4.9\/5 star reviews<\/strong>, we truly believe we can deliver the best custom pet artwork you will ever own. Let's create your masterpiece today!<\/p>"},"blocks":{}}},"block_order":["product_title_JjxmKw","custom_liquid_w6AbyN","product_badges_3qxfaW","product_price_VhBaXe","product_description_xNEez4","product_countdown_kTqkaR","product_variant_picker_RJxUVf","product_item_property_AFM39k","product_item_property_zUDRAY","product_item_property_MfnMNC","product_extra_link_Hq4nxF","product_item_property_JrCQWy","product_item_property_PCUwwC","product_item_property_E4dNbb","quantity_selector_6zJAfX","product_buy_button_9gRLMx","custom_liquid_bzYDTG","product_back_instock_qNYiT7","3_accordion_yPtQxm"]},"main-product":{"type":"_product-medias","static":true,"settings":{"display_by_block":true,"color_scheme":"scheme-b15ec134-56b6-42aa-bb18-94333011f7c0","desktop_media_layout":"thumbnail_bottom","media_size":"medium","mobile_media_layout":"thumbnails","enable_thumb_efect":true,"show_first_media":false,"use_select_varaint_change_media":true,"enable_media_autoplay":true,"enable_video_looping":true,"image_ratio":"adapt_image","image_size":true,"image_zoom":"no","image_zoom_type":"external","zoom_level":2,"max_zoom_lightbox":3,"navUI":true,"nav_des":"default","nav_shape":"rounded","name_tab_1":"Description","data_tab_1":"<p><\/p>{{ closest.product.description }}","name_tab_2":"Shipping and Returns","data_tab_2":"<p><strong>Custom Artwork Creation Time<\/strong><br\/>• Artwork previews will be sent to you via email within 1-3 days.<br\/>• Once approved, production will begin within 2-4 business days.<br\/><\/p><p><strong>Shipping Times<\/strong><br\/>Shipping times vary by destination and may increase slightly during peak holiday seasons.<br\/>• <strong>USA:<\/strong> 4–8 business days<br\/>• <strong>UK, CA, AUS:<\/strong> 7–14 business days<br\/>• <strong>Europe:<\/strong> 7–21 business days<br\/><em>(All orders are shipped fully tracked)<br\/><\/em><\/p><p><strong>Returns & Replacements<\/strong><br\/>Because all of our products are 100% custom-made specifically for your pet, we cannot accept returns or exchanges for a change of mind. However, if your item arrives damaged, has printing errors, or if you receive the wrong product, please let us know. We will gladly arrange a replacement for you immediately—<strong>no questions asked!<\/strong><\/p>","name_tab_3":"Satisfaction Guarantee","data_tab_3":"<p>We want you to be absolutely thrilled with your custom art! That is why we make sure you are part of the process from start to finish.<br\/><\/p><p>We will send you a digital preview of your portrait as soon as it's finished. You can request <strong>unlimited revisions<\/strong> until the artwork is absolutely perfect. We guarantee that your design will <strong>never<\/strong> be sent to print until you give us the final thumbs up!<br\/><\/p><p>Having crafted custom portraits for years and earning thousands of <strong>4.9\/5 star reviews<\/strong>, we truly believe we can deliver the best custom pet artwork you will ever own. Let's create your masterpiece today!<\/p>"},"blocks":{}}},"block_order":["group_product_rjwCiM"],"custom_css":[".hdt-product-form__submit {height: 56px; border-radius: 5px;}",".hdt-product__extra-link {margin: 0px; float: right;}",".hdt-product__extra-link wrapp-open-pswp-btn {margin: 0px;}",".hdt-product__extra-link .hdt-s-text {text-decoration: underline;}"],"settings":{"sticky_atc":false,"product_list_fbt":[],"fbt_color_scheme":"","color_scheme":"scheme-b15ec134-56b6-42aa-bb18-94333011f7c0","full_width":false,"padding_top":30,"padding_bottom":30,"padding_rate":50}},"accordion_HzWxdG":{"type":"accordion","blocks":{"title_q8i3Hn":{"type":"title","settings":{"title":"Frequently Asked Questions"}},"accordion_item_3DPMn6":{"type":"accordion_item","settings":{"title":"1. Can I see the design before it is printed?","content":"Absolutely! You are part of the creative process. We will send you a digital preview for your approval and will offer unlimited revisions until you are 100% satisfied before we proceed to printing.","content_richtext":""}},"accordion_item_8MMg6p":{"type":"accordion_item","settings":{"title":"2. What kind of photo should I provide?","content":"For the best result, please provide a clear, front-facing photo with good lighting (avoid backlighting). Photos taken at your pet's eye level work best. We have a Photo Guide in each listing to help you. If you’re unsure, just send what you have—we’ll help you pick the perfect one!","content_richtext":""}},"accordion_item_BCVmm6":{"type":"accordion_item","settings":{"title":"3. Can you combine pets from separate photos into one portrait?","content":"Yes, we can! If you don't have a photo of your pets together, just send their individual photos. Please try to ensure each photo follows our Photo Guide so the final portrait looks seamless and beautiful.","content_richtext":""}},"accordion_item_WRqUR4":{"type":"accordion_item","settings":{"title":"4. How long does it take to receive my order?","content":"You will receive your digital preview within 1–3 business days. Once you approve the design, production and shipping usually take 4–8 business days. Please note that the timeline may be extended if multiple revisions are requested.","content_richtext":""}}},"block_order":["title_q8i3Hn","accordion_item_3DPMn6","accordion_item_8MMg6p","accordion_item_BCVmm6","accordion_item_WRqUR4"],"custom_css":[".hdt-custom-col-accordion-content {max-width: 800px; margin-inline: auto;}","h5 {text-align: center; font-size: 36px;}"],"name":"t:sections.accordion.name","settings":{"accordion_position":"start","accordion_icon":"1","open_first":false,"enable_link_list":false,"section_fullwidth":false,"color_scheme":"scheme-b15ec134-56b6-42aa-bb18-94333011f7c0","padding_top":30,"padding_bottom":30,"padding_rate":75}},"custom_section_pKaDXe":{"type":"custom-section","blocks":{"multi_row_aYKMVK":{"type":"_multi_row","settings":{"rounded":"none"},"blocks":{"multi_column_rEKRTH":{"type":"_multi_column","name":"Column","settings":{"column_dk":"12","column_tb":"12","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":0,"spacing_v_tb":0,"spacing_h_mb":0,"spacing_v_mb":0,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f7f4f1","rounded":"hdt-rounded-full"},"blocks":{"heading_7R9JzB":{"type":"heading","settings":{"heading":"<p>See Why Pet Parents Love Our Custom Art<br\/><\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h2","text_color":"hdt-s-text","font_size_heading_lg":50,"font_size_heading_md":30,"font_size_heading":24,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"spacer_EBfNxe":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":10,"space_md":50,"space":16},"blocks":{}}},"block_order":["heading_7R9JzB","spacer_EBfNxe"]},"multi_column_PGcFDj":{"type":"_multi_column","settings":{"column_dk":"4","column_tb":"4","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":30,"spacing_v_tb":30,"spacing_h_mb":15,"spacing_v_mb":15,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f6f3ee","rounded":"none"},"blocks":{"image_Qgzwbi":{"type":"_image","name":"Image","settings":{"image":"shopify:\/\/shop_images\/2.webp","url":"","img_effect":"none","b_effect":"none"},"blocks":{}},"spacer_drbcAw":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":16,"space":10},"blocks":{}},"star_vote_TQqwM7":{"type":"_star_vote","name":"Star vote","settings":{},"blocks":{}},"spacer_kDqdJR":{"type":"spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"text_nqcP3r":{"type":"text","settings":{"text":"<p>\"I am absolutely in love with my dog's portrait! The artist captured every detail perfectly. Max looks like royalty!\"<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"lg","text_color":"hdt-s-text","font_size_text_lg":12,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"heading_93gEbd":{"type":"heading","settings":{"heading":"<p>Sarah M.<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h_custom","text_color":"hdt-s-text","font_size_heading_lg":16,"font_size_heading_md":16,"font_size_heading":16,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"spacer_7yFgar":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":50,"space":20},"blocks":{}}},"block_order":["image_Qgzwbi","spacer_drbcAw","star_vote_TQqwM7","spacer_kDqdJR","text_nqcP3r","heading_93gEbd","spacer_7yFgar"]},"multi_column_K79jRD":{"type":"_multi_column","settings":{"column_dk":"4","column_tb":"4","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":30,"spacing_v_tb":30,"spacing_h_mb":15,"spacing_v_mb":15,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f6f3ee","rounded":"none"},"blocks":{"image_6aaCFr":{"type":"_image","name":"Image","settings":{"image":"shopify:\/\/shop_images\/14.webp","url":"","img_effect":"none","b_effect":"none"},"blocks":{}},"spacer_68zmtT":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":16,"space":10},"blocks":{}},"star_vote_qT77UY":{"type":"_star_vote","name":"Star vote","settings":{},"blocks":{}},"spacer_Ch3Ttd":{"type":"spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"text_VWzwna":{"type":"text","settings":{"text":"<p>\"The quality exceeded my expectations. I ordered 3 more for my family members. They make the perfect gift!\"<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"lg","text_color":"hdt-s-text","font_size_text_lg":12,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"heading_fe9xbd":{"type":"heading","settings":{"heading":"<p>Jennifer K.<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h_custom","text_color":"hdt-s-text","font_size_heading_lg":16,"font_size_heading_md":16,"font_size_heading":16,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"spacer_34khwL":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":50,"space":20},"blocks":{}}},"block_order":["image_6aaCFr","spacer_68zmtT","star_vote_qT77UY","spacer_Ch3Ttd","text_VWzwna","heading_fe9xbd","spacer_34khwL"]},"multi_column_Yid74D":{"type":"_multi_column","settings":{"column_dk":"4","column_tb":"4","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":30,"spacing_v_tb":30,"spacing_h_mb":15,"spacing_v_mb":15,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f6f3ee","rounded":"none"},"blocks":{"image_fcVGhq":{"type":"_image","name":"Image","settings":{"image":"shopify:\/\/shop_images\/16.webp","url":"","img_effect":"none","b_effect":"none"},"blocks":{}},"spacer_YyFAAK":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":16,"space":10},"blocks":{}},"star_vote_7mqpKe":{"type":"_star_vote","name":"Star vote","settings":{},"blocks":{}},"spacer_4ENCVx":{"type":"spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"text_9raGLh":{"type":"text","settings":{"text":"<p>\"Fast shipping, amazing quality, and the customer service was outstanding. Will definitely order again!\"<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"lg","text_color":"hdt-s-text","font_size_text_lg":12,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"heading_qtMVWg":{"type":"heading","settings":{"heading":"<p>Michael R.<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h_custom","text_color":"hdt-s-text","font_size_heading_lg":16,"font_size_heading_md":16,"font_size_heading":16,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"spacer_XARP73":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":50,"space":20},"blocks":{}}},"block_order":["image_fcVGhq","spacer_YyFAAK","star_vote_7mqpKe","spacer_4ENCVx","text_9raGLh","heading_qtMVWg","spacer_XARP73"]}},"block_order":["multi_column_rEKRTH","multi_column_PGcFDj","multi_column_K79jRD","multi_column_Yid74D"]}},"block_order":["multi_row_aYKMVK"],"disabled":true,"custom_css":[".vote-star {justify-content: center;}","img {margin-inline: auto; margin-top: 20px; border-radius: 10px;}"],"name":"Custom section","settings":{"class_parent":"how-it-work","item_spacing":30,"item_spacing_tb":15,"item_spacing_mb":15,"full_width":false,"color_scheme":"scheme-1","padding_top":30,"padding_bottom":30,"padding_rate":50}},"testimonials_3aHpcF":{"type":"testimonials","blocks":{"quote_kcWGKb":{"type":"_quote","settings":{"image":"shopify:\/\/shop_images\/2.webp","heading":"","content":"<p>\"I am absolutely in love with my dog's portrait! The artist captured every detail perfectly. Max looks like royalty!\"<\/p>","author":"Sarah M.","pos":"","enable_verify":false,"product":"","rating":5},"blocks":{}},"quote_Qkben7":{"type":"_quote","settings":{"image":"shopify:\/\/shop_images\/14.webp","heading":"","content":"<p>\"The quality exceeded my expectations. I ordered 3 more for my family members. They make the perfect gift!\"<\/p>","author":"Robert L.","pos":"","enable_verify":false,"product":"","rating":5},"blocks":{}},"quote_TFRK89":{"type":"_quote","settings":{"image":"shopify:\/\/shop_images\/16.webp","heading":"","content":"<p>\"Fast shipping, amazing quality, and the customer service was outstanding. Will definitely order again!\"<\/p>","author":"Chloe P.","pos":"","enable_verify":false,"product":"","rating":5},"blocks":{}},"testimonials":{"type":"section-heading","static":true,"settings":{"alignment":"center","row_gap":15,"margin_bottom":30},"blocks":{"heading_CzNkMQ":{"type":"heading","name":"Heading","settings":{"heading":"<p>See Why Pet Parents Love Our Custom Art<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h4","text_color":"hdt-s-text","font_size_heading_lg":40,"font_size_heading_md":30,"font_size_heading":24,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}}},"block_order":["heading_CzNkMQ"]}},"block_order":["quote_kcWGKb","quote_Qkben7","quote_TFRK89"],"custom_css":["@media (max-width: 575px) {.hdt-slider__container {height: auto; } .hdt-poropost-image img {max-width: 100%; margin: 0px !important; }}"],"name":"t:sections.testimonials.name","settings":{"class_custom":"","content_align":"start","testimonial_des":"3","col_dk":"3","col_tb":"2","col_mb":"1","navUI":false,"nav_pos":"middle_out","nav_des":"default","dotUI":true,"dis_dot":30,"color_scheme":"scheme-1","pr_rating":"#ff7b54","section_fullwidth":false,"padding_top":30,"padding_bottom":30,"padding_rate":75}},"custom_section_pbj3bN":{"type":"custom-section","blocks":{"multi_row_iTRFiK":{"type":"_multi_row","settings":{"rounded":"none"},"blocks":{"multi_column_mb3B6R":{"type":"_multi_column","name":"Column","settings":{"column_dk":"12","column_tb":"12","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":0,"spacing_v_tb":0,"spacing_h_mb":0,"spacing_v_mb":0,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f7f4f1","rounded":"hdt-rounded-full"},"blocks":{"heading_7TETgg":{"type":"heading","settings":{"heading":"<p>Create Your Masterpiece in 3 Steps<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h4","text_color":"hdt-s-text","font_size_heading_lg":50,"font_size_heading_md":30,"font_size_heading":24,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"text_W9TUL4":{"type":"text","name":"Text","disabled":true,"settings":{"text":"<p>From photo to masterpiece in three simple steps<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"base","text_color":"hdt-s-text","font_size_text_lg":16,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}}},"block_order":["heading_7TETgg","text_W9TUL4"]},"multi_column_nTbRkn":{"type":"_multi_column","settings":{"column_dk":"4","column_tb":"4","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":30,"spacing_v_tb":30,"spacing_h_mb":15,"spacing_v_mb":15,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f6f3ee","rounded":"none"},"blocks":{"image_rzjqCF":{"type":"_image","name":"Image","settings":{"image":"shopify:\/\/shop_images\/how-it-works-custom-portrait-painterful.jpg","url":"","img_effect":"none","b_effect":"none"},"blocks":{}},"spacer_4Eh7DQ":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":16,"space":10},"blocks":{}},"text_RdAKbT":{"type":"text","name":"Text","settings":{"text":"<h6>1<\/h6>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"base","text_color":"hdt-s-text","font_size_text_lg":14,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_K4EwYB":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"heading_MMtbwq":{"type":"heading","settings":{"heading":"<p>Share Your Moment<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h_custom","text_color":"hdt-s-text","font_size_heading_lg":20,"font_size_heading_md":20,"font_size_heading":20,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"spacer_3Dn7UT":{"type":"spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"text_zCjAwc":{"type":"text","settings":{"text":"<p>Upload a photo you love. We review it to ensure perfect results.<br\/><\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"custom","text_color":"hdt-s-text","font_size_text_lg":14,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_rzxier":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":50,"space":20},"blocks":{}}},"block_order":["image_rzjqCF","spacer_4Eh7DQ","text_RdAKbT","spacer_K4EwYB","heading_MMtbwq","spacer_3Dn7UT","text_zCjAwc","spacer_rzxier"]},"multi_column_efGaLV":{"type":"_multi_column","settings":{"column_dk":"4","column_tb":"4","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":30,"spacing_v_tb":30,"spacing_h_mb":15,"spacing_v_mb":15,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f6f3ee","rounded":"none"},"blocks":{"image_D7eeJG":{"type":"_image","name":"Image","settings":{"image":"shopify:\/\/shop_images\/how-it-works-custom-portrait-painterful_4.jpg","url":"","img_effect":"none","b_effect":"none"},"blocks":{}},"spacer_qbxpGF":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":16,"space":10},"blocks":{}},"text_h4Ai7N":{"type":"text","name":"Text","settings":{"text":"<h6>2<\/h6>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"base","text_color":"hdt-s-text","font_size_text_lg":16,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_NYqpnV":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"heading_hKgdW6":{"type":"heading","settings":{"heading":"<p>Review & Refine<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h_custom","text_color":"hdt-s-text","font_size_heading_lg":20,"font_size_heading_md":20,"font_size_heading":20,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"spacer_KPgctp":{"type":"spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"text_qWPMaw":{"type":"text","settings":{"text":"<p>Hand-illustrated by artists. You approve the digital proof before printing.<br\/><\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"custom","text_color":"hdt-s-text","font_size_text_lg":14,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_zzPrkn":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":50,"space":20},"blocks":{}}},"block_order":["image_D7eeJG","spacer_qbxpGF","text_h4Ai7N","spacer_NYqpnV","heading_hKgdW6","spacer_KPgctp","text_qWPMaw","spacer_zzPrkn"]},"multi_column_UVn9Cq":{"type":"_multi_column","settings":{"column_dk":"4","column_tb":"4","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":30,"spacing_v_tb":30,"spacing_h_mb":15,"spacing_v_mb":15,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f6f3ee","rounded":"none"},"blocks":{"image_3aK9mY":{"type":"_image","name":"Image","settings":{"image":"shopify:\/\/shop_images\/how-it-works-custom-portrait-painterful_3.jpg","url":"","img_effect":"none","b_effect":"none"},"blocks":{}},"spacer_mVQ8PJ":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":16,"space":10},"blocks":{}},"text_cLpRLP":{"type":"text","name":"Text","settings":{"text":"<h6>3<\/h6>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"base","text_color":"hdt-s-text","font_size_text_lg":16,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_CWRETY":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"heading_WDYYbb":{"type":"heading","settings":{"heading":"<p>Unbox & Cherish<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h_custom","text_color":"hdt-s-text","font_size_heading_lg":20,"font_size_heading_md":20,"font_size_heading":20,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"spacer_wjdbJr":{"type":"spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"text_XQjwUf":{"type":"text","settings":{"text":"<p>Gallery-quality art, shipped fast. Ready to hang and love forever.<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"custom","text_color":"hdt-s-text","font_size_text_lg":14,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_Yq4adK":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":50,"space":20},"blocks":{}}},"block_order":["image_3aK9mY","spacer_mVQ8PJ","text_cLpRLP","spacer_CWRETY","heading_WDYYbb","spacer_wjdbJr","text_XQjwUf","spacer_Yq4adK"]}},"block_order":["multi_column_mb3B6R","multi_column_nTbRkn","multi_column_efGaLV","multi_column_UVn9Cq"]}},"block_order":["multi_row_iTRFiK"],"custom_css":["a {pointer-events: none;}"],"name":"Custom section","settings":{"class_parent":"how-it-work","item_spacing":30,"item_spacing_tb":15,"item_spacing_mb":15,"full_width":false,"color_scheme":"","padding_top":30,"padding_bottom":30,"padding_rate":50}},"tabs":{"type":"main-product-tabs","blocks":{"tab_html_fjtD4a":{"type":"tab_html","settings":{"title":"Details","content":"<ul><li>Hand-drawn by professional artists<\/li><li>Museum-quality archival materials<\/li><li>Vibrant, fade-resistant colors<\/li><li>Perfect for home decor or gifting<\/li><\/ul>","page":""}},"tab_html_GUBKNW":{"type":"tab_html","settings":{"title":"Shipping","content":"<ul><li>Fast Shipping<\/li><li>US: 3-5 days <\/li><\/ul>","page":""}},"tab_html_4nMabf":{"type":"tab_html","settings":{"title":"Guarantee","content":"<ul><li>100% Satisfaction<\/li><li>Unlimited revisions <\/li><\/ul>","page":""}}},"block_order":["tab_html_fjtD4a","tab_html_GUBKNW","tab_html_4nMabf"],"disabled":true,"custom_css":[".hdt-type-accordion {max-width: 800px; margin-inline: auto;}"],"settings":{"tabs_design":"accordion","enable_first_tab":false,"color_scheme":"scheme-c9476b69-abc7-454f-a946-2d5a9f5f3a37","full_width":false,"padding_top":30,"padding_bottom":30,"padding_rate":50}},"sidebar":{"type":"sidebar-product","disabled":true,"settings":{"color_scheme":"","space":50}},"1769499399d94dbd2d":{"type":"apps","blocks":{"loox_reviews_loox_dynamic_section_JDiQjj":{"type":"shopify:\/\/apps\/loox-reviews\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e","settings":{"reviews_to_display":"","default_tab":"automatic","only_photos":false,"aggregated":true,"limit":20,"hide_thumbnails":false,"maxwidth":1080,"is_sample":true}}},"block_order":["loox_reviews_loox_dynamic_section_JDiQjj"],"settings":{"include_margins":true}},"custom_section_6gABy3":{"type":"custom-section","blocks":{"multi_row_UqYHnN":{"type":"_multi_row","settings":{"rounded":"none"},"blocks":{"multi_column_w4TNXC":{"type":"_multi_column","name":"Column","settings":{"column_dk":"12","column_tb":"12","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":0,"spacing_v_tb":0,"spacing_h_mb":0,"spacing_v_mb":0,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f7f4f1","rounded":"hdt-rounded-full"},"blocks":{"heading_MAwwJy":{"type":"heading","settings":{"heading":"<h4>Gallery-Grade Quality.<\/h4><h4> Crafted to Last a Lifetime.<br\/><\/h4>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h2","text_color":"hdt-s-text","font_size_heading_lg":50,"font_size_heading_md":30,"font_size_heading":24,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"text_GTwqQ9":{"type":"text","name":"Text","disabled":true,"settings":{"text":"<p>From photo to masterpiece in three simple steps<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"base","text_color":"hdt-s-text","font_size_text_lg":16,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}}},"block_order":["heading_MAwwJy","text_GTwqQ9"]},"multi_column_G6eBtT":{"type":"_multi_column","settings":{"column_dk":"4","column_tb":"4","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":30,"spacing_v_tb":30,"spacing_h_mb":15,"spacing_v_mb":15,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f6f3ee","rounded":"none"},"blocks":{"image_FaMgL9":{"type":"_image","name":"Image","settings":{"image":"shopify:\/\/shop_images\/framedcanvaspreview3jpg1607709451374.jpg","url":"","img_effect":"none","b_effect":"none"},"blocks":{}},"spacer_rdLRxa":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":16,"space":10},"blocks":{}},"text_CHBADW":{"type":"text","name":"Text","settings":{"text":"","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"base","text_color":"hdt-s-text","font_size_text_lg":16,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_pNhpwn":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"heading_Myr87t":{"type":"heading","settings":{"heading":"<p>Archival Canvas & Vivid Inks<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h_custom","text_color":"hdt-s-text","font_size_heading_lg":20,"font_size_heading_md":20,"font_size_heading":20,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"spacer_rgGKa7":{"type":"spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"text_46dTDJ":{"type":"text","settings":{"text":"<p>Museum-quality, anti-yellowing canvas paired with GREENGUARD Gold certified inks. Safe for your home, fade-resistant for generations.<br\/><br\/><\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"lg","text_color":"hdt-s-text","font_size_text_lg":14,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_76GpGY":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":50,"space":20},"blocks":{}}},"block_order":["image_FaMgL9","spacer_rdLRxa","text_CHBADW","spacer_pNhpwn","heading_Myr87t","spacer_rgGKa7","text_46dTDJ","spacer_76GpGY"]},"multi_column_Aqdghe":{"type":"_multi_column","settings":{"column_dk":"4","column_tb":"4","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":30,"spacing_v_tb":30,"spacing_h_mb":15,"spacing_v_mb":15,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f6f3ee","rounded":"none"},"blocks":{"image_dqiGLF":{"type":"_image","name":"Image","settings":{"image":"shopify:\/\/shop_images\/framedcanvaswhitelaydown.jpg","url":"","img_effect":"none","b_effect":"none"},"blocks":{}},"spacer_KkFnDx":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":16,"space":10},"blocks":{}},"text_UPJbLX":{"type":"text","name":"Text","settings":{"text":"","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"base","text_color":"hdt-s-text","font_size_text_lg":16,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_8NBdbF":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"heading_A4nirT":{"type":"heading","settings":{"heading":"<p>Handcrafted Solid Wood Frames<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h_custom","text_color":"hdt-s-text","font_size_heading_lg":20,"font_size_heading_md":20,"font_size_heading":20,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"spacer_P77z9B":{"type":"spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"text_ekXCkc":{"type":"text","settings":{"text":"<p>100% sustainably sourced, kiln-dried pine wood. Meticulously hand-assembled to ensure your masterpiece never warps or bows.<br\/><\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"lg","text_color":"hdt-s-text","font_size_text_lg":14,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_8iaGUK":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":50,"space":20},"blocks":{}}},"block_order":["image_dqiGLF","spacer_KkFnDx","text_UPJbLX","spacer_8NBdbF","heading_A4nirT","spacer_P77z9B","text_ekXCkc","spacer_8iaGUK"]},"multi_column_pjDc46":{"type":"_multi_column","settings":{"column_dk":"4","column_tb":"4","column_mb":"12","spacing_h_dk":0,"spacing_v_dk":0,"spacing_h_tb":30,"spacing_v_tb":30,"spacing_h_mb":15,"spacing_v_mb":15,"content_position":"center","content_position_mb":"center","alignment":"center","alignment_mb":"center","background_color":"#f6f3ee","rounded":"none"},"blocks":{"image_KDX8dD":{"type":"_image","name":"Image","settings":{"image":"shopify:\/\/shop_images\/white-frame-detail-display.jpg","url":"","img_effect":"none","b_effect":"none"},"blocks":{}},"spacer_arV6ER":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":16,"space":10},"blocks":{}},"text_TpqkVL":{"type":"text","name":"Text","settings":{"text":"","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"base","text_color":"hdt-s-text","font_size_text_lg":16,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_XNTPyW":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"heading_WXmyNq":{"type":"heading","settings":{"heading":"<p>Ready to Hang & Cherish<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h_custom","text_color":"hdt-s-text","font_size_heading_lg":20,"font_size_heading_md":20,"font_size_heading":20,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}},"spacer_tMNzwz":{"type":"spacer","settings":{"direction":false,"space_lg":10,"space_md":10,"space":10},"blocks":{}},"text_VQFLze":{"type":"text","settings":{"text":"<p>Arrives fully assembled with premium hardware and protective bumpers. Simply unbox and display your memory instantly.<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"text_size":"lg","text_color":"hdt-s-text","font_size_text_lg":14,"font_size_text_md":14,"font_size_text":14,"font_weight_text":400,"letter_spacing_text":0},"blocks":{}},"spacer_pzFfMc":{"type":"spacer","name":"Spacer","settings":{"direction":false,"space_lg":20,"space_md":50,"space":20},"blocks":{}}},"block_order":["image_KDX8dD","spacer_arV6ER","text_TpqkVL","spacer_XNTPyW","heading_WXmyNq","spacer_tMNzwz","text_VQFLze","spacer_pzFfMc"]}},"block_order":["multi_column_w4TNXC","multi_column_G6eBtT","multi_column_Aqdghe","multi_column_pjDc46"]}},"block_order":["multi_row_UqYHnN"],"disabled":true,"name":"Custom section","settings":{"class_parent":"how-it-work","item_spacing":30,"item_spacing_tb":15,"item_spacing_mb":15,"full_width":false,"color_scheme":"scheme-1","padding_top":30,"padding_bottom":30,"padding_rate":50}},"lookbook_carousel_zVAGyn":{"type":"lookbook-carousel","blocks":{"lookbook_C9Xhdn":{"type":"_lookbook","settings":{"image":"shopify:\/\/shop_images\/Generated_Image_December_09_2025_-_8_32AM.jpg","img_effect":"none","b_effect":"none"},"blocks":{}},"lookbook-heading":{"type":"section-heading","static":true,"settings":{"alignment":"center","row_gap":15,"margin_bottom":30},"blocks":{"heading_iD4pcJ":{"type":"heading","settings":{"heading":"<p><strong>Size Guide: <\/strong>Visualize in Your Space<\/p>","hidden_br_mobile":false,"hidden_on_mobile":false,"heading_size":"h2","text_color":"hdt-s-text","font_size_heading_lg":50,"font_size_heading_md":30,"font_size_heading":24,"font_weight_heading":600,"letter_spacing_heading":0},"blocks":{}}},"block_order":["heading_iD4pcJ"]}},"block_order":["lookbook_C9Xhdn"],"disabled":true,"name":"t:sections.lookbook.name2","settings":{"image_ratio":"adapt_image","item_show":"1","color_scheme":"","auto_play":0,"pause_hover":false,"navigate_style":"mixed","navUI":false,"dotUI":false,"full_width":false,"padding_top":0,"padding_bottom":0,"padding_rate":75}},"banner_carousel_fkHQeV":{"type":"banner-carousel","blocks":{"banner_item_qyCW7F":{"type":"_banner-item","settings":{"banner_url":"","banner_target":false,"img_effect":"none","b_effect":"none","color_scheme":"","content_position":"center","alignment":"center","content_position_mb":"center","alignment_mb":"center"},"blocks":{"banner-media":{"type":"_media","static":true,"settings":{"source":"video","video":"shopify:\/\/files\/videos\/snaptik.vn_1cu5b.mp4","external_video_url":""},"blocks":{}}},"block_order":[]},"banner_item_KmL6QK":{"type":"_banner-item","settings":{"banner_url":"","banner_target":false,"img_effect":"none","b_effect":"none","color_scheme":"","content_position":"center","alignment":"center","content_position_mb":"center","alignment_mb":"center"},"blocks":{"banner-media":{"type":"_media","static":true,"settings":{"source":"video","video":"shopify:\/\/files\/videos\/snaptik.vn_JqrCy.mp4","external_video_url":""},"blocks":{}}},"block_order":[]},"banner_item_r99fqx":{"type":"_banner-item","settings":{"banner_url":"","banner_target":false,"img_effect":"none","b_effect":"none","color_scheme":"","content_position":"center","alignment":"center","content_position_mb":"center","alignment_mb":"center"},"blocks":{"banner-media":{"type":"_media","static":true,"settings":{"source":"video","video":"shopify:\/\/files\/videos\/snaptik.vn_5XO8r.mp4","external_video_url":""},"blocks":{}}},"block_order":[]},"banner_item_EUQW9x":{"type":"_banner-item","settings":{"banner_url":"","banner_target":false,"img_effect":"none","b_effect":"none","color_scheme":"","content_position":"center","alignment":"center","content_position_mb":"center","alignment_mb":"center"},"blocks":{"banner-media":{"type":"_media","static":true,"settings":{"source":"video","video":"shopify:\/\/files\/videos\/snaptik.vn_5Q24W.mp4","external_video_url":""},"blocks":{}}},"block_order":[]}},"block_order":["banner_item_qyCW7F","banner_item_KmL6QK","banner_item_r99fqx","banner_item_EUQW9x"],"custom_css":[".hdt-container-content {flex-direction: column;}",".review-box {max-width: 100%;}"],"name":"Banner carousel","settings":{"color_scheme":"","full_width":false,"boxed_fullwidth":false,"title":"Rated 4.9 \/ 5 From Thousands Of Verified Customers","sub_title":"You captured my pet's personality perfectly! You included all of his finer details...","col_dk":"3","row_height":500,"space_item":30,"col_tb":"2","row_height_tb":500,"space_item_tb":15,"row_height_mb":500,"navUI":false,"nav_rounded":false,"nav_des":"default","nav_pos":"middle_in","nav_icon":"chrvon","dotUI":true,"padding_top":40,"padding_bottom":40,"padding_rate":75}},"recently-products":{"type":"recently-products","disabled":true,"settings":{"sec_heading":"Recently Viewed","heading_tag":"h3","heading_size":"h3","text_color":"hdt-s-text","heading_align":"center","sec_subheading":"","subheading_size":"lg","heading_reverse":false,"heading_gap":18,"sec_heading_spacing":50,"limit":10,"product_des":"1","image_ratio":"custom-pr","image_size":true,"show_vendor":false,"col_dk":"4","col_tb":"3","col_mb":"2","navUI":true,"btn_vi":"hover","nav_des":"default","nav_shape":"rounded","nav_size":"small","nav_pos":"middle_in","nav_icon":"chrvon","dotUI":false,"color_scheme":"scheme-2","full_width":false,"padding_top":0,"padding_bottom":100,"padding_rate":75}},"related-products":{"type":"related-products","settings":{"sec_heading":"You May Also Love","heading_tag":"h3","heading_size":"h3","text_color":"hdt-s-text","heading_align":"center","sec_subheading":"","subheading_size":"lg","heading_reverse":false,"heading_gap":10,"sec_heading_spacing":20,"limit":10,"product_des":"1","image_ratio":"square","image_size":true,"show_vendor":false,"col_dk":"4","col_tb":"3","col_mb":"2","navUI":true,"btn_vi":"always","nav_des":"simple","nav_shape":"rounded","nav_size":"small","nav_pos":"middle_out","nav_icon":"chrvon","dotUI":false,"color_scheme":"scheme-2","full_width":false,"padding_top":32,"padding_bottom":40,"padding_rate":75}}},"order":["breadcrumb","main-product","accordion_HzWxdG","custom_section_pKaDXe","testimonials_3aHpcF","custom_section_pbj3bN","tabs","sidebar","1769499399d94dbd2d","custom_section_6gABy3","lookbook_carousel_zVAGyn","banner_carousel_fkHQeV","recently-products","related-products"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "disabled": true,
+      "custom_css": [
+        ".hdt-s-gradient {border: 1px solid #e0d9d180;}"
+      ],
+      "settings": {
+        "back_next_pr": true,
+        "color_scheme": "scheme-3fd2c3d1-d752-42b9-a4d2-17bfc10b6555",
+        "padding_top": 15,
+        "padding_bottom": 15,
+        "padding_rate": 75
+      }
+    },
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "group_product_rjwCiM": {
+          "type": "_group-product",
+          "settings": {},
+          "blocks": {
+            "product_title_JjxmKw": {
+              "type": "_product-title",
+              "settings": {
+                "hdt_pr_title_size": "h4"
+              },
+              "blocks": {}
+            },
+            "custom_liquid_w6AbyN": {
+              "type": "_custom-liquid",
+              "name": "Custom liquid",
+              "settings": {
+                "liquid": "<div class=\"vote-star\"><div class=\"loox-rating\" data-id=\"{{ product.id }}\" data-rating=\"{{ product.metafields.loox.avg_rating }}\" data-raters=\"{{ product.metafields.loox.num_reviews }}\"></div>\n<a href=\"#looxReviews\" style=\"color: #be5637; text-decoration: underline;\">Read Reviews</a></div>"
+              },
+              "blocks": {}
+            },
+            "product_badges_3qxfaW": {
+              "type": "_product-badges",
+              "disabled": true,
+              "settings": {
+                "special": "",
+                "min": 4,
+                "max": 80,
+                "content": "Selling fast! [count] people have this in their carts.",
+                "icon_svg": "flash",
+                "ani": "none"
+              },
+              "blocks": {}
+            },
+            "product_price_VhBaXe": {
+              "type": "_product-price",
+              "settings": {},
+              "blocks": {}
+            },
+            "product_description_xNEez4": {
+              "type": "_product-description",
+              "name": "t:sections.main-product.blocks.description.name",
+              "disabled": true,
+              "settings": {
+                "des": "2",
+                "short_des": "{{ closest.product.metafields.custom.short_description | metafield_tag }}",
+                "readm": false,
+                "length": 30,
+                "readm_txt": "Read more",
+                "readl_txt": "Read less"
+              },
+              "blocks": {}
+            },
+            "product_countdown_kTqkaR": {
+              "type": "_product-countdown",
+              "settings": {
+                "color_scheme": "",
+                "icon": "none",
+                "svg_upload": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"hdt-ani-tada is--infinite hdt-inine-block\" width=\"14\" height=\"14\" viewBox=\"0 0 14 14\"><path d=\"M6.7796 0.828412C3.1501 0.828412 0.193808 3.7847 0.193808 7.41421C0.193808 11.0437 3.1501 14 6.7796 14C10.4091 14 13.3654 11.0437 13.3654 7.41421C13.3654 3.7847 10.4091 0.828412 6.7796 0.828412ZM6.7796 12.5365C3.95503 12.5365 1.65732 10.2388 1.65732 7.41421C1.65732 4.58963 3.95503 2.29192 6.7796 2.29192C9.60418 2.29192 11.9019 4.58963 11.9019 7.41421C11.9019 10.2388 9.60418 12.5365 6.7796 12.5365ZM0.252349 2.65048C-0.0549885 2.38705 -0.0842587 1.91873 0.179173 1.61871C0.669449 1.05526 1.24754 0.550345 1.88416 0.125928C2.22077 -0.100916 2.67446 -0.0131058 2.9013 0.323501C3.12814 0.660109 3.04033 1.1138 2.70373 1.34064C2.17686 1.69188 1.70122 2.1163 1.29144 2.58462C1.14509 2.75293 0.947516 2.83342 0.742624 2.83342C0.564631 2.83384 0.392712 2.76872 0.259666 2.65048H0.252349ZM10.8555 1.34064C10.5189 1.1138 10.4311 0.660109 10.6579 0.323501C10.8847 -0.0131058 11.3384 -0.100916 11.675 0.125928C12.3117 0.550345 12.8824 1.05526 13.38 1.61871C13.6435 1.92604 13.6142 2.38705 13.3069 2.65048C13.2349 2.71418 13.1511 2.76303 13.0602 2.79421C12.9693 2.82539 12.8732 2.83829 12.7773 2.83217C12.6814 2.82605 12.5876 2.80102 12.5015 2.75854C12.4153 2.71606 12.3383 2.65695 12.2751 2.58462C11.859 2.1117 11.3844 1.69368 10.8628 1.34064H10.8555ZM8.71875 8.1606C9.01877 8.43135 9.04804 8.89235 8.77729 9.19237C8.63094 9.35336 8.43337 9.44117 8.22848 9.44117C8.05286 9.44117 7.88455 9.38263 7.74552 9.25823L6.28933 7.96302C6.13566 7.82399 6.04053 7.62642 6.04053 7.41421V4.48719C6.04053 4.08472 6.36982 3.75543 6.77228 3.75543C7.17475 3.75543 7.50404 4.08472 7.50404 4.48719V7.08492L8.71875 8.1606Z\"></path></svg>",
+                "ani": "hdt-ani-tada",
+                "content": "HURRY UP! SALE ENDS IN:",
+                "alignment": "center",
+                "effect_cd": "move_top"
+              },
+              "blocks": {}
+            },
+            "product_variant_picker_RJxUVf": {
+              "type": "_product-variant-picker",
+              "settings": {
+                "enable_historystate": true,
+                "color_picker_type": "color_rounded",
+                "color_size": "small",
+                "picker_type": "block",
+                "size_chart_source": "image",
+                "size_chart_page": "",
+                "title": "Variant picker"
+              },
+              "blocks": {}
+            },
+            "product_item_property_AFM39k": {
+              "type": "_product-item-property",
+              "name": "t:sections.main-product.blocks.line_item_property.name",
+              "settings": {
+                "title_content": "Select Phone Model",
+                "title": "Please check compatibility images first",
+                "property_type": "options",
+                "use_required": false,
+                "show_at_ck_cart": true,
+                "color_name_1": "",
+                "color_name_2": "",
+                "color_name_3": "",
+                "color_name_4": "",
+                "color_name_5": "",
+                "color_name_6": "",
+                "color_name_7": "",
+                "color_name_8": "",
+                "color_name_9": "",
+                "type_text": "short",
+                "ck_value": "Yes",
+                "type_options": "select",
+                "options": "iPhone 7\niPhone 7 Plus\niPhone 8\niPhone 8 Plus\niPhone X\niPhone XR\niPhone XS\niPhone XS MAX\niPhone 11\niPhone 11 Pro\niPhone 11 Pro Max\niPhone 12\niPhone 12 Mini\niPhone 12 Pro\niPhone 12 Pro Max\niPhone 13\niPhone 13 Mini\niPhone 13 Pro\niPhone 13 Pro Max\niPhone 14\niPhone 14 Pro\niPhone 14 Pro Max\niPhone 14 Plus\niPhone 15\niPhone 15 Pro\niPhone 15 Pro Max\niPhone 15 Plus\niPhone 16\niPhone 16 Pro\niPhone 16 Pro Max\niPhone 16 Plus\niPhone 17\niPhone 17 Air\niPhone 17 Pro\niPhone 17 Pro Max\nSamsung Galaxy S20 FE\nSamsung Galaxy S20 Ultra\nSamsung Galaxy S20+\nSamsung Galaxy S20\nSamsung Galaxy S21\nSamsung Galaxy S21 Plus\nSamsung Galaxy S21 Ultra\nSamsung Galaxy S22\nSamsung Galaxy S22 Plus\nSamsung Galaxy S22 Ultra\nSamsung Galaxy S23\nSamsung Galaxy S23 Plus\nSamsung Galaxy S23 Ultra\nSamsung Galaxy S24\nSamsung Galaxy S24 Plus\nSamsung Galaxy S24 Ultra\nSamsung Galaxy S25\nSamsung Galaxy S25 Plus\nSamsung Galaxy S25 Ultra",
+                "visibility": "product",
+                "collection_based": [],
+                "type_based": "",
+                "tag_based": "",
+                "product_based": [
+                  "signature-modern-pet-portrait-phone-case"
+                ]
+              },
+              "blocks": {}
+            },
+            "product_item_property_zUDRAY": {
+              "type": "_product-item-property",
+              "name": "t:sections.main-product.blocks.line_item_property.name",
+              "settings": {
+                "title_content": "",
+                "title": "Select Background",
+                "property_type": "color",
+                "use_required": false,
+                "show_at_ck_cart": true,
+                "color_name_1": "Soft White",
+                "color_image_1": "shopify://shop_images/soft-white-custom-portrait-background.jpg",
+                "color_name_2": "Blush Sand",
+                "color_image_2": "shopify://shop_images/blush-sand-custom-portrait-background.jpg",
+                "color_name_3": "Charcoal Black",
+                "color_image_3": "shopify://shop_images/charcoal-black-custom-portrait-background.jpg",
+                "color_name_4": "Olive Muted",
+                "color_image_4": "shopify://shop_images/olive-muted-custom-portrait-background.jpg",
+                "color_name_5": "Warm Taupe",
+                "color_image_5": "shopify://shop_images/warm-taupe-custom-portrait-background.jpg",
+                "color_name_6": "Deep Navy",
+                "color_image_6": "shopify://shop_images/deep-navy-custom-portrait-background.jpg",
+                "color_name_7": "Botanical Whisper",
+                "color_image_7": "shopify://shop_images/botanical-whisper-custom-portrait-background.jpg",
+                "color_name_8": "Gallery Flow",
+                "color_image_8": "shopify://shop_images/gallery-flow-custom-portrait-background.jpg",
+                "color_name_9": "Natural Linen",
+                "color_image_9": "shopify://shop_images/natural-linen-custom-portrait-background.jpg",
+                "type_text": "short",
+                "ck_value": "Yes",
+                "type_options": "select",
+                "options": "option1\noption2",
+                "visibility": "product",
+                "collection_based": [],
+                "type_based": "",
+                "tag_based": "",
+                "product_based": [
+                  "signature-modern-pet-portrait",
+                  "chic-minimalist-human-portrait",
+                  "lifelike-realistic-human-portrait",
+                  "signature-modern-pet-portrait-velveteen-blanket",
+                  "signature-modern-pet-portrait-phone-case"
+                ]
+              },
+              "blocks": {}
+            },
+            "product_item_property_MfnMNC": {
+              "type": "_product-item-property",
+              "name": "t:sections.main-product.blocks.line_item_property.name",
+              "settings": {
+                "title_content": "Color Scheme Options",
+                "title": "",
+                "property_type": "options",
+                "use_required": false,
+                "show_at_ck_cart": true,
+                "color_name_1": "",
+                "color_name_2": "",
+                "color_name_3": "",
+                "color_name_4": "",
+                "color_name_5": "",
+                "color_name_6": "",
+                "color_name_7": "",
+                "color_name_8": "",
+                "color_name_9": "",
+                "type_text": "short",
+                "ck_value": "Yes",
+                "type_options": "select",
+                "options": "Blue\nPink\nGreen\nGray",
+                "visibility": "product",
+                "collection_based": [],
+                "type_based": "",
+                "tag_based": "",
+                "product_based": [
+                  "custom-90s-vintage-pet-tshirt",
+                  "custom-90s-vintage-pet-sweatshirt",
+                  "custom-90s-vintage-pet-hoodie"
+                ]
+              },
+              "blocks": {}
+            },
+            "product_extra_link_Hq4nxF": {
+              "type": "_product-extra-link",
+              "name": "t:sections.main-product.blocks.extra_link.name",
+              "settings": {},
+              "blocks": {
+                "product_size_chart_pWpBdQ": {
+                  "type": "_product-size-chart",
+                  "name": "Size chart",
+                  "settings": {
+                    "title": "Photo Guide",
+                    "size_chart": "3",
+                    "size_chart_source": "page",
+                    "size_chart_page": "pet-photo-guide",
+                    "size_chart_image": "shopify://shop_images/1be59897a1f62fa876e7.jpg"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_size_chart_pWpBdQ"
+              ]
+            },
+            "product_item_property_JrCQWy": {
+              "type": "_product-item-property",
+              "name": "t:sections.main-product.blocks.line_item_property.name",
+              "settings": {
+                "title_content": " Upload Your Photo",
+                "title": "Image",
+                "property_type": "upload",
+                "use_required": true,
+                "show_at_ck_cart": true,
+                "color_name_1": "",
+                "color_name_2": "",
+                "color_name_3": "",
+                "color_name_4": "",
+                "color_name_5": "",
+                "color_name_6": "",
+                "color_name_7": "",
+                "color_name_8": "",
+                "color_name_9": "",
+                "type_text": "short",
+                "ck_value": "Yes",
+                "type_options": "select",
+                "options": "option1\noption2",
+                "visibility": "all",
+                "collection_based": [],
+                "type_based": "",
+                "tag_based": "",
+                "product_based": []
+              },
+              "blocks": {}
+            },
+            "product_item_property_PCUwwC": {
+              "type": "_product-item-property",
+              "name": "t:sections.main-product.blocks.line_item_property.name",
+              "settings": {
+                "title_content": "Pet's Name / Text (Optional)",
+                "title": "Pet's name",
+                "property_type": "text",
+                "use_required": false,
+                "show_at_ck_cart": true,
+                "color_name_1": "",
+                "color_name_2": "",
+                "color_name_3": "",
+                "color_name_4": "",
+                "color_name_5": "",
+                "color_name_6": "",
+                "color_name_7": "",
+                "color_name_8": "",
+                "color_name_9": "",
+                "type_text": "short",
+                "ck_value": "Yes",
+                "type_options": "select",
+                "options": "option1\noption2",
+                "visibility": "all",
+                "collection_based": [],
+                "type_based": "",
+                "tag_based": "",
+                "product_based": []
+              },
+              "blocks": {}
+            },
+            "product_item_property_E4dNbb": {
+              "type": "_product-item-property",
+              "name": "t:sections.main-product.blocks.line_item_property.name",
+              "settings": {
+                "title_content": "Optional Note",
+                "title": "Anything else we should know? (e.g., specific colors, removing details, or special layout requests)",
+                "property_type": "text",
+                "use_required": false,
+                "show_at_ck_cart": true,
+                "color_name_1": "",
+                "color_name_2": "",
+                "color_name_3": "",
+                "color_name_4": "",
+                "color_name_5": "",
+                "color_name_6": "",
+                "color_name_7": "",
+                "color_name_8": "",
+                "color_name_9": "",
+                "type_text": "short",
+                "ck_value": "Yes",
+                "type_options": "select",
+                "options": "option1\noption2",
+                "visibility": "all",
+                "collection_based": [],
+                "type_based": "",
+                "tag_based": "",
+                "product_based": []
+              },
+              "blocks": {}
+            },
+            "quantity_selector_6zJAfX": {
+              "type": "_quantity-selector",
+              "disabled": true,
+              "settings": {},
+              "blocks": {}
+            },
+            "product_buy_button_9gRLMx": {
+              "type": "_product-buy-button",
+              "settings": {
+                "show_dynamic_checkout": false,
+                "show_gift_card_recipient": false,
+                "show_wishlist": false,
+                "show_compare": false,
+                "show_price_variant": false
+              },
+              "blocks": {}
+            },
+            "custom_liquid_bzYDTG": {
+              "type": "_custom-liquid",
+              "name": "Custom liquid",
+              "settings": {
+                "liquid": "{% render 'delivery' %}"
+              },
+              "blocks": {}
+            },
+            "product_back_instock_qNYiT7": {
+              "type": "_product_back_instock",
+              "settings": {
+                "only_show_soldout": true
+              },
+              "blocks": {}
+            },
+            "3_accordion_yPtQxm": {
+              "type": "_3-accordion",
+              "name": "3 Accordion",
+              "settings": {
+                "name_tab_1": "Description",
+                "data_tab_1": "{{ closest.product.description }}",
+                "name_tab_2": "Shipping & Return",
+                "data_tab_2": "<p><strong>Custom Artwork Creation Time</strong><br/>• Artwork previews will be sent to you via email within 1-3 days.<br/>• Once approved, production will begin within 2-4 business days.<br/></p><p><strong>Shipping Times</strong><br/>Shipping times vary by destination and may increase slightly during peak holiday seasons.<br/>• <strong>USA:</strong> 4–8 business days<br/>• <strong>UK, CA, AUS:</strong> 7–14 business days<br/>• <strong>Europe:</strong> 7–21 business days<br/><em>(All orders are shipped fully tracked)<br/></em></p><p><strong>Returns & Replacements</strong><br/>Because all of our products are 100% custom-made specifically for your pet, we cannot accept returns or exchanges for a change of mind. However, if your item arrives damaged, has printing errors, or if you receive the wrong product, please let us know. We will gladly arrange a replacement for you immediately—<strong>no questions asked!</strong></p>",
+                "name_tab_3": "Satisfaction Guarantee",
+                "data_tab_3": "<p>We want you to be absolutely thrilled with your custom art! That is why we make sure you are part of the process from start to finish.<br/></p><p>We will send you a digital preview of your portrait as soon as it's finished. You can request <strong>unlimited revisions</strong> until the artwork is absolutely perfect. We guarantee that your design will <strong>never</strong> be sent to print until you give us the final thumbs up!<br/></p><p>Having crafted custom portraits for years and earning thousands of <strong>4.9/5 star reviews</strong>, we truly believe we can deliver the best custom pet artwork you will ever own. Let's create your masterpiece today!</p>"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_title_JjxmKw",
+            "custom_liquid_w6AbyN",
+            "product_badges_3qxfaW",
+            "product_price_VhBaXe",
+            "product_description_xNEez4",
+            "product_countdown_kTqkaR",
+            "product_variant_picker_RJxUVf",
+            "product_item_property_AFM39k",
+            "product_item_property_zUDRAY",
+            "product_item_property_MfnMNC",
+            "product_extra_link_Hq4nxF",
+            "product_item_property_JrCQWy",
+            "product_item_property_PCUwwC",
+            "product_item_property_E4dNbb",
+            "quantity_selector_6zJAfX",
+            "product_buy_button_9gRLMx",
+            "custom_liquid_bzYDTG",
+            "product_back_instock_qNYiT7",
+            "3_accordion_yPtQxm"
+          ]
+        },
+        "main-product": {
+          "type": "_product-medias",
+          "static": true,
+          "settings": {
+            "display_by_block": true,
+            "color_scheme": "scheme-b15ec134-56b6-42aa-bb18-94333011f7c0",
+            "desktop_media_layout": "thumbnail_bottom",
+            "media_size": "medium",
+            "mobile_media_layout": "thumbnails",
+            "enable_thumb_efect": true,
+            "show_first_media": false,
+            "use_select_varaint_change_media": true,
+            "enable_media_autoplay": true,
+            "enable_video_looping": true,
+            "image_ratio": "adapt_image",
+            "image_size": true,
+            "image_zoom": "no",
+            "image_zoom_type": "external",
+            "zoom_level": 2,
+            "max_zoom_lightbox": 3,
+            "navUI": true,
+            "nav_des": "default",
+            "nav_shape": "rounded",
+            "name_tab_1": "Description",
+            "data_tab_1": "<p></p>{{ closest.product.description }}",
+            "name_tab_2": "Shipping and Returns",
+            "data_tab_2": "<p><strong>Custom Artwork Creation Time</strong><br/>• Artwork previews will be sent to you via email within 1-3 days.<br/>• Once approved, production will begin within 2-4 business days.<br/></p><p><strong>Shipping Times</strong><br/>Shipping times vary by destination and may increase slightly during peak holiday seasons.<br/>• <strong>USA:</strong> 4–8 business days<br/>• <strong>UK, CA, AUS:</strong> 7–14 business days<br/>• <strong>Europe:</strong> 7–21 business days<br/><em>(All orders are shipped fully tracked)<br/></em></p><p><strong>Returns & Replacements</strong><br/>Because all of our products are 100% custom-made specifically for your pet, we cannot accept returns or exchanges for a change of mind. However, if your item arrives damaged, has printing errors, or if you receive the wrong product, please let us know. We will gladly arrange a replacement for you immediately—<strong>no questions asked!</strong></p>",
+            "name_tab_3": "Satisfaction Guarantee",
+            "data_tab_3": "<p>We want you to be absolutely thrilled with your custom art! That is why we make sure you are part of the process from start to finish.<br/></p><p>We will send you a digital preview of your portrait as soon as it's finished. You can request <strong>unlimited revisions</strong> until the artwork is absolutely perfect. We guarantee that your design will <strong>never</strong> be sent to print until you give us the final thumbs up!<br/></p><p>Having crafted custom portraits for years and earning thousands of <strong>4.9/5 star reviews</strong>, we truly believe we can deliver the best custom pet artwork you will ever own. Let's create your masterpiece today!</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "group_product_rjwCiM"
+      ],
+      "custom_css": [
+        ".hdt-product-form__submit {height: 56px; border-radius: 5px;}",
+        ".hdt-product__extra-link {margin: 0px; float: right;}",
+        ".hdt-product__extra-link wrapp-open-pswp-btn {margin: 0px;}",
+        ".hdt-product__extra-link .hdt-s-text {text-decoration: underline;}"
+      ],
+      "settings": {
+        "sticky_atc": false,
+        "product_list_fbt": [],
+        "fbt_color_scheme": "",
+        "color_scheme": "scheme-b15ec134-56b6-42aa-bb18-94333011f7c0",
+        "full_width": false,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 50
+      }
+    },
+    "accordion_HzWxdG": {
+      "type": "accordion",
+      "blocks": {
+        "title_q8i3Hn": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_3DPMn6": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "1. Can I see the design before it is printed?",
+            "content": "Absolutely! You are part of the creative process. We will send you a digital preview for your approval and will offer unlimited revisions until you are 100% satisfied before we proceed to printing.",
+            "content_richtext": ""
+          }
+        },
+        "accordion_item_8MMg6p": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "2. What kind of photo should I provide?",
+            "content": "For the best result, please provide a clear, front-facing photo with good lighting (avoid backlighting). Photos taken at your pet's eye level work best. We have a Photo Guide in each listing to help you. If you’re unsure, just send what you have—we’ll help you pick the perfect one!",
+            "content_richtext": ""
+          }
+        },
+        "accordion_item_BCVmm6": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "3. Can you combine pets from separate photos into one portrait?",
+            "content": "Yes, we can! If you don't have a photo of your pets together, just send their individual photos. Please try to ensure each photo follows our Photo Guide so the final portrait looks seamless and beautiful.",
+            "content_richtext": ""
+          }
+        },
+        "accordion_item_WRqUR4": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "4. How long does it take to receive my order?",
+            "content": "You will receive your digital preview within 1–3 business days. Once you approve the design, production and shipping usually take 4–8 business days. Please note that the timeline may be extended if multiple revisions are requested.",
+            "content_richtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_q8i3Hn",
+        "accordion_item_3DPMn6",
+        "accordion_item_8MMg6p",
+        "accordion_item_BCVmm6",
+        "accordion_item_WRqUR4"
+      ],
+      "custom_css": [
+        ".hdt-custom-col-accordion-content {max-width: 800px; margin-inline: auto;}",
+        "h5 {text-align: center; font-size: 36px;}"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-b15ec134-56b6-42aa-bb18-94333011f7c0",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "custom_section_pKaDXe": {
+      "type": "custom-section",
+      "blocks": {
+        "multi_row_aYKMVK": {
+          "type": "_multi_row",
+          "settings": {
+            "rounded": "none"
+          },
+          "blocks": {
+            "multi_column_rEKRTH": {
+              "type": "_multi_column",
+              "name": "Column",
+              "settings": {
+                "column_dk": "12",
+                "column_tb": "12",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 0,
+                "spacing_v_tb": 0,
+                "spacing_h_mb": 0,
+                "spacing_v_mb": 0,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f7f4f1",
+                "rounded": "hdt-rounded-full"
+              },
+              "blocks": {
+                "heading_7R9JzB": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>See Why Pet Parents Love Our Custom Art<br/></p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h2",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 50,
+                    "font_size_heading_md": 30,
+                    "font_size_heading": 24,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_EBfNxe": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 50,
+                    "space": 16
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_7R9JzB",
+                "spacer_EBfNxe"
+              ]
+            },
+            "multi_column_PGcFDj": {
+              "type": "_multi_column",
+              "settings": {
+                "column_dk": "4",
+                "column_tb": "4",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 30,
+                "spacing_v_tb": 30,
+                "spacing_h_mb": 15,
+                "spacing_v_mb": 15,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f6f3ee",
+                "rounded": "none"
+              },
+              "blocks": {
+                "image_Qgzwbi": {
+                  "type": "_image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/2.webp",
+                    "url": "",
+                    "img_effect": "none",
+                    "b_effect": "none"
+                  },
+                  "blocks": {}
+                },
+                "spacer_drbcAw": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 16,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "star_vote_TQqwM7": {
+                  "type": "_star_vote",
+                  "name": "Star vote",
+                  "settings": {},
+                  "blocks": {}
+                },
+                "spacer_kDqdJR": {
+                  "type": "spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_nqcP3r": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>\"I am absolutely in love with my dog's portrait! The artist captured every detail perfectly. Max looks like royalty!\"</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "lg",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 12,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_93gEbd": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>Sarah M.</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h_custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 16,
+                    "font_size_heading_md": 16,
+                    "font_size_heading": 16,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_7yFgar": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 50,
+                    "space": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_Qgzwbi",
+                "spacer_drbcAw",
+                "star_vote_TQqwM7",
+                "spacer_kDqdJR",
+                "text_nqcP3r",
+                "heading_93gEbd",
+                "spacer_7yFgar"
+              ]
+            },
+            "multi_column_K79jRD": {
+              "type": "_multi_column",
+              "settings": {
+                "column_dk": "4",
+                "column_tb": "4",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 30,
+                "spacing_v_tb": 30,
+                "spacing_h_mb": 15,
+                "spacing_v_mb": 15,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f6f3ee",
+                "rounded": "none"
+              },
+              "blocks": {
+                "image_6aaCFr": {
+                  "type": "_image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/14.webp",
+                    "url": "",
+                    "img_effect": "none",
+                    "b_effect": "none"
+                  },
+                  "blocks": {}
+                },
+                "spacer_68zmtT": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 16,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "star_vote_qT77UY": {
+                  "type": "_star_vote",
+                  "name": "Star vote",
+                  "settings": {},
+                  "blocks": {}
+                },
+                "spacer_Ch3Ttd": {
+                  "type": "spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_VWzwna": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>\"The quality exceeded my expectations. I ordered 3 more for my family members. They make the perfect gift!\"</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "lg",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 12,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_fe9xbd": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>Jennifer K.</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h_custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 16,
+                    "font_size_heading_md": 16,
+                    "font_size_heading": 16,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_34khwL": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 50,
+                    "space": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_6aaCFr",
+                "spacer_68zmtT",
+                "star_vote_qT77UY",
+                "spacer_Ch3Ttd",
+                "text_VWzwna",
+                "heading_fe9xbd",
+                "spacer_34khwL"
+              ]
+            },
+            "multi_column_Yid74D": {
+              "type": "_multi_column",
+              "settings": {
+                "column_dk": "4",
+                "column_tb": "4",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 30,
+                "spacing_v_tb": 30,
+                "spacing_h_mb": 15,
+                "spacing_v_mb": 15,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f6f3ee",
+                "rounded": "none"
+              },
+              "blocks": {
+                "image_fcVGhq": {
+                  "type": "_image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/16.webp",
+                    "url": "",
+                    "img_effect": "none",
+                    "b_effect": "none"
+                  },
+                  "blocks": {}
+                },
+                "spacer_YyFAAK": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 16,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "star_vote_7mqpKe": {
+                  "type": "_star_vote",
+                  "name": "Star vote",
+                  "settings": {},
+                  "blocks": {}
+                },
+                "spacer_4ENCVx": {
+                  "type": "spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_9raGLh": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>\"Fast shipping, amazing quality, and the customer service was outstanding. Will definitely order again!\"</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "lg",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 12,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_qtMVWg": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>Michael R.</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h_custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 16,
+                    "font_size_heading_md": 16,
+                    "font_size_heading": 16,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_XARP73": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 50,
+                    "space": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_fcVGhq",
+                "spacer_YyFAAK",
+                "star_vote_7mqpKe",
+                "spacer_4ENCVx",
+                "text_9raGLh",
+                "heading_qtMVWg",
+                "spacer_XARP73"
+              ]
+            }
+          },
+          "block_order": [
+            "multi_column_rEKRTH",
+            "multi_column_PGcFDj",
+            "multi_column_K79jRD",
+            "multi_column_Yid74D"
+          ]
+        }
+      },
+      "block_order": [
+        "multi_row_aYKMVK"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".vote-star {justify-content: center;}",
+        "img {margin-inline: auto; margin-top: 20px; border-radius: 10px;}"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "class_parent": "how-it-work",
+        "item_spacing": 30,
+        "item_spacing_tb": 15,
+        "item_spacing_mb": 15,
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 50
+      }
+    },
+    "testimonials_3aHpcF": {
+      "type": "testimonials",
+      "blocks": {
+        "quote_kcWGKb": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/2.webp",
+            "heading": "",
+            "content": "<p>\"I am absolutely in love with my dog's portrait! The artist captured every detail perfectly. Max looks like royalty!\"</p>",
+            "author": "Sarah M.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_Qkben7": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/14.webp",
+            "heading": "",
+            "content": "<p>\"The quality exceeded my expectations. I ordered 3 more for my family members. They make the perfect gift!\"</p>",
+            "author": "Robert L.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_TFRK89": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/16.webp",
+            "heading": "",
+            "content": "<p>\"Fast shipping, amazing quality, and the customer service was outstanding. Will definitely order again!\"</p>",
+            "author": "Chloe P.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "testimonials": {
+          "type": "section-heading",
+          "static": true,
+          "settings": {
+            "alignment": "center",
+            "row_gap": 15,
+            "margin_bottom": 30
+          },
+          "blocks": {
+            "heading_CzNkMQ": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "heading": "<p>See Why Pet Parents Love Our Custom Art</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "heading_size": "h4",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 40,
+                "font_size_heading_md": 30,
+                "font_size_heading": 24,
+                "font_weight_heading": 600,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_CzNkMQ"
+          ]
+        }
+      },
+      "block_order": [
+        "quote_kcWGKb",
+        "quote_Qkben7",
+        "quote_TFRK89"
+      ],
+      "custom_css": [
+        "@media (max-width: 575px) {.hdt-slider__container {height: auto; } .hdt-poropost-image img {max-width: 100%; margin: 0px !important; }}"
+      ],
+      "name": "t:sections.testimonials.name",
+      "settings": {
+        "class_custom": "",
+        "content_align": "start",
+        "testimonial_des": "3",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "1",
+        "navUI": false,
+        "nav_pos": "middle_out",
+        "nav_des": "default",
+        "dotUI": true,
+        "dis_dot": 30,
+        "color_scheme": "scheme-1",
+        "pr_rating": "#ff7b54",
+        "section_fullwidth": false,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "custom_section_pbj3bN": {
+      "type": "custom-section",
+      "blocks": {
+        "multi_row_iTRFiK": {
+          "type": "_multi_row",
+          "settings": {
+            "rounded": "none"
+          },
+          "blocks": {
+            "multi_column_mb3B6R": {
+              "type": "_multi_column",
+              "name": "Column",
+              "settings": {
+                "column_dk": "12",
+                "column_tb": "12",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 0,
+                "spacing_v_tb": 0,
+                "spacing_h_mb": 0,
+                "spacing_v_mb": 0,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f7f4f1",
+                "rounded": "hdt-rounded-full"
+              },
+              "blocks": {
+                "heading_7TETgg": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>Create Your Masterpiece in 3 Steps</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h4",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 50,
+                    "font_size_heading_md": 30,
+                    "font_size_heading": 24,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "text_W9TUL4": {
+                  "type": "text",
+                  "name": "Text",
+                  "disabled": true,
+                  "settings": {
+                    "text": "<p>From photo to masterpiece in three simple steps</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "base",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 16,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_7TETgg",
+                "text_W9TUL4"
+              ]
+            },
+            "multi_column_nTbRkn": {
+              "type": "_multi_column",
+              "settings": {
+                "column_dk": "4",
+                "column_tb": "4",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 30,
+                "spacing_v_tb": 30,
+                "spacing_h_mb": 15,
+                "spacing_v_mb": 15,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f6f3ee",
+                "rounded": "none"
+              },
+              "blocks": {
+                "image_rzjqCF": {
+                  "type": "_image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/how-to-order-your-custom-pet-portrait_3.png",
+                    "image_mb": "shopify://shop_images/how-to-order-your-custom-pet-portrait_3.png",
+                    "url": "",
+                    "img_effect": "none",
+                    "b_effect": "none"
+                  },
+                  "blocks": {}
+                },
+                "spacer_4Eh7DQ": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 16,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_RdAKbT": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<h6>1</h6>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "base",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 14,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_K4EwYB": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "heading_MMtbwq": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>Share Your Moment</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h_custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 20,
+                    "font_size_heading_md": 20,
+                    "font_size_heading": 20,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_3Dn7UT": {
+                  "type": "spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_zCjAwc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Upload a photo you love. We review it to ensure perfect results.<br/></p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 14,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_rzxier": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 50,
+                    "space": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_rzjqCF",
+                "spacer_4Eh7DQ",
+                "text_RdAKbT",
+                "spacer_K4EwYB",
+                "heading_MMtbwq",
+                "spacer_3Dn7UT",
+                "text_zCjAwc",
+                "spacer_rzxier"
+              ]
+            },
+            "multi_column_efGaLV": {
+              "type": "_multi_column",
+              "settings": {
+                "column_dk": "4",
+                "column_tb": "4",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 30,
+                "spacing_v_tb": 30,
+                "spacing_h_mb": 15,
+                "spacing_v_mb": 15,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f6f3ee",
+                "rounded": "none"
+              },
+              "blocks": {
+                "image_D7eeJG": {
+                  "type": "_image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/how-to-order-your-custom-pet-portrait_2.png",
+                    "image_mb": "shopify://shop_images/how-to-order-your-custom-pet-portrait_2.png",
+                    "url": "",
+                    "img_effect": "none",
+                    "b_effect": "none"
+                  },
+                  "blocks": {}
+                },
+                "spacer_qbxpGF": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 16,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_h4Ai7N": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<h6>2</h6>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "base",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 16,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_NYqpnV": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "heading_hKgdW6": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>Review & Refine</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h_custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 20,
+                    "font_size_heading_md": 20,
+                    "font_size_heading": 20,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_KPgctp": {
+                  "type": "spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_qWPMaw": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Hand-illustrated by artists. You approve the digital proof before printing.<br/></p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 14,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_zzPrkn": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 50,
+                    "space": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_D7eeJG",
+                "spacer_qbxpGF",
+                "text_h4Ai7N",
+                "spacer_NYqpnV",
+                "heading_hKgdW6",
+                "spacer_KPgctp",
+                "text_qWPMaw",
+                "spacer_zzPrkn"
+              ]
+            },
+            "multi_column_UVn9Cq": {
+              "type": "_multi_column",
+              "settings": {
+                "column_dk": "4",
+                "column_tb": "4",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 30,
+                "spacing_v_tb": 30,
+                "spacing_h_mb": 15,
+                "spacing_v_mb": 15,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f6f3ee",
+                "rounded": "none"
+              },
+              "blocks": {
+                "image_3aK9mY": {
+                  "type": "_image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/how-to-order-your-custom-pet-portrait_1.png",
+                    "image_mb": "shopify://shop_images/how-to-order-your-custom-pet-portrait_1.png",
+                    "url": "",
+                    "img_effect": "none",
+                    "b_effect": "none"
+                  },
+                  "blocks": {}
+                },
+                "spacer_mVQ8PJ": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 16,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_cLpRLP": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<h6>3</h6>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "base",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 16,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_CWRETY": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "heading_WDYYbb": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>Unbox & Cherish</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h_custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 20,
+                    "font_size_heading_md": 20,
+                    "font_size_heading": 20,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_wjdbJr": {
+                  "type": "spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_XQjwUf": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Gallery-quality art, shipped fast. Ready to hang and love forever.</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 14,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_Yq4adK": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 50,
+                    "space": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_3aK9mY",
+                "spacer_mVQ8PJ",
+                "text_cLpRLP",
+                "spacer_CWRETY",
+                "heading_WDYYbb",
+                "spacer_wjdbJr",
+                "text_XQjwUf",
+                "spacer_Yq4adK"
+              ]
+            }
+          },
+          "block_order": [
+            "multi_column_mb3B6R",
+            "multi_column_nTbRkn",
+            "multi_column_efGaLV",
+            "multi_column_UVn9Cq"
+          ]
+        }
+      },
+      "block_order": [
+        "multi_row_iTRFiK"
+      ],
+      "custom_css": [
+        "a {pointer-events: none;}"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "class_parent": "how-it-work",
+        "item_spacing": 30,
+        "item_spacing_tb": 15,
+        "item_spacing_mb": 15,
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 50
+      }
+    },
+    "tabs": {
+      "type": "main-product-tabs",
+      "blocks": {
+        "tab_html_fjtD4a": {
+          "type": "tab_html",
+          "settings": {
+            "title": "Details",
+            "content": "<ul><li>Hand-drawn by professional artists</li><li>Museum-quality archival materials</li><li>Vibrant, fade-resistant colors</li><li>Perfect for home decor or gifting</li></ul>",
+            "page": ""
+          }
+        },
+        "tab_html_GUBKNW": {
+          "type": "tab_html",
+          "settings": {
+            "title": "Shipping",
+            "content": "<ul><li>Fast Shipping</li><li>US: 3-5 days </li></ul>",
+            "page": ""
+          }
+        },
+        "tab_html_4nMabf": {
+          "type": "tab_html",
+          "settings": {
+            "title": "Guarantee",
+            "content": "<ul><li>100% Satisfaction</li><li>Unlimited revisions </li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_html_fjtD4a",
+        "tab_html_GUBKNW",
+        "tab_html_4nMabf"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".hdt-type-accordion {max-width: 800px; margin-inline: auto;}"
+      ],
+      "settings": {
+        "tabs_design": "accordion",
+        "enable_first_tab": false,
+        "color_scheme": "scheme-c9476b69-abc7-454f-a946-2d5a9f5f3a37",
+        "full_width": false,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 50
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-product",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "space": 50
+      }
+    },
+    "1769499399d94dbd2d": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_JDiQjj": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": true,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_JDiQjj"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_section_6gABy3": {
+      "type": "custom-section",
+      "blocks": {
+        "multi_row_UqYHnN": {
+          "type": "_multi_row",
+          "settings": {
+            "rounded": "none"
+          },
+          "blocks": {
+            "multi_column_w4TNXC": {
+              "type": "_multi_column",
+              "name": "Column",
+              "settings": {
+                "column_dk": "12",
+                "column_tb": "12",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 0,
+                "spacing_v_tb": 0,
+                "spacing_h_mb": 0,
+                "spacing_v_mb": 0,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f7f4f1",
+                "rounded": "hdt-rounded-full"
+              },
+              "blocks": {
+                "heading_MAwwJy": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<h4>Gallery-Grade Quality.</h4><h4> Crafted to Last a Lifetime.<br/></h4>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h2",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 50,
+                    "font_size_heading_md": 30,
+                    "font_size_heading": 24,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "text_GTwqQ9": {
+                  "type": "text",
+                  "name": "Text",
+                  "disabled": true,
+                  "settings": {
+                    "text": "<p>From photo to masterpiece in three simple steps</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "base",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 16,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_MAwwJy",
+                "text_GTwqQ9"
+              ]
+            },
+            "multi_column_G6eBtT": {
+              "type": "_multi_column",
+              "settings": {
+                "column_dk": "4",
+                "column_tb": "4",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 30,
+                "spacing_v_tb": 30,
+                "spacing_h_mb": 15,
+                "spacing_v_mb": 15,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f6f3ee",
+                "rounded": "none"
+              },
+              "blocks": {
+                "image_FaMgL9": {
+                  "type": "_image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/framedcanvaspreview3jpg1607709451374.jpg",
+                    "url": "",
+                    "img_effect": "none",
+                    "b_effect": "none"
+                  },
+                  "blocks": {}
+                },
+                "spacer_rdLRxa": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 16,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_CHBADW": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "base",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 16,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_pNhpwn": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "heading_Myr87t": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>Archival Canvas & Vivid Inks</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h_custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 20,
+                    "font_size_heading_md": 20,
+                    "font_size_heading": 20,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_rgGKa7": {
+                  "type": "spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_46dTDJ": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Museum-quality, anti-yellowing canvas paired with GREENGUARD Gold certified inks. Safe for your home, fade-resistant for generations.<br/><br/></p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "lg",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 14,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_76GpGY": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 50,
+                    "space": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_FaMgL9",
+                "spacer_rdLRxa",
+                "text_CHBADW",
+                "spacer_pNhpwn",
+                "heading_Myr87t",
+                "spacer_rgGKa7",
+                "text_46dTDJ",
+                "spacer_76GpGY"
+              ]
+            },
+            "multi_column_Aqdghe": {
+              "type": "_multi_column",
+              "settings": {
+                "column_dk": "4",
+                "column_tb": "4",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 30,
+                "spacing_v_tb": 30,
+                "spacing_h_mb": 15,
+                "spacing_v_mb": 15,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f6f3ee",
+                "rounded": "none"
+              },
+              "blocks": {
+                "image_dqiGLF": {
+                  "type": "_image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/framedcanvaswhitelaydown.jpg",
+                    "url": "",
+                    "img_effect": "none",
+                    "b_effect": "none"
+                  },
+                  "blocks": {}
+                },
+                "spacer_KkFnDx": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 16,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_UPJbLX": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "base",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 16,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_8NBdbF": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "heading_A4nirT": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>Handcrafted Solid Wood Frames</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h_custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 20,
+                    "font_size_heading_md": 20,
+                    "font_size_heading": 20,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_P77z9B": {
+                  "type": "spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_ekXCkc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>100% sustainably sourced, kiln-dried pine wood. Meticulously hand-assembled to ensure your masterpiece never warps or bows.<br/></p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "lg",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 14,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_8iaGUK": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 50,
+                    "space": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_dqiGLF",
+                "spacer_KkFnDx",
+                "text_UPJbLX",
+                "spacer_8NBdbF",
+                "heading_A4nirT",
+                "spacer_P77z9B",
+                "text_ekXCkc",
+                "spacer_8iaGUK"
+              ]
+            },
+            "multi_column_pjDc46": {
+              "type": "_multi_column",
+              "settings": {
+                "column_dk": "4",
+                "column_tb": "4",
+                "column_mb": "12",
+                "spacing_h_dk": 0,
+                "spacing_v_dk": 0,
+                "spacing_h_tb": 30,
+                "spacing_v_tb": 30,
+                "spacing_h_mb": 15,
+                "spacing_v_mb": 15,
+                "content_position": "center",
+                "content_position_mb": "center",
+                "alignment": "center",
+                "alignment_mb": "center",
+                "background_color": "#f6f3ee",
+                "rounded": "none"
+              },
+              "blocks": {
+                "image_KDX8dD": {
+                  "type": "_image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/white-frame-detail-display.jpg",
+                    "url": "",
+                    "img_effect": "none",
+                    "b_effect": "none"
+                  },
+                  "blocks": {}
+                },
+                "spacer_arV6ER": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 16,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_TpqkVL": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "base",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 16,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_XNTPyW": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "heading_WXmyNq": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "<p>Ready to Hang & Cherish</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "heading_size": "h_custom",
+                    "text_color": "hdt-s-text",
+                    "font_size_heading_lg": 20,
+                    "font_size_heading_md": 20,
+                    "font_size_heading": 20,
+                    "font_weight_heading": 600,
+                    "letter_spacing_heading": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_tMNzwz": {
+                  "type": "spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 10,
+                    "space_md": 10,
+                    "space": 10
+                  },
+                  "blocks": {}
+                },
+                "text_VQFLze": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Arrives fully assembled with premium hardware and protective bumpers. Simply unbox and display your memory instantly.</p>",
+                    "hidden_br_mobile": false,
+                    "hidden_on_mobile": false,
+                    "text_size": "lg",
+                    "text_color": "hdt-s-text",
+                    "font_size_text_lg": 14,
+                    "font_size_text_md": 14,
+                    "font_size_text": 14,
+                    "font_weight_text": 400,
+                    "letter_spacing_text": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_pzFfMc": {
+                  "type": "spacer",
+                  "name": "Spacer",
+                  "settings": {
+                    "direction": false,
+                    "space_lg": 20,
+                    "space_md": 50,
+                    "space": 20
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_KDX8dD",
+                "spacer_arV6ER",
+                "text_TpqkVL",
+                "spacer_XNTPyW",
+                "heading_WXmyNq",
+                "spacer_tMNzwz",
+                "text_VQFLze",
+                "spacer_pzFfMc"
+              ]
+            }
+          },
+          "block_order": [
+            "multi_column_w4TNXC",
+            "multi_column_G6eBtT",
+            "multi_column_Aqdghe",
+            "multi_column_pjDc46"
+          ]
+        }
+      },
+      "block_order": [
+        "multi_row_UqYHnN"
+      ],
+      "disabled": true,
+      "name": "Custom section",
+      "settings": {
+        "class_parent": "how-it-work",
+        "item_spacing": 30,
+        "item_spacing_tb": 15,
+        "item_spacing_mb": 15,
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 50
+      }
+    },
+    "lookbook_carousel_zVAGyn": {
+      "type": "lookbook-carousel",
+      "blocks": {
+        "lookbook_C9Xhdn": {
+          "type": "_lookbook",
+          "settings": {
+            "image": "shopify://shop_images/Generated_Image_December_09_2025_-_8_32AM.jpg",
+            "img_effect": "none",
+            "b_effect": "none"
+          },
+          "blocks": {}
+        },
+        "lookbook-heading": {
+          "type": "section-heading",
+          "static": true,
+          "settings": {
+            "alignment": "center",
+            "row_gap": 15,
+            "margin_bottom": 30
+          },
+          "blocks": {
+            "heading_iD4pcJ": {
+              "type": "heading",
+              "settings": {
+                "heading": "<p><strong>Size Guide: </strong>Visualize in Your Space</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "heading_size": "h2",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading_md": 30,
+                "font_size_heading": 24,
+                "font_weight_heading": 600,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_iD4pcJ"
+          ]
+        }
+      },
+      "block_order": [
+        "lookbook_C9Xhdn"
+      ],
+      "disabled": true,
+      "name": "t:sections.lookbook.name2",
+      "settings": {
+        "image_ratio": "adapt_image",
+        "item_show": "1",
+        "color_scheme": "",
+        "auto_play": 0,
+        "pause_hover": false,
+        "navigate_style": "mixed",
+        "navUI": false,
+        "dotUI": false,
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "banner_carousel_fkHQeV": {
+      "type": "banner-carousel",
+      "blocks": {
+        "banner_item_qyCW7F": {
+          "type": "_banner-item",
+          "settings": {
+            "banner_url": "",
+            "banner_target": false,
+            "img_effect": "none",
+            "b_effect": "none",
+            "color_scheme": "",
+            "content_position": "center",
+            "alignment": "center",
+            "content_position_mb": "center",
+            "alignment_mb": "center"
+          },
+          "blocks": {
+            "banner-media": {
+              "type": "_media",
+              "static": true,
+              "settings": {
+                "source": "video",
+                "video": "shopify://files/videos/snaptik.vn_1cu5b.mp4",
+                "external_video_url": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        },
+        "banner_item_KmL6QK": {
+          "type": "_banner-item",
+          "settings": {
+            "banner_url": "",
+            "banner_target": false,
+            "img_effect": "none",
+            "b_effect": "none",
+            "color_scheme": "",
+            "content_position": "center",
+            "alignment": "center",
+            "content_position_mb": "center",
+            "alignment_mb": "center"
+          },
+          "blocks": {
+            "banner-media": {
+              "type": "_media",
+              "static": true,
+              "settings": {
+                "source": "video",
+                "video": "shopify://files/videos/snaptik.vn_JqrCy.mp4",
+                "external_video_url": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        },
+        "banner_item_r99fqx": {
+          "type": "_banner-item",
+          "settings": {
+            "banner_url": "",
+            "banner_target": false,
+            "img_effect": "none",
+            "b_effect": "none",
+            "color_scheme": "",
+            "content_position": "center",
+            "alignment": "center",
+            "content_position_mb": "center",
+            "alignment_mb": "center"
+          },
+          "blocks": {
+            "banner-media": {
+              "type": "_media",
+              "static": true,
+              "settings": {
+                "source": "video",
+                "video": "shopify://files/videos/snaptik.vn_5XO8r.mp4",
+                "external_video_url": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        },
+        "banner_item_EUQW9x": {
+          "type": "_banner-item",
+          "settings": {
+            "banner_url": "",
+            "banner_target": false,
+            "img_effect": "none",
+            "b_effect": "none",
+            "color_scheme": "",
+            "content_position": "center",
+            "alignment": "center",
+            "content_position_mb": "center",
+            "alignment_mb": "center"
+          },
+          "blocks": {
+            "banner-media": {
+              "type": "_media",
+              "static": true,
+              "settings": {
+                "source": "video",
+                "video": "shopify://files/videos/snaptik.vn_5Q24W.mp4",
+                "external_video_url": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "banner_item_qyCW7F",
+        "banner_item_KmL6QK",
+        "banner_item_r99fqx",
+        "banner_item_EUQW9x"
+      ],
+      "custom_css": [
+        ".hdt-container-content {flex-direction: column;}",
+        ".review-box {max-width: 100%;}"
+      ],
+      "name": "Banner carousel",
+      "settings": {
+        "color_scheme": "",
+        "full_width": false,
+        "boxed_fullwidth": false,
+        "title": "Rated 4.9 / 5 From Thousands Of Verified Customers",
+        "sub_title": "You captured my pet's personality perfectly! You included all of his finer details...",
+        "col_dk": "3",
+        "row_height": 500,
+        "space_item": 30,
+        "col_tb": "2",
+        "row_height_tb": 500,
+        "space_item_tb": 15,
+        "row_height_mb": 500,
+        "navUI": false,
+        "nav_rounded": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "nav_icon": "chrvon",
+        "dotUI": true,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "recently-products": {
+      "type": "recently-products",
+      "disabled": true,
+      "settings": {
+        "sec_heading": "Recently Viewed",
+        "heading_tag": "h3",
+        "heading_size": "h3",
+        "text_color": "hdt-s-text",
+        "heading_align": "center",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 50,
+        "limit": 10,
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "btn_vi": "hover",
+        "nav_des": "default",
+        "nav_shape": "rounded",
+        "nav_size": "small",
+        "nav_pos": "middle_in",
+        "nav_icon": "chrvon",
+        "dotUI": false,
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "padding_rate": 75
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "sec_heading": "You May Also Love",
+        "heading_tag": "h3",
+        "heading_size": "h3",
+        "text_color": "hdt-s-text",
+        "heading_align": "center",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 10,
+        "sec_heading_spacing": 20,
+        "limit": 10,
+        "product_des": "1",
+        "image_ratio": "square",
+        "image_size": true,
+        "show_vendor": false,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "btn_vi": "always",
+        "nav_des": "simple",
+        "nav_shape": "rounded",
+        "nav_size": "small",
+        "nav_pos": "middle_out",
+        "nav_icon": "chrvon",
+        "dotUI": false,
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "padding_top": 32,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main-product",
+    "accordion_HzWxdG",
+    "custom_section_pKaDXe",
+    "testimonials_3aHpcF",
+    "custom_section_pbj3bN",
+    "tabs",
+    "sidebar",
+    "1769499399d94dbd2d",
+    "custom_section_6gABy3",
+    "lookbook_carousel_zVAGyn",
+    "banner_carousel_fkHQeV",
+    "recently-products",
+    "related-products"
+  ]
+}

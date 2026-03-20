@@ -27,6 +27,7 @@
     "heading_scale": 100,
     "font_base": "--f_family_3",
     "bd_fweight": 400,
+    "h2_size": 45,
     "h3_size": 36,
     "h5_size": 28,
     "page_width": 1400,

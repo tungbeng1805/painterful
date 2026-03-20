@@ -132,6 +132,7 @@
           "type": "_slide-split-item",
           "settings": {
             "image": "shopify://shop_images/banner-custom-royal-pet-portrait-painterful.webp",
+            "image_mb": "shopify://shop_images/banner-custom-royal-pet-portrait-painterful.webp",
             "url": "",
             "banner_target": false,
             "color_scheme": "scheme-2",
@@ -262,6 +263,7 @@
           "type": "_slide-split-item",
           "settings": {
             "image": "shopify://shop_images/banner-custom-modern-pet-portrait-painterful.webp",
+            "image_mb": "shopify://shop_images/banner-custom-modern-pet-portrait-painterful.webp",
             "url": "",
             "banner_target": false,
             "color_scheme": "scheme-1",
@@ -374,6 +376,7 @@
           "type": "_slide-split-item",
           "settings": {
             "image": "shopify://shop_images/banner-custom-people-portrait-painterful.webp",
+            "image_mb": "shopify://shop_images/banner-custom-people-portrait-painterful.webp",
             "url": "",
             "banner_target": false,
             "color_scheme": "scheme-1",
@@ -1534,7 +1537,7 @@
         "logo_item_VVAAqg": {
           "type": "_logo-item",
           "settings": {
-            "image": "shopify://shop_images/painterful-as-seen-on-media-press-logos_25.png",
+            "image": "shopify://shop_images/painterful-as-seen-on-media-press-logos_32.png",
             "url": ""
           },
           "blocks": {}
@@ -1661,7 +1664,7 @@
         "animated": "none",
         "col_tb": "3",
         "col_mb": "2",
-        "padding_top": 20,
+        "padding_top": 15,
         "padding_bottom": 15,
         "padding_rate": 75
       }
@@ -2253,7 +2256,7 @@
                   "type": "_image",
                   "name": "Image",
                   "settings": {
-                    "image": "shopify://shop_images/how-it-works-custom-portrait-painterful.jpg",
+                    "image": "shopify://shop_images/how-to-order-your-custom-pet-portrait_3.png",
                     "url": "",
                     "img_effect": "none",
                     "b_effect": "none"
@@ -2388,7 +2391,7 @@
                   "type": "_image",
                   "name": "Image",
                   "settings": {
-                    "image": "shopify://shop_images/how-it-works-custom-portrait-painterful_4.jpg",
+                    "image": "shopify://shop_images/how-to-order-your-custom-pet-portrait_2.png",
                     "url": "",
                     "img_effect": "none",
                     "b_effect": "none"
@@ -2523,7 +2526,7 @@
                   "type": "_image",
                   "name": "Image",
                   "settings": {
-                    "image": "shopify://shop_images/how-it-works-custom-portrait-painterful_3.jpg",
+                    "image": "shopify://shop_images/how-to-order-your-custom-pet-portrait_1.png",
                     "url": "",
                     "img_effect": "none",
                     "b_effect": "none"

@@ -343,7 +343,7 @@
           "background_gradient": "",
           "background2": "#fbf7f2",
           "button": "#be5737",
-          "button_label": "#ffffff",
+          "button_label": "#FFFFFF",
           "button_border": "#ebebeb",
           "secondary_button_label": "#000000",
           "accent_color": "#db1215",
@@ -352,7 +352,7 @@
           "pr_text": "#231508",
           "price": "#b86135",
           "sale_price": "#db1215",
-          "input_primary": "#ffffff",
+          "input_primary": "#FFFFFF",
           "input_secondary": "#000000"
         }
       },

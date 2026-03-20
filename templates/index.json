@@ -497,7 +497,7 @@
         "fixed_height": 600,
         "image_height_mb": "adapt_image",
         "fixed_height_mb": 300,
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-2",
         "loop": true,
         "auto_play": 10,
         "pause_hover": false,

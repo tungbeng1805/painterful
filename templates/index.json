@@ -1347,7 +1347,7 @@
                 "heading": "<p><strong>Explore Our Collections</strong></p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
-                "heading_size": "h3",
+                "heading_size": "h2",
                 "text_color": "hdt-s-text",
                 "font_size_heading_lg": 100,
                 "font_size_heading_md": 30,

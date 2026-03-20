@@ -2257,6 +2257,7 @@
                   "name": "Image",
                   "settings": {
                     "image": "shopify://shop_images/how-to-order-your-custom-pet-portrait_3.png",
+                    "image_mb": "shopify://shop_images/how-to-order-your-custom-pet-portrait_3.png",
                     "url": "",
                     "img_effect": "none",
                     "b_effect": "none"
@@ -2392,6 +2393,7 @@
                   "name": "Image",
                   "settings": {
                     "image": "shopify://shop_images/how-to-order-your-custom-pet-portrait_2.png",
+                    "image_mb": "shopify://shop_images/how-to-order-your-custom-pet-portrait_2.png",
                     "url": "",
                     "img_effect": "none",
                     "b_effect": "none"
@@ -2527,6 +2529,7 @@
                   "name": "Image",
                   "settings": {
                     "image": "shopify://shop_images/how-to-order-your-custom-pet-portrait_1.png",
+                    "image_mb": "shopify://shop_images/how-to-order-your-custom-pet-portrait_1.png",
                     "url": "",
                     "img_effect": "none",
                     "b_effect": "none"

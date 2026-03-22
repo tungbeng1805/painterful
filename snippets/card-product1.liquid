@@ -90,7 +90,8 @@
         {% render 'scrolling_badge', product: card_product %}
       </div>
       <div class="hdt-card-product__info hdt-card-align-{{ info_align | default: settings.pr_card_alignment }}">
-        {% render 'star-vote' %}
+        <div class="loox-rating" data-id="{{ card_product.id }}" data-rating="{{ card_product.metafields.loox.avg_rating }}" data-raters="{{ card_product.metafields.loox.num_reviews }}"></div>
+
         {%- if settings.show_rating %}{% render 'hdt-pr-card-rating', product: card_product %}{% endif -%}
         {%- liquid
         if card_product.vendor.size > 0 and show_vendor

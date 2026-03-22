@@ -343,7 +343,7 @@
           "background_gradient": "",
           "background2": "#fbf7f2",
           "button": "#be5737",
-          "button_label": "#FFFFFF",
+          "button_label": "#ffffff",
           "button_border": "#ebebeb",
           "secondary_button_label": "#000000",
           "accent_color": "#db1215",
@@ -352,7 +352,7 @@
           "pr_text": "#231508",
           "price": "#b86135",
           "sale_price": "#db1215",
-          "input_primary": "#FFFFFF",
+          "input_primary": "#ffffff",
           "input_secondary": "#000000"
         }
       },
@@ -612,7 +612,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "#template--16917651816503__slideshow_split_jVR7RA {background-color: #fbf7f2; margin-top: 20px;}"
+      "/*slide home*/#template--17074804129847__slideshow_split_jVR7RA {background-color: #fbf7f2;}"
     ]
   }
 }

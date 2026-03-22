@@ -416,6 +416,15 @@
             "navUI": true,
             "nav_des": "default",
             "nav_shape": "rounded",
+            "svg_1": "",
+            "star_rating_number_1": "50,000+",
+            "star_rating_label_1": "Happy Customers",
+            "svg_2": "",
+            "star_rating_number_2": "4.9/5",
+            "star_rating_label_2": "Star Rating",
+            "svg_3": "",
+            "star_rating_number_3": "100%",
+            "star_rating_label_3": "Satisfaction",
             "name_tab_1": "Description",
             "data_tab_1": "{{ closest.product.description }}",
             "name_tab_2": "Shipping & Returns",
@@ -2409,6 +2418,12 @@
         "padding_bottom": 72,
         "padding_rate": 75
       }
+    },
+    "17741529573cfcd804": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -2425,6 +2440,7 @@
     "lookbook_carousel_zVAGyn",
     "banner_carousel_fkHQeV",
     "recently-products",
-    "related-products"
+    "related-products",
+    "17741529573cfcd804"
   ]
 }

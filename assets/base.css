@@ -4941,3 +4941,7 @@ height: auto;
     margin-left: 10px;
   }
 }
+
+.mr-inline {
+  margin-inline: auto;
+}

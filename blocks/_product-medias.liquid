@@ -181,7 +181,7 @@
       </div>
     </div>
   {%- endif -%}
-  {% render '3-column' %}
+  {% render '3-column', _block: block %}
   {% render 'tab-3-medias', _block: block, mobile: false %}
 </div>
 {% schema %}
@@ -497,6 +497,61 @@
       "unit": "%",
       "default": 100
     }*/
+    {
+      "type": "header",
+      "content": "Setup 3 column"
+    },
+    {
+      "type": "text",
+      "id": "svg_1",
+      "label": "Svg 1"
+    },
+    {
+      "type": "text",
+      "id": "star_rating_number_1",
+      "label": "Start number 1",
+      "default": "50,000+"
+    },
+    {
+      "type": "text",
+      "id": "star_rating_label_1",
+      "label": "Start label 1",
+      "default": "Happy Customers"
+    },
+    {
+      "type": "text",
+      "id": "svg_2",
+      "label": "Svg 2"
+    },
+    {
+      "type": "text",
+      "id": "star_rating_number_2",
+      "label": "Start number 2",
+      "default": "4.9/5"
+    },
+    {
+      "type": "text",
+      "id": "star_rating_label_2",
+      "label": "Start label 2",
+      "default": "Star Rating"
+    },
+    {
+      "type": "text",
+      "id": "svg_3",
+      "label": "Svg 3"
+    },
+    {
+      "type": "text",
+      "id": "star_rating_number_3",
+      "label": "Start number 3",
+      "default": "100%"
+    },
+    {
+      "type": "text",
+      "id": "star_rating_label_3",
+      "label": "Start label 3",
+      "default": "Satisfaction"
+    },
     {
       "type": "header",
       "content": "Setup Tab"

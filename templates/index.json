@@ -496,7 +496,7 @@
       ],
       "name": "Slideshow split",
       "settings": {
-        "image_height": "fixed",
+        "image_height": "adapt_image",
         "fixed_height": 600,
         "image_height_mb": "adapt_image",
         "fixed_height_mb": 300,

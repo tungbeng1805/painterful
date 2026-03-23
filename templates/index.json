@@ -2236,7 +2236,7 @@
               "type": "_multi_column",
               "settings": {
                 "column_dk": "4",
-                "column_tb": "4",
+                "column_tb": "12",
                 "column_mb": "12",
                 "spacing_h_dk": 0,
                 "spacing_v_dk": 0,
@@ -2372,7 +2372,7 @@
               "type": "_multi_column",
               "settings": {
                 "column_dk": "4",
-                "column_tb": "4",
+                "column_tb": "12",
                 "column_mb": "12",
                 "spacing_h_dk": 0,
                 "spacing_v_dk": 0,
@@ -2508,7 +2508,7 @@
               "type": "_multi_column",
               "settings": {
                 "column_dk": "4",
-                "column_tb": "4",
+                "column_tb": "12",
                 "column_mb": "12",
                 "spacing_h_dk": 0,
                 "spacing_v_dk": 0,

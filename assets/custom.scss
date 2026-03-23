@@ -29,7 +29,7 @@
 }
 
 .hdt-card-product.hdt-pr-style1 {
-    padding-bottom: 30px;
+    padding-bottom: 0px;
 }
 
 .hdt-card-product__info {
@@ -291,6 +291,18 @@ input[type=radio]:checked+.hdt-product-form_value.is-type-block {
         background-color: #c16347;
         color: #fff;
         }
+}
+
+.hdt-slider__container {
+    .hdt-slide_inner {
+        .hdt-h_custom {
+            font-family: var(--font-heading-family) !important;
+        }
+    }
+}
+
+.hdt-menu-link-text, .hdt-dropdown-menu {
+    font-family: var(--font-heading-family) !important;
 }
 
 @media(max-width: 575px) {

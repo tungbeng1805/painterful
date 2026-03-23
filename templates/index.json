@@ -1394,7 +1394,7 @@
       "settings": {
         "class_custom": "bring-your",
         "row_height": 350,
-        "row_height_tb": 290,
+        "row_height_tb": 260,
         "row_height_mb": 140,
         "space_items": "20",
         "space_items_tb": "20",

@@ -301,6 +301,10 @@ input[type=radio]:checked+.hdt-product-form_value.is-type-block {
     }
 }
 
+.hdt-menu-link-text {
+    font-family: var(--font-heading-family) !important;
+}
+
 @media(max-width: 575px) {
     .how-it-work {
         .hdt-grid-system {

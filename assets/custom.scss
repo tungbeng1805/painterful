@@ -293,6 +293,16 @@ input[type=radio]:checked+.hdt-product-form_value.is-type-block {
         }
 }
 
+hdt-slideshow {
+    .hdt-slide_inner {
+        .hdt-h_custom {
+            .hdt-text-warry {
+                font-family: var(--font-heading-family) !important;
+            }
+        }
+    }
+}
+
 @media(max-width: 575px) {
     .how-it-work {
         .hdt-grid-system {

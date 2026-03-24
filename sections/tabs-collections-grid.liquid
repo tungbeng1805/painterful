@@ -22,6 +22,10 @@
   assign size_list = 'products.theme_settings.size' | t | downcase | strip | replace: ' ,', ',' | replace: ', ', ',' | split: ',' | uniq 
 -%}
 {%- style -%}
+  .custom-svg-title-tab svg {
+    width: 16px;
+    height: 16px;
+  }
   #shopify-section-{{section.id}}{  
     --section-pt: {{ section.settings.padding_top }}px;
     --section-pb: {{ section.settings.padding_bottom }}px; 

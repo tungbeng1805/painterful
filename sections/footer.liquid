@@ -12,7 +12,7 @@
             assign hdt-footer_grid = section.blocks.size
           endif
           -%}
-        <div class="hdt-row-flex lg:hdt-flex-cols-{{ hdt-footer_grid }} hdt-custom_width hdt-footer-collapse-{{ section.settings.collapse }} md:hdt-flex-cols-2 hdt-grid-cols-1 hdt-footer-column hdt-justify-center" style="--spacing-y:0px;--spacing-x:0px;">
+        <div class="hdt-row-flex lg:hdt-flex-cols-{{ hdt-footer_grid }} hdt-custom_width hdt-footer-collapse-{{ section.settings.collapse }} md:hdt-flex-cols-2 hdt-grid-cols-1 hdt-footer-column hdt-justify-start" style="--spacing-y:0px;--spacing-x:0px;">
           {%- for block in section.blocks -%}
             {%-
               liquid

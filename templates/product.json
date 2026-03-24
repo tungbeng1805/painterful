@@ -417,6 +417,15 @@
             "navUI": true,
             "nav_des": "default",
             "nav_shape": "rounded",
+            "svg_1": "",
+            "star_rating_number_1": "50,000+",
+            "star_rating_label_1": "Happy Customers",
+            "svg_2": "",
+            "star_rating_number_2": "4.9/5",
+            "star_rating_label_2": "Star Rating",
+            "svg_3": "",
+            "star_rating_number_3": "100%",
+            "star_rating_label_3": "Satisfaction",
             "name_tab_1": "Description",
             "data_tab_1": "<p></p>{{ closest.product.description }}",
             "name_tab_2": "Shipping and Returns",
@@ -498,7 +507,8 @@
       ],
       "custom_css": [
         ".hdt-custom-col-accordion-content {max-width: 800px; margin-inline: auto;}",
-        "h5 {text-align: center; font-size: 36px;}"
+        "h5 {text-align: center; font-size: 36px;}",
+        "@media(max-width: 991px){}"
       ],
       "name": "t:sections.accordion.name",
       "settings": {

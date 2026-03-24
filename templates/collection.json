@@ -399,6 +399,9 @@
       "block_order": [
         "slide_item_k8za88"
       ],
+      "custom_css": [
+        ".hdt-slide_inner .hdt-content {background-color: transparent;}"
+      ],
       "name": "t:sections.slideshow.name",
       "settings": {
         "image_height": "adapt_image",

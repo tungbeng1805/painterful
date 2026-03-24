@@ -33,6 +33,73 @@
     </hdt-scrollsnap>
   </div>
 </div>
+{%- if section.settings.carousel_mobile and section.settings.auto_next -%}
+  <script>
+    (() => {
+      const sectionId = {{ section.id | json }};
+      const scroller = document.getElementById(`Scroller-${sectionId}`);
+      if (!scroller || scroller.dataset.autoNextBound === "true") return;
+
+      const delay = Math.max(1, Number({{ section.settings.auto_next_time | json }})) * 1000;
+      const dots = [...(scroller.parentElement?.querySelectorAll(".hdt-icon-box__scrollsnap-dots .hdt-scrollsnap-dot__link") || [])];
+      const items = [...scroller.querySelectorAll(":scope > .hdt-group-block, :scope > *")].filter((item) => item.nodeType === 1);
+      if (dots.length < 2 && items.length < 2) return;
+
+      let currentIndex = 0;
+      scroller.dataset.autoNextBound = "true";
+
+      const goToIndex = (index) => {
+        if (dots.length > 0) {
+          dots[index]?.click();
+          return;
+        }
+        const target = items[index];
+        target?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+      };
+
+      const next = () => {
+        const length = dots.length > 0 ? dots.length : items.length;
+        currentIndex = (currentIndex + 1) % length;
+        goToIndex(currentIndex);
+      };
+
+      let timer = setInterval(next, delay);
+
+      scroller.addEventListener("scroll", () => {
+        if (dots.length > 0 || !items.length) return;
+        let nearestIndex = 0;
+        let nearestDistance = Number.POSITIVE_INFINITY;
+        const currentLeft = Math.round(scroller.scrollLeft);
+        items.forEach((item, index) => {
+          const itemLeft = Math.round(item.offsetLeft - scroller.offsetLeft);
+          const distance = Math.abs(itemLeft - currentLeft);
+          if (distance < nearestDistance) {
+            nearestDistance = distance;
+            nearestIndex = index;
+          }
+        });
+        currentIndex = nearestIndex;
+      }, { passive: true });
+
+      if (dots.length > 0) {
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            currentIndex = index;
+          }, { passive: true });
+        });
+      }
+
+      scroller.addEventListener("pointerdown", () => {
+        clearInterval(timer);
+      }, { passive: true });
+
+      scroller.addEventListener("pointerup", () => {
+        clearInterval(timer);
+        timer = setInterval(next, delay);
+      }, { passive: true });
+    })();
+  </script>
+{%- endif -%}
 
 {% schema %}
 {
@@ -91,6 +158,22 @@
       "id": "carousel_mobile",
       "label": "Carousel on mobile",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_next",
+      "label": "Auto next",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "auto_next_time",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Auto next time",
+      "default": 3
     },
     {
       "type": "select",

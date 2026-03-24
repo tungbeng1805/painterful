@@ -492,7 +492,8 @@
         "slide_split_item_kt4MhP"
       ],
       "custom_css": [
-        ".hdt-slide_inner .hdt-content {background-color: transparent;}"
+        ".hdt-slide_inner .hdt-content {background-color: transparent;}",
+        ".hdt-slider__dots {padding: 0px; justify-content: center;}"
       ],
       "name": "Slideshow split",
       "settings": {

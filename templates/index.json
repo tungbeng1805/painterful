@@ -1431,7 +1431,7 @@
           "settings": {
             "one_line": false,
             "alignment": "center",
-            "row_gap": 15,
+            "row_gap": 0,
             "margin_bottom": 30
           },
           "blocks": {

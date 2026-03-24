@@ -81,7 +81,7 @@
                     {%- if block.type == "tab_item" -%}
                       <button class="hdt-tabs-item-title hdt-inline-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-{{ section.settings.tab_item_size }} hdt-font-{{ section.settings.tab_item_weight }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}" {{ block.shopify_attributes }}>
                         <span class="hdt-collection-title-text hdt-truncate hdt-relative">
-                          <span>
+                          <span class="hdt-inline-flex hdt-align-center">
                             {{ block.settings.svg_title }}
                             <span>{{ block.settings.title }}</span>
                           </span>

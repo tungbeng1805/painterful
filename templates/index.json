@@ -1477,6 +1477,9 @@
       "block_order": [
         "view_all_WriFwr"
       ],
+      "custom_css": [
+        ".hdt-slider__dots {margin-top: 20px;}"
+      ],
       "name": "t:sections.collection_products.carousel_name",
       "settings": {
         "collection": "shop-all-product",

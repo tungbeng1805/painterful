@@ -1032,7 +1032,7 @@
         "quote_TFRK89"
       ],
       "custom_css": [
-        "@media (max-width: 575px) {.hdt-slider__container {height: auto; } .hdt-poropost-image img {max-width: 100%; margin: 5px !important; }}"
+        "@media (max-width: 575px) {.hdt-slider__container {height: auto; } .hdt-poropost-image img {max-width: 100%; margin: 15px !important; }}"
       ],
       "name": "t:sections.testimonials.name",
       "settings": {

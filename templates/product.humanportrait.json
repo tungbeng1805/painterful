@@ -1046,7 +1046,7 @@
         "nav_pos": "middle_out",
         "nav_des": "default",
         "dotUI": true,
-        "dis_dot": 30,
+        "dis_dot": 35,
         "color_scheme": "scheme-1",
         "pr_rating": "#ff7b54",
         "section_fullwidth": false,

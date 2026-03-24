@@ -508,7 +508,8 @@
       "custom_css": [
         ".hdt-custom-col-accordion-content {max-width: 800px; margin-inline: auto;}",
         "h5 {text-align: center; font-size: 36px;}",
-        "@media(max-width: 991px){}"
+        "@media (max-width: 991px) {#title_q8i3Hn {font-size: 30px; }}",
+        "@media (max-width: 991px) {#title_q8i3Hn {font-size: 24px; }}"
       ],
       "name": "t:sections.accordion.name",
       "settings": {

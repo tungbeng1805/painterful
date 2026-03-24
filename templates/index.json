@@ -2875,7 +2875,7 @@
       "custom_css": [
         ".gi-svg {border: 2px solid #be5737; box-shadow: #bd9386 0px 7px 29px 0px;}",
         ".gi-svg svg {stroke: #be5737;}",
-        "@media(max-width:991px){.hdt-full-width-link {position: relative; }}",
+        "@media (max-width: 991px) {.hdt-full-width-link {position: relative; } .hdt-relative {display: flex; align-items: center; }}",
         "@media (max-width: 575px) {.group-img-text h3 {font-size: 16px; } .flex-1 p {font-size: 14px; } .flex-1 {text-align: left; }}"
       ],
       "name": "Image with text",

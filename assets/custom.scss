@@ -305,6 +305,13 @@ input[type=radio]:checked+.hdt-product-form_value.is-type-block {
     font-family: var(--font-heading-family) !important;
 }
 
+@media(max-width: 1366px){
+    .hdt-collection-style1 {
+            aspect-ratio: auto;
+    height: 100% !important;
+    }
+}
+
 @media(max-width: 575px) {
     .how-it-work {
         .hdt-grid-system {

@@ -119,6 +119,14 @@
             "content_richtext": "<p>Yes, we understand that changes are sometimes necessary! Please contact us within 12-24 hours of placing your order. Depending on what you need to adjust, here are our guidelines:<br/><br/><strong>Shipping Information:</strong> We can update your shipping address or phone number as long as you reach out before your final artwork is sent to print. Once the order is in the printing and fulfillment phase, we can no longer redirect the package.<br/><br/><strong>Design Details:</strong> Need to fix a typo in your pet's name, switch the background color, or change the frame? Contact us ASAP. These changes must also be requested before the final proof goes to print.<br/><strong><br/>Changing the Pet Photo: </strong>You can swap your reference photo for free only if our artists haven't started illustrating yet. If the drawing process has already begun, changing the photo will require an additional artwork fee. To avoid this, please review our Photo Guide before ordering. If you're unsure, feel free to send us a few photos—our team would be happy to help you pick the perfect one!<br/><br/><strong>Changing Product or Size:</strong> If you want to change the canvas size or switch to a different product entirely, the price will vary. Please reach out to our support team so we can cancel your current order and help you place a new one with the correct details.<br/></p>"
           }
         },
+        "accordion_item_9ecdVa": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "10. Do you create pet memorial portraits?",
+            "content": "-",
+            "content_richtext": "<p>Yes, we absolutely do. It is a profound honor for our team to help you preserve the memory of a beloved companion who has crossed the rainbow bridge.</p><p>Our artists put extra care and love into these special pieces. Upon request, we can beautifully and respectfully incorporate elements like a delicate halo or angel wings into the portrait. We hope to provide you with a timeless, comforting tribute to the unconditional love they brought into your life. Please just leave a note for our artists when placing your order.</p>"
+          }
+        },
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-title-2": {
           "type": "title",
           "settings": {
@@ -230,6 +238,7 @@
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-3",
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-4",
         "accordion_item_fwgJ3m",
+        "accordion_item_9ecdVa",
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-title-2",
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-5",
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-6",

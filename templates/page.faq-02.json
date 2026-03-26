@@ -207,8 +207,8 @@
           "type": "accordion_item",
           "settings": {
             "title": "2. Can I cancel my order?",
-            "content": "Yes, but timing is everything:\n\nWithin 24 hours of purchase: You are eligible for a 100% full refund, no questions asked.\n\nAfter 24 hours: If our artists have already started your portrait, a $10 service fee will be deducted from your refund to cover the labor costs. Once you have approved the artwork for printing, cancellations are no longer possible.",
-            "content_richtext": ""
+            "content": "-",
+            "content_richtext": "<p>Yes, but timing is everything:<br/><br/><strong>Within 24 hours of purchase:</strong> You are eligible for a 100% full refund, no questions asked.<br/><br/><strong>After 24 hours:</strong> If our artists have already started your portrait, a $10 service fee will be deducted from your refund to cover the labor costs. Once you have approved the artwork for printing, cancellations are no longer possible.</p>"
           }
         },
         "accordion_item_TVY7qm": {

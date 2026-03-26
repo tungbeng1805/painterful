@@ -1177,7 +1177,7 @@
                   "type": "text",
                   "name": "Text",
                   "settings": {
-                    "text": "<h6><strong>1</strong></h6>",
+                    "text": "<h6>1</h6>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
                     "text_size": "sm",
@@ -1313,7 +1313,7 @@
                   "type": "text",
                   "name": "Text",
                   "settings": {
-                    "text": "<h6><strong>2</strong></h6>",
+                    "text": "<h6>2</h6>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
                     "text_size": "sm",
@@ -1449,7 +1449,7 @@
                   "type": "text",
                   "name": "Text",
                   "settings": {
-                    "text": "<h6><strong>3</strong></h6>",
+                    "text": "<h6>3</h6>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
                     "text_size": "sm",

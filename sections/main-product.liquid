@@ -114,6 +114,262 @@
   </hdt-sticky-btn-atc>
   {%- endif -%}
 </div>
+<script>
+  (() => {
+    const SELECTOR_ATC_BUTTONS = [
+      '.hdt-product-form__submit.hdt-btn',
+      '.hdt-sticky-atc__submit.hdt-btn'
+    ].join(',');
+    const MODAL_ID = 'hdt-atc-validation-modal';
+
+    function ensureValidationModal() {
+      let modal = document.getElementById(MODAL_ID);
+      if (modal) return modal;
+
+      modal = document.createElement('div');
+      modal.id = MODAL_ID;
+      modal.setAttribute('aria-hidden', 'true');
+      modal.style.cssText = 'position:fixed;inset:0;display:none;z-index:99999;';
+      modal.innerHTML = `
+        <div data-role="overlay" style="position:absolute;inset:0;background:rgba(0,0,0,.5);"></div>
+        <div style="position:relative;z-index:1;display:flex;min-height:100%;align-items:center;justify-content:center;padding:16px;">
+          <div role="dialog" aria-modal="true" style="width:100%;max-width:420px;background:#fff;border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.2);padding:18px 16px 14px;">
+            <div data-role="title" style="font-size:18px;line-height:1.3;font-weight:700;color:#222;margin-bottom:8px;">Notice</div>
+            <div data-role="message" style="font-size:14px;line-height:1.45;color:#444;margin-bottom:14px;"></div>
+            <div data-role="actions" style="display:flex;gap:8px;justify-content:flex-end;"></div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      return modal;
+    }
+
+    function showPopup(options) {
+      const modal = ensureValidationModal();
+      const titleEl = modal.querySelector('[data-role="title"]');
+      const messageEl = modal.querySelector('[data-role="message"]');
+      const actionsEl = modal.querySelector('[data-role="actions"]');
+      const overlayEl = modal.querySelector('[data-role="overlay"]');
+
+      const title = options?.title || 'Notice';
+      const message = options?.message || '';
+      const okText = options?.okText || 'OK';
+      const cancelText = options?.cancelText || '';
+      const okStyle = options?.okStyle || 'primary';
+
+      titleEl.textContent = title;
+      messageEl.textContent = message;
+      actionsEl.innerHTML = '';
+
+      return new Promise((resolve) => {
+        const close = (result) => {
+          modal.style.display = 'none';
+          modal.setAttribute('aria-hidden', 'true');
+          document.removeEventListener('keydown', onEsc, true);
+          resolve(result);
+        };
+
+        const onEsc = (ev) => {
+          if (ev.key === 'Escape') close(false);
+        };
+        document.addEventListener('keydown', onEsc, true);
+
+        if (cancelText) {
+          const cancelBtn = document.createElement('button');
+          cancelBtn.type = 'button';
+          cancelBtn.textContent = cancelText;
+          cancelBtn.style.cssText = 'border:1px solid #ddd;background:#fff;color:#333;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;';
+          cancelBtn.onclick = () => close(false);
+          actionsEl.appendChild(cancelBtn);
+        }
+
+        const okBtn = document.createElement('button');
+        okBtn.type = 'button';
+        okBtn.textContent = okText;
+        okBtn.style.cssText = okStyle === 'danger'
+          ? 'border:1px solid #d92d20;background:#d92d20;color:#fff;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;'
+          : 'border:1px solid #be5637;background:#be5637;color:#fff;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;';
+        okBtn.onclick = () => close(true);
+        actionsEl.appendChild(okBtn);
+
+        overlayEl.onclick = () => close(false);
+        modal.style.display = 'block';
+        modal.setAttribute('aria-hidden', 'false');
+        setTimeout(() => okBtn.focus(), 0);
+      });
+    }
+
+    function getFormFromSubmitButton(btn) {
+      if (!btn) return null;
+      if (btn.form instanceof HTMLFormElement) return btn.form;
+      const formId = btn.getAttribute && btn.getAttribute('form');
+      if (formId) return document.getElementById(formId);
+      return btn.closest('form');
+    }
+
+    function getUploadPickerForForm(form) {
+      if (!form?.id) return null;
+      const picker = document.querySelector(
+        `input.hdt-upload-input[data-product-form-id="${form.id}"][data-required="true"]`
+      );
+      if (picker) return picker;
+      // Fallback: if theme submits a different form (sticky), reuse any required picker on page
+      return document.querySelector('input.hdt-upload-input[data-required="true"]');
+    }
+
+    function countUploadedFilesForForm(form) {
+      // Prefer the global cache populated by `_product-item-property.liquid`
+      const map = window.__hdtUploadFilesByFormAndLabel;
+      const byLabel = (form?.id && map && map[form.id]) ? map[form.id] : null;
+      if (byLabel && typeof byLabel === 'object') {
+        let total = 0;
+        for (const files of Object.values(byLabel)) {
+          if (Array.isArray(files)) total += files.length;
+        }
+        return total;
+      }
+
+      // Fallback: count preview images in the upload block (if present)
+      const picker = getUploadPickerForForm(form);
+      const root = picker?.closest?.('.hdt-line-item-property');
+      const preview = root?.querySelector?.('.hdt-upload-preview');
+      const imgs = preview ? preview.querySelectorAll('img') : null;
+      return imgs ? imgs.length : 0;
+    }
+
+    function setInlineValidation(picker, message) {
+      if (!picker) return;
+      const root = picker.closest('.hdt-line-item-property') || picker.parentElement;
+      if (!root) return;
+
+      let el = root.querySelector('.hdt-upload-validation');
+      if (!el) {
+        el = document.createElement('div');
+        el.className = 'hdt-upload-validation';
+        el.style.cssText = 'margin-top:8px;color:#ff0000;font-size:13px;line-height:1.3;font-weight:500;';
+        root.appendChild(el);
+      }
+      el.textContent = message || '';
+      el.hidden = !message;
+    }
+
+    function focusUploadArea(picker) {
+      if (!picker) return;
+      const root = picker.closest('.hdt-line-item-property') || picker.parentElement;
+      const label = root?.querySelector('label[for]');
+      const target = label || root || picker;
+      try {
+        target?.scrollIntoView?.({ behavior: 'smooth', block: 'center' });
+      } catch (_) {}
+      // picker is hidden, so focus label/root for better mobile UX
+      try {
+        if (label instanceof HTMLElement) {
+          label.setAttribute('tabindex', '-1');
+          label.focus({ preventScroll: true });
+        } else if (root instanceof HTMLElement) {
+          root.setAttribute('tabindex', '-1');
+          root.focus({ preventScroll: true });
+        } else {
+          picker.focus?.({ preventScroll: true });
+        }
+      } catch (_) {}
+    }
+
+    function clearInlineValidationForForm(form) {
+      const picker = getUploadPickerForForm(form);
+      if (!picker) return;
+      setInlineValidation(picker, '');
+    }
+
+    function getPetNameInput(form) {
+      if (!form) return null;
+      // Inputs can be outside <form> and linked via form="<id>", so use element.form mapping.
+      const exactCandidates = Array.from(
+        document.querySelectorAll('input[name="properties[Pet\'s name]"], textarea[name="properties[Pet\'s name]"]')
+      );
+      const exact = exactCandidates.find((el) => el.form === form);
+      if (exact) return exact;
+
+      // Fallback: any line-item property input/textarea linked to this form that looks like pet name
+      const props = Array.from(
+        document.querySelectorAll('input[name^="properties["], textarea[name^="properties["]')
+      ).filter((el) => el.form === form);
+
+      return props.find((i) => {
+        const n = String(i.name || '').toLowerCase();
+        return n.includes('pet') && n.includes('name');
+      }) || null;
+    }
+
+    function shouldBlockForMissingUpload(form) {
+      const picker = getUploadPickerForForm(form);
+      if (!picker) return false; // no upload field on this product
+      if (picker.dataset.required !== 'true') return false;
+      return countUploadedFilesForForm(form) <= 0;
+    }
+
+    document.addEventListener('change', (e) => {
+      const t = e.target;
+      if (!(t instanceof HTMLInputElement)) return;
+      if (!t.classList.contains('hdt-upload-input')) return;
+      const formId = t.dataset.productFormId;
+      const form = formId ? document.getElementById(formId) : (t.form instanceof HTMLFormElement ? t.form : null);
+      if (form) clearInlineValidationForForm(form);
+    }, true);
+
+    document.addEventListener('click', async (e) => {
+      const el = e.target;
+      if (!(el instanceof Element)) return;
+
+      const btn = el.closest(SELECTOR_ATC_BUTTONS);
+      if (!(btn instanceof HTMLElement)) return;
+
+      const form = getFormFromSubmitButton(btn);
+      if (!(form instanceof HTMLFormElement)) return;
+
+      // Always control submit ourselves
+      e.preventDefault();
+      e.stopPropagation();
+
+      // 1) Require upload
+      if (shouldBlockForMissingUpload(form)) {
+        const picker = getUploadPickerForForm(form);
+        setInlineValidation(picker, 'Please upload at least 1 photo before adding to cart.');
+        focusUploadArea(picker);
+        await showPopup({
+          title: 'Photo Required',
+          message: 'Please upload at least 1 photo before adding this product to cart.',
+          okText: 'Got it',
+          okStyle: 'danger'
+        });
+        return;
+      }
+
+      // 2) Pet name confirm (optional field)
+      const petName = getPetNameInput(form);
+      const petNameValue = (petName?.value || '').trim();
+      if (!petNameValue) {
+        const ok = await showPopup({
+          title: "Pet's Name Missing",
+          message: "You haven't entered your pet's name. Do you want to add to cart anyway?",
+          okText: 'Yes, continue',
+          cancelText: 'No',
+          okStyle: 'primary'
+        });
+        if (!ok) return;
+      }
+
+      // Continue: submit form (theme scripts will handle cart/add.js)
+      try {
+        if (typeof form.requestSubmit === 'function') form.requestSubmit();
+        else form.submit();
+      } catch (_) {
+        try { form.submit(); } catch (_) {}
+      }
+    }, true);
+  })();
+</script>
+
 {% schema %}
 {
   "name": "Main product",

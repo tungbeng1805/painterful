@@ -82,10 +82,10 @@
         .hdt-text-warry h6 {
             width: 40px;
             height: 40px;
-            line-height: 40px;
+            line-height: 36px;
             background-color: #be5637;
             color: #fff;
-            font-weight: 600;
+            font-weight: 400;
             z-index: 10;
             text-align: center;
             border-radius: 50%;
@@ -93,10 +93,6 @@
             margin-inline: auto;
             font-size: 40px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            strong {
-                line-height: 35px;
-    display: block;
-            }
         }
         .hdt-column_inner {
                     place-self: normal;

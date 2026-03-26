@@ -137,16 +137,16 @@
           "type": "accordion_item",
           "settings": {
             "title": "1. How long does the entire process take?",
-            "content": "Total delivery time = Design + Production + Shipping.\n\nDesign & Preview: 1–3 Business Days.\n\nProduction: 2–4 Business Days (starts after you approve your artwork).\n\nShipping: Once shipped, delivery takes:\n\n🇺🇸 USA: 4–8 Business Days.\n\n🇬🇧 UK / 🇨🇦 Canada / 🇦🇺 Australia: 7–14 Business Days.\n\n🇪🇺 Europe: 7–21 Business Days.\n\nNote on Approval: To ensure timely delivery, we allow 3 days for you to approve or request changes. If we don't hear back after multiple reminders, we will proceed to print to avoid further delays.",
-            "content_richtext": ""
+            "content": "-",
+            "content_richtext": "<p>Total delivery time = Design + Production + Shipping.<br/><br/><strong>Design & Preview</strong>: 1–3 Business Days.<br/><br/><strong>Production:</strong> 2–4 Business Days (starts after you approve your artwork).<br/><br/><strong>Shipping:</strong> Once shipped, delivery takes:<br/><br/>🇺🇸 USA: 4–8 Business Days.<br/><br/>🇬🇧 UK / 🇨🇦 Canada / 🇦🇺 Australia / 🇪🇺 Europe: 1 - 3 weeks.<br/><br/>International: 2-4 weeks.<br/><br/><strong>Note on Approval:</strong> To ensure timely delivery, we allow 3 days for you to approve or request changes. If we don't hear back after multiple reminders, we will proceed to print to avoid further delays.</p>"
           }
         },
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-6": {
           "type": "accordion_item",
           "settings": {
             "title": "2. What are the shipping fees?",
-            "content": "Because we offer a wide variety of custom products in different sizes and weights, shipping fees vary depending on the specific items in your order and your shipping destination. The exact shipping cost will be automatically calculated and clearly displayed at checkout before you complete your purchase.",
-            "content_richtext": ""
+            "content": "-",
+            "content_richtext": "<p>We are thrilled to offer FREE standard shipping for all US orders over $100! </p><p>For US orders under $100, as well as all international orders, shipping fees are automatically calculated at checkout based on your exact location and the items in your cart.</p>"
           }
         },
         "accordion_item_4G8Wpk": {
@@ -160,8 +160,8 @@
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-7": {
           "type": "accordion_item",
           "settings": {
-            "title": "4. What products can I customize?",
-            "content": "We offer a wide range of premium essentials to showcase your pet's portrait, including:Wall Art: High-quality Posters and Canvases (Framed or Unframed). Lifestyle: Ceramic Mugs, cozy Blankets, and durable Phone Cases. Apparel: Soft T-shirts, Sweatshirts, and Hoodies. Tip: You can use the same pet portrait across multiple items to create a matching set!",
+            "title": "4. Will I receive a tracking number?",
+            "content": "Yes, absolutely! Once you approve your final artwork, we immediately send it to print. It typically takes about 2 to 4 business days for your custom piece to be produced and a tracking number to be generated. As soon as it's ready, we will send you a shipping confirmation email so you can follow your artwork's journey home!",
             "content_richtext": ""
           }
         },
@@ -170,6 +170,22 @@
           "settings": {
             "title": "5. Which payment methods do you accept?",
             "content": "We accept all major debit and credit cards including Visa, Visa Debit, Mastercard, American Express and more. We also accept PayPal payments.",
+            "content_richtext": ""
+          }
+        },
+        "accordion_item_yp9hG4": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "6. Why isn't my tracking number updating?",
+            "content": "Don't worry! When your shipping label is first created, it can take 24 to 48 hours for the carrier's system to scan the package and update the tracking status online. If your tracking hasn't updated after a couple of days, please reach out to us and we'll happily look into it for you!",
+            "content_richtext": ""
+          }
+        },
+        "accordion_item_yWtiwf": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "7. If I order multiple items, will they arrive in the same package?",
+            "content": "Not always. Because we offer a variety of specialized custom products (such as framed canvases, phone cases, and blankets), your items may be produced in different printing facilities to ensure the highest quality. As a result, they might arrive in separate packages and on different days. You will receive a separate tracking number for each package, so you can track all your goodies!",
             "content_richtext": ""
           }
         },
@@ -211,14 +227,6 @@
             "content_richtext": ""
           }
         },
-        "accordion_item_3ibgtU": {
-          "type": "accordion_item",
-          "settings": {
-            "title": "5. Can I change my photo after seeing the preview?",
-            "content": "We want the best result for you! You can change your photo once for free. However, requesting a completely new photo for a second time (starting the drawing process from scratch again) will incur a $10 Artwork Recreation Fee.",
-            "content_richtext": ""
-          }
-        },
         "96d06894-2378-432e-9a7c-721d0af64eb5": {
           "type": "other_link",
           "settings": {
@@ -245,12 +253,13 @@
         "accordion_item_4G8Wpk",
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-7",
         "accordion_item_YhKyLX",
+        "accordion_item_yp9hG4",
+        "accordion_item_yWtiwf",
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-title-3",
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-9",
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-a",
         "accordion_item_TVY7qm",
         "accordion_item_MVNMVi",
-        "accordion_item_3ibgtU",
         "96d06894-2378-432e-9a7c-721d0af64eb5"
       ],
       "custom_css": [

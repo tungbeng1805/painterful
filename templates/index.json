@@ -2425,19 +2425,19 @@
                   },
                   "blocks": {}
                 },
-                "text_xJd6wW": {
+                "text_HV6NpG": {
                   "type": "text",
                   "name": "Text",
                   "settings": {
-                    "text": "<h6>2</h6>",
+                    "text": "<h6><strong>2</strong></h6>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
-                    "text_size": "base",
+                    "text_size": "sm",
                     "text_color": "hdt-s-text",
-                    "font_size_text_lg": 16,
+                    "font_size_text_lg": 14,
                     "font_size_text_md": 14,
                     "font_size_text": 14,
-                    "font_weight_text": 400,
+                    "font_weight_text": 200,
                     "letter_spacing_text": 0
                   },
                   "blocks": {}
@@ -2510,7 +2510,7 @@
               "block_order": [
                 "image_gUHMRT",
                 "spacer_9DdMhh",
-                "text_xJd6wW",
+                "text_HV6NpG",
                 "spacer_iUAQeM",
                 "heading_86QqGx",
                 "spacer_DHHwXQ",
@@ -2561,19 +2561,19 @@
                   },
                   "blocks": {}
                 },
-                "text_h9Vi4j": {
+                "text_xpc9Tb": {
                   "type": "text",
                   "name": "Text",
                   "settings": {
-                    "text": "<h6>3</h6>",
+                    "text": "<h6><strong>3</strong></h6>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
-                    "text_size": "base",
+                    "text_size": "sm",
                     "text_color": "hdt-s-text",
-                    "font_size_text_lg": 16,
+                    "font_size_text_lg": 14,
                     "font_size_text_md": 14,
                     "font_size_text": 14,
-                    "font_weight_text": 400,
+                    "font_weight_text": 200,
                     "letter_spacing_text": 0
                   },
                   "blocks": {}
@@ -2646,7 +2646,7 @@
               "block_order": [
                 "image_tRbU8V",
                 "spacer_zQiCpy",
-                "text_h9Vi4j",
+                "text_xpc9Tb",
                 "spacer_C3XyY3",
                 "heading_iMAPCR",
                 "spacer_FePNb4",

@@ -961,8 +961,22 @@
           "settings": {
             "image": "shopify://shop_images/Ncy0xKxLH_mid.jpg",
             "heading": "",
-            "content": "<p>\"I think my dog is officially obsessed with himself! 😂 I got this Signature Modern Portrait for my two boys, and as soon as I set it down, he started staring at it like he was looking in a mirror. Thank you, Painterful, for such a fun and high-quality keepsake!\"</p>",
+            "content": "<p>\"I think my dog is officially obsessed with himself! 😂 I got this Signature Modern Portrait for my two boys, and as soon as I set it down, he started staring at it like he was looking in a mirror.\"</p>",
             "author": "Tonirose L.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_63kQEV": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/custom-pet-portrait-review.jpg",
+            "heading": "",
+            "content": "<p>\"Highly recommend! Got my sister a portrait of her dog for her birthday. They sent a proof before mailing it which was much appreciated. It arrived quickly and my sister loved it!\"</p>",
+            "author": "Mikayla W.",
             "pos": "",
             "enable_verify": false,
             "product": "",
@@ -1019,20 +1033,6 @@
             "heading": "",
             "content": "<p>\"Excellent customer service, and exquisite quality! Seller made sure it got to me before our anniversary, what a fantastic gift, highly recommend!\"</p>",
             "author": "Carlos N",
-            "pos": "",
-            "enable_verify": false,
-            "product": "",
-            "rating": 5
-          },
-          "blocks": {}
-        },
-        "quote_63kQEV": {
-          "type": "_quote",
-          "settings": {
-            "image": "shopify://shop_images/custom-pet-portrait-review.jpg",
-            "heading": "",
-            "content": "<p>\"Highly recommend! Got my sister a portrait of her dog for her birthday. They sent a proof before mailing it which was much appreciated. It arrived quickly and my sister loved it!\"</p>",
-            "author": "Mikayla W.",
             "pos": "",
             "enable_verify": false,
             "product": "",
@@ -1130,11 +1130,11 @@
       },
       "block_order": [
         "quote_3VGXgx",
+        "quote_63kQEV",
         "quote_AUVAUB",
         "quote_6ahh4c",
         "quote_Qkben7",
         "quote_TFRK89",
-        "quote_63kQEV",
         "quote_FTc988",
         "quote_kcWGKb",
         "quote_CgtxBH",

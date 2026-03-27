@@ -284,68 +284,6 @@
         "padding_rate": 75
       }
     },
-    "slideshow_CchLaa": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_item_k8za88": {
-          "type": "_slide-item",
-          "settings": {
-            "image": "shopify://shop_images/1_a22c7116-ab65-44d4-9344-4328391aa5dc.jpg",
-            "url": "",
-            "banner_target": false,
-            "color_scheme": "",
-            "content_position": "center-start",
-            "alignment": "left",
-            "content_position_mb": "center-start",
-            "alignment_mb": "left",
-            "background_content": false,
-            "bg_opacity": 0,
-            "box_square": false,
-            "content_rounded": false,
-            "use_border_content": false,
-            "border_opacity": 0,
-            "border_style": "none",
-            "border_pd_dk": 0,
-            "padding_vertical": 30,
-            "padding_horizontal": 30,
-            "min_width_content": 350,
-            "border_pd": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "slide_item_k8za88"
-      ],
-      "custom_css": [
-        ".hdt-slide_inner .hdt-content {background-color: transparent;}"
-      ],
-      "name": "t:sections.slideshow.name",
-      "settings": {
-        "image_height": "adapt_image",
-        "fixed_height": 860,
-        "image_height_mb": "adapt_image",
-        "fixed_height_mb": 300,
-        "is_fade": false,
-        "loop": false,
-        "auto_play": 0,
-        "pause_hover": false,
-        "navUI": false,
-        "nav_des": "default",
-        "nav_rounded_full": false,
-        "dotUI": false,
-        "dot_vertical": false,
-        "dot_style": "default",
-        "dot_align": "center",
-        "dot_space": 30,
-        "color_scheme": "",
-        "full_width": true,
-        "rounded": "none",
-        "padding_top": 0,
-        "padding_bottom": 52,
-        "padding_rate": 75
-      }
-    },
     "accordion_Jz3jAE": {
       "type": "accordion",
       "blocks": {
@@ -416,6 +354,68 @@
         "section_fullwidth": false,
         "color_scheme": "",
         "padding_top": 30,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "slideshow_CchLaa": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_item_k8za88": {
+          "type": "_slide-item",
+          "disabled": true,
+          "settings": {
+            "url": "",
+            "banner_target": false,
+            "color_scheme": "",
+            "content_position": "center-start",
+            "alignment": "left",
+            "content_position_mb": "center-start",
+            "alignment_mb": "left",
+            "background_content": false,
+            "bg_opacity": 0,
+            "box_square": false,
+            "content_rounded": false,
+            "use_border_content": false,
+            "border_opacity": 0,
+            "border_style": "none",
+            "border_pd_dk": 0,
+            "padding_vertical": 30,
+            "padding_horizontal": 30,
+            "min_width_content": 350,
+            "border_pd": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "slide_item_k8za88"
+      ],
+      "custom_css": [
+        ".hdt-slide_inner .hdt-content {background-color: transparent;}"
+      ],
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "image_height": "adapt_image",
+        "fixed_height": 860,
+        "image_height_mb": "adapt_image",
+        "fixed_height_mb": 300,
+        "is_fade": false,
+        "loop": false,
+        "auto_play": 0,
+        "pause_hover": false,
+        "navUI": false,
+        "nav_des": "default",
+        "nav_rounded_full": false,
+        "dotUI": false,
+        "dot_vertical": false,
+        "dot_style": "default",
+        "dot_align": "center",
+        "dot_space": 30,
+        "color_scheme": "",
+        "full_width": true,
+        "rounded": "none",
+        "padding_top": 0,
         "padding_bottom": 52,
         "padding_rate": 75
       }

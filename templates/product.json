@@ -956,16 +956,30 @@
     "testimonials_3aHpcF": {
       "type": "testimonials",
       "blocks": {
-        "quote_kcWGKb": {
+        "quote_3VGXgx": {
           "type": "_quote",
           "settings": {
-            "image": "shopify://shop_images/2.webp",
+            "image": "shopify://shop_images/Ncy0xKxLH_mid.jpg",
             "heading": "",
-            "content": "<p>\"Absolutely in love with this portrait! The artist captured my pet's personality so perfectly. The quality is top-notch!!\"</p>",
-            "author": "Sarah M.",
+            "content": "<p>\"I think my dog is officially obsessed with himself! 😂 I got this Signature Modern Portrait for my two boys, and as soon as I set it down, he started staring at it like he was looking in a mirror. Thank you, Painterful, for such a fun and high-quality keepsake!\"</p>",
+            "author": "Tonirose L.",
             "pos": "",
             "enable_verify": false,
-            "product": "signature-modern-pet-portrait",
+            "product": "the-gentleman-custom-vintage-pet-portrait",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_AUVAUB": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/custom-royal-pet-portrait-review.jpg",
+            "heading": "",
+            "content": "<p>\"Great communication, love the picture! This was perfect! My fiance loved it so much and it’s so funny, goofy and cute! Wish I would’ve ordered it in a bigger size but so happy!\"</p>",
+            "author": "Briar R.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "the-gentleman-custom-vintage-pet-portrait",
             "rating": 5
           },
           "blocks": {}
@@ -1040,16 +1054,16 @@
           },
           "blocks": {}
         },
-        "quote_AUVAUB": {
+        "quote_kcWGKb": {
           "type": "_quote",
           "settings": {
-            "image": "shopify://shop_images/custom-royal-pet-portrait-review.jpg",
+            "image": "shopify://shop_images/2.webp",
             "heading": "",
-            "content": "<p>\"Great communication, love the picture! This was perfect! My fiance loved it so much and it’s so funny, goofy and cute! Wish I would’ve ordered it in a bigger size but so happy!\"</p>",
-            "author": "Briar R.",
+            "content": "<p>\"Absolutely in love with this portrait! The artist captured my pet's personality so perfectly. The quality is top-notch!!\"</p>",
+            "author": "Sarah M.",
             "pos": "",
             "enable_verify": false,
-            "product": "the-gentleman-custom-vintage-pet-portrait",
+            "product": "signature-modern-pet-portrait",
             "rating": 5
           },
           "blocks": {}
@@ -1115,13 +1129,14 @@
         }
       },
       "block_order": [
-        "quote_kcWGKb",
+        "quote_3VGXgx",
+        "quote_AUVAUB",
         "quote_6ahh4c",
         "quote_Qkben7",
         "quote_TFRK89",
         "quote_63kQEV",
         "quote_FTc988",
-        "quote_AUVAUB",
+        "quote_kcWGKb",
         "quote_CgtxBH",
         "quote_aJXVWN"
       ],

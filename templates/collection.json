@@ -101,7 +101,7 @@
               "type": "spacer",
               "settings": {
                 "direction": false,
-                "space_lg": 50,
+                "space_lg": 30,
                 "space_md": 30,
                 "space": 26
               },

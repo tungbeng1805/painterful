@@ -970,20 +970,6 @@
           },
           "blocks": {}
         },
-        "quote_63kQEV": {
-          "type": "_quote",
-          "settings": {
-            "image": "shopify://shop_images/custom-pet-portrait-review.jpg",
-            "heading": "",
-            "content": "<p>\"Highly recommend! Got my sister a portrait of her dog for her birthday. They sent a proof before mailing it which was much appreciated. It arrived quickly and my sister loved it!\"</p>",
-            "author": "Mikayla W.",
-            "pos": "",
-            "enable_verify": false,
-            "product": "",
-            "rating": 5
-          },
-          "blocks": {}
-        },
         "quote_AUVAUB": {
           "type": "_quote",
           "settings": {
@@ -991,6 +977,20 @@
             "heading": "",
             "content": "<p>\"Great communication, love the picture! This was perfect! My fiance loved it so much and it’s so funny, goofy and cute! Wish I would’ve ordered it in a bigger size but so happy!\"</p>",
             "author": "Briar R.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_63kQEV": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/custom-pet-portrait-review.jpg",
+            "heading": "",
+            "content": "<p>\"Highly recommend! Got my sister a portrait of her dog for her birthday. They sent a proof before mailing it which was much appreciated. It arrived quickly and my sister loved it!\"</p>",
+            "author": "Mikayla W.",
             "pos": "",
             "enable_verify": false,
             "product": "",
@@ -1130,8 +1130,8 @@
       },
       "block_order": [
         "quote_3VGXgx",
-        "quote_63kQEV",
         "quote_AUVAUB",
+        "quote_63kQEV",
         "quote_6ahh4c",
         "quote_Qkben7",
         "quote_TFRK89",

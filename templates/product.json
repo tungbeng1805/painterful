@@ -965,7 +965,21 @@
             "author": "Sarah M.",
             "pos": "",
             "enable_verify": false,
-            "product": "",
+            "product": "signature-modern-pet-portrait",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_6ahh4c": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/playful-cartoon-portrait-review.webp",
+            "heading": "",
+            "content": "<p>\"It’s perfect! Exactly like the image I provided, delivered promptly and great quality! Great no complaints. Would purchase again☺️\"</p>",
+            "author": "Carey J.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "playful-cartoon-pet-portrait",
             "rating": 5
           },
           "blocks": {}
@@ -979,7 +993,7 @@
             "author": "Robert L.",
             "pos": "",
             "enable_verify": false,
-            "product": "",
+            "product": "signature-modern-pet-portrait",
             "rating": 5
           },
           "blocks": {}
@@ -987,13 +1001,83 @@
         "quote_TFRK89": {
           "type": "_quote",
           "settings": {
-            "image": "shopify://shop_images/16.webp",
+            "image": "shopify://shop_images/signature-modern-pet-portrait-velveteen-blanket-review.jpg",
             "heading": "",
-            "content": "<p>\"Fast shipping, amazing quality, and the customer service was outstanding. Will definitely order again!\"</p>",
-            "author": "Chloe P.",
+            "content": "<p>\"Excellent customer service, and exquisite quality! Seller made sure it got to me before our anniversary, what a fantastic gift, highly recommend!\"</p>",
+            "author": "Carlos N",
             "pos": "",
             "enable_verify": false,
-            "product": "",
+            "product": "signature-modern-pet-portrait-velveteen-blanket",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_63kQEV": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/custom-pet-portrait-review.jpg",
+            "heading": "",
+            "content": "<p>\"Highly recommend! Got my sister a portrait of her dog for her birthday. They sent a proof before mailing it which was much appreciated. It arrived quickly and my sister loved it!\"</p>",
+            "author": "Mikayla W.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "signature-modern-pet-portrait",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_FTc988": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/custom-pet-tshirts-review.jpg",
+            "heading": "",
+            "content": "<p>\"Incredible customer service and very quick to respond! I received my mock up within 3 days and was able to request an adjustment, received a new mock up, and then my order was delivered within 7 days! My friend LOVES her shirt!\"</p>",
+            "author": "Harper P.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "custom-90s-vintage-pet-tshirt",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_AUVAUB": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/custom-royal-pet-portrait-review.jpg",
+            "heading": "",
+            "content": "<p>\"Great communication, love the picture! This was perfect! My fiance loved it so much and it’s so funny, goofy and cute! Wish I would’ve ordered it in a bigger size but so happy!\"</p>",
+            "author": "Briar R.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "the-gentleman-custom-vintage-pet-portrait",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_CgtxBH": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/custom-renaissance-pet-portrait-female-pet-review.jpg",
+            "heading": "",
+            "content": "<p>\"This is the third photo I've done with them. The quality is 100%. It was better than expected and I now have a picture of my beautiful little dog as the angel she was. I will be getting another and I highly recommend\"</p>",
+            "author": "Irene N.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "the-queen-custom-renaissance-pet-portrait",
+            "rating": 5
+          },
+          "blocks": {}
+        },
+        "quote_aJXVWN": {
+          "type": "_quote",
+          "settings": {
+            "image": "shopify://shop_images/PA-L9_LTt_mid.jpg",
+            "heading": "",
+            "content": "<p>\"Love this mug .my friend lost her dog and this looks just like him. Thank you! The picture turned out so great, I can’t wait to give this to her. She’s going to love it!\"</p>",
+            "author": "Harper P.",
+            "pos": "",
+            "enable_verify": false,
+            "product": "signature-modern-accent-pet-mug",
             "rating": 5
           },
           "blocks": {}
@@ -1032,8 +1116,14 @@
       },
       "block_order": [
         "quote_kcWGKb",
+        "quote_6ahh4c",
         "quote_Qkben7",
-        "quote_TFRK89"
+        "quote_TFRK89",
+        "quote_63kQEV",
+        "quote_FTc988",
+        "quote_AUVAUB",
+        "quote_CgtxBH",
+        "quote_aJXVWN"
       ],
       "custom_css": [
         "@media (max-width: 575px) {.hdt-slider__container {height: auto; } .hdt-poropost-image img {max-width: 100%; margin: 0px !important; }}",

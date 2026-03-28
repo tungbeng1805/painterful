@@ -74,7 +74,7 @@
             "mess": "Guarantee Safe Checkout",
             "source": "1",
             "wimg": 350,
-            "svg": "visa,paypal,master,american_express,amazon_payments",
+            "svg": "paypal,visa,master,",
             "height": 25
           }
         }

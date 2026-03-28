@@ -94,7 +94,7 @@
         "use_countdown_cart": true,
         "countdown_cart_minutes": 10,
         "countdown_cart_text": "Your artwork will be ready in 1–2 days!",
-        "padding_top": 30,
+        "padding_top": 0,
         "padding_bottom": 20,
         "padding_rate": 50
       }

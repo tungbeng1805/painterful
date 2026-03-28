@@ -99,6 +99,7 @@
                 "picker_type": "block",
                 "size_chart_source": "image",
                 "size_chart_page": "",
+                "size_chart_image": "shopify://shop_images/size-guide-canvas-poster-product-painterful.jpg",
                 "title": "Variant picker"
               },
               "blocks": {}
@@ -227,7 +228,7 @@
                     "size_chart": "3",
                     "size_chart_source": "page",
                     "size_chart_page": "pet-photo-guide",
-                    "size_chart_image": "shopify://shop_images/1be59897a1f62fa876e7.jpg"
+                    "size_chart_image": "shopify://shop_images/photo-guide-custom-pet-portrait.jpg"
                   },
                   "blocks": {}
                 }

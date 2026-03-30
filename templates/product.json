@@ -1044,34 +1044,6 @@
           },
           "blocks": {}
         },
-        "quote_TFRK89": {
-          "type": "_quote",
-          "settings": {
-            "image": "shopify://shop_images/signature-modern-pet-portrait-velveteen-blanket-review.jpg",
-            "heading": "",
-            "content": "<p>\"Excellent customer service, and exquisite quality! Seller made sure it got to me before our anniversary, what a fantastic gift, highly recommend!\"</p>",
-            "author": "Carlos N",
-            "pos": "",
-            "enable_verify": false,
-            "product": "",
-            "rating": 5
-          },
-          "blocks": {}
-        },
-        "quote_FTc988": {
-          "type": "_quote",
-          "settings": {
-            "image": "shopify://shop_images/custom-pet-tshirts-review.jpg",
-            "heading": "",
-            "content": "<p>\"Incredible customer service and very quick to respond! I received my mock up within 3 days and was able to request an adjustment, received a new mock up, and then my order was delivered within 7 days! My friend LOVES her shirt!\"</p>",
-            "author": "Harper P.",
-            "pos": "",
-            "enable_verify": false,
-            "product": "",
-            "rating": 5
-          },
-          "blocks": {}
-        },
         "quote_kcWGKb": {
           "type": "_quote",
           "settings": {
@@ -1079,34 +1051,6 @@
             "heading": "",
             "content": "<p>\"Absolutely in love with this portrait! The artist captured my pet's personality so perfectly. The quality is top-notch!!\"</p>",
             "author": "Sarah M.",
-            "pos": "",
-            "enable_verify": false,
-            "product": "",
-            "rating": 5
-          },
-          "blocks": {}
-        },
-        "quote_CgtxBH": {
-          "type": "_quote",
-          "settings": {
-            "image": "shopify://shop_images/custom-renaissance-pet-portrait-female-pet-review.jpg",
-            "heading": "",
-            "content": "<p>\"This is the third photo I've done with them. The quality is 100%. It was better than expected and I now have a picture of my beautiful little dog as the angel she was. I will be getting another and I highly recommend\"</p>",
-            "author": "Irene N.",
-            "pos": "",
-            "enable_verify": false,
-            "product": "",
-            "rating": 5
-          },
-          "blocks": {}
-        },
-        "quote_aJXVWN": {
-          "type": "_quote",
-          "settings": {
-            "image": "shopify://shop_images/PA-L9_LTt_mid.jpg",
-            "heading": "",
-            "content": "<p>\"Love this mug .my friend lost her dog and this looks just like him. Thank you! The picture turned out so great, I can’t wait to give this to her. She’s going to love it!\"</p>",
-            "author": "Harper P.",
             "pos": "",
             "enable_verify": false,
             "product": "",
@@ -1152,11 +1096,7 @@
         "quote_63kQEV",
         "quote_6ahh4c",
         "quote_Qkben7",
-        "quote_TFRK89",
-        "quote_FTc988",
-        "quote_kcWGKb",
-        "quote_CgtxBH",
-        "quote_aJXVWN"
+        "quote_kcWGKb"
       ],
       "custom_css": [
         "@media (max-width: 575px) {.hdt-slider__container {height: auto; } .hdt-poropost-image img {max-width: 100%; margin: 0px !important; }}",
@@ -1353,7 +1293,7 @@
                 "text_zCjAwc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Upload a photo you love. We review it to ensure perfect results.<br/></p>",
+                    "text": "<p>Upload a photo you love. Don't worry about the quality – we accept 98% of smartphone photos! We’ll reach out if we need a better one.<br/></p>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
                     "text_size": "custom",
@@ -1489,7 +1429,7 @@
                 "text_qWPMaw": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Hand-illustrated by artists. You approve the digital proof before printing.<br/></p>",
+                    "text": "<p>Hand-illustrated by artists. You’ll receive a digital proof to review and approve within 1-3 days.<br/></p>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
                     "text_size": "custom",
@@ -2460,7 +2400,7 @@
         "full_width": false,
         "boxed_fullwidth": false,
         "title": "Rated 4.9 / 5 From Thousands Of Verified Customers",
-        "sub_title": "You captured my pet's personality perfectly! You included all of his finer details...",
+        "sub_title": "I gifted this to my mom and she cried happy tears for an hour. Truly the most meaningful gift ever!",
         "col_dk": "3",
         "row_height": 500,
         "space_item": 30,

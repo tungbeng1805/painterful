@@ -287,18 +287,18 @@
     "accordion_Jz3jAE": {
       "type": "accordion",
       "blocks": {
+        "title_pdnaVG": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
         "accordion_item_hneLYA": {
           "type": "accordion_item",
           "settings": {
             "title": "Are your portraits created by AI or real artists?",
             "content": "100% Real Humans!  We NEVER use AI generators or photo filters. Every single portrait is meticulously hand-drawn and painted by our talented artists using a digital pen and drawing tablet. We take pride in putting real human artistry, time, and love into capturing your pet's unique personality.",
             "content_richtext": ""
-          }
-        },
-        "title_pdnaVG": {
-          "type": "title",
-          "settings": {
-            "title": "Frequently Asked Questions"
           }
         },
         "accordion_item_8BnmgX": {
@@ -343,8 +343,8 @@
         }
       },
       "block_order": [
-        "accordion_item_hneLYA",
         "title_pdnaVG",
+        "accordion_item_hneLYA",
         "accordion_item_8BnmgX",
         "accordion_item_984BBz",
         "accordion_item_AbnTUp",

@@ -2346,7 +2346,7 @@
                 "text_kiV6F9": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Select a photo from your gallery. We’ll review to ensure perfect results.</p>",
+                    "text": "<p>Upload a photo you love. Don't worry about the quality – we accept 98% of smartphone photos! We’ll reach out if we need a better one.</p>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
                     "text_size": "lg",
@@ -2482,7 +2482,7 @@
                 "text_UgwfjA": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our artists hand-draw your portrait. You get unlimited revisions to ensure it's perfect before printing.</p>",
+                    "text": "<p>Hand-illustrated by artists. You’ll receive a digital proof to review and approve within 1-3 days.</p>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
                     "text_size": "lg",

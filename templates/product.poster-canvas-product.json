@@ -302,7 +302,7 @@
               "name": "t:sections.main-product.blocks.line_item_property.name",
               "settings": {
                 "title_content": "Optional Note",
-                "title": "Anything else we should know? (e.g., specific colors, removing details, or special layout requests)",
+                "title": "Notes to Artist",
                 "property_type": "text",
                 "use_required": false,
                 "show_at_ck_cart": true,

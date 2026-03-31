@@ -227,7 +227,8 @@
         "slide_split_item_pVFjkJ"
       ],
       "custom_css": [
-        "@media (max-width: 575px) {hdt-slider-sync, .hdt-button-block {display: none !important; }}"
+        "@media (max-width: 575px) {hdt-slider-sync, .hdt-button-block {display: none !important; }}",
+        ".hdt-slide_inner {background-color: #F5F1EB;}"
       ],
       "name": "Slideshow split",
       "settings": {

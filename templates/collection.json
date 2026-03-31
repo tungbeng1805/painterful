@@ -340,6 +340,14 @@
             "content": "You will receive your digital preview within 1–3 business days. Once you approve the design, production and shipping usually take 4–8 business days. Please note that the timeline may be extended if multiple revisions are requested.",
             "content_richtext": ""
           }
+        },
+        "accordion_item_M6qBfb": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I include more than one pet in a portrait?",
+            "content": "Absolutely! We love painting the whole furry family. We offer options for multiple pets in a single masterpiece. Special Offer: For portraits with 4 or more pets, you only pay the price for 4, the perfect way to celebrate your entire pack!",
+            "content_richtext": ""
+          }
         }
       },
       "block_order": [
@@ -349,7 +357,8 @@
         "accordion_item_984BBz",
         "accordion_item_AbnTUp",
         "accordion_item_dnaEWQ",
-        "accordion_item_xYKqmJ"
+        "accordion_item_xYKqmJ",
+        "accordion_item_M6qBfb"
       ],
       "custom_css": [
         ".hdt-custom-col-accordion-content {margin-inline: auto; max-width: 700px;}"

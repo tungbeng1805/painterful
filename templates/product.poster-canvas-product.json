@@ -2276,7 +2276,7 @@
     "banner_carousel_fkHQeV": {
       "type": "banner-carousel",
       "blocks": {
-        "banner_item_qyCW7F": {
+        "banner_item_r99fqx": {
           "type": "_banner-item",
           "settings": {
             "banner_url": "",
@@ -2295,7 +2295,7 @@
               "static": true,
               "settings": {
                 "source": "video",
-                "video": "shopify://files/videos/snaptik.vn_1cu5b.mp4",
+                "video": "shopify://files/videos/snaptik.vn_7449571329948339499.mp4",
                 "external_video_url": ""
               },
               "blocks": {}
@@ -2330,33 +2330,6 @@
           },
           "block_order": []
         },
-        "banner_item_r99fqx": {
-          "type": "_banner-item",
-          "settings": {
-            "banner_url": "",
-            "banner_target": false,
-            "img_effect": "none",
-            "b_effect": "none",
-            "color_scheme": "",
-            "content_position": "center",
-            "alignment": "center",
-            "content_position_mb": "center",
-            "alignment_mb": "center"
-          },
-          "blocks": {
-            "banner-media": {
-              "type": "_media",
-              "static": true,
-              "settings": {
-                "source": "video",
-                "video": "shopify://files/videos/snaptik.vn_5XO8r.mp4",
-                "external_video_url": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        },
         "banner_item_EUQW9x": {
           "type": "_banner-item",
           "settings": {
@@ -2376,7 +2349,34 @@
               "static": true,
               "settings": {
                 "source": "video",
-                "video": "shopify://files/videos/snaptik.vn_5Q24W.mp4",
+                "video": "shopify://files/videos/snaptik.vn_7477370346862038315.mp4",
+                "external_video_url": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        },
+        "banner_item_qyCW7F": {
+          "type": "_banner-item",
+          "settings": {
+            "banner_url": "",
+            "banner_target": false,
+            "img_effect": "none",
+            "b_effect": "none",
+            "color_scheme": "",
+            "content_position": "center",
+            "alignment": "center",
+            "content_position_mb": "center",
+            "alignment_mb": "center"
+          },
+          "blocks": {
+            "banner-media": {
+              "type": "_media",
+              "static": true,
+              "settings": {
+                "source": "video",
+                "video": "shopify://files/videos/snaptik.vn_1cu5b.mp4",
                 "external_video_url": ""
               },
               "blocks": {}
@@ -2386,10 +2386,10 @@
         }
       },
       "block_order": [
-        "banner_item_qyCW7F",
-        "banner_item_KmL6QK",
         "banner_item_r99fqx",
-        "banner_item_EUQW9x"
+        "banner_item_KmL6QK",
+        "banner_item_EUQW9x",
+        "banner_item_qyCW7F"
       ],
       "custom_css": [
         ".hdt-container-content {flex-direction: column;}",

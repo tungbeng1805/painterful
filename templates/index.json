@@ -1347,7 +1347,7 @@
             "heading_Kakdbh": {
               "type": "heading",
               "settings": {
-                "heading": "<p><strong>Explore Our Collections</strong></p>",
+                "heading": "<p><strong>Explore Gift Ideas</strong></p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "heading_size": "h2",
@@ -1364,7 +1364,7 @@
               "type": "text",
               "name": "Text",
               "settings": {
-                "text": "<p>Step inside and discover endless ways to bring your custom portrait to life.</p>",
+                "text": "<p>Create a personalized keepsake they’ll want to show off every single day.</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "text_size": "custom",

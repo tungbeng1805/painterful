@@ -497,6 +497,22 @@
             "content": "You will receive your digital preview within 1–3 business days. Once you approve the design, production and shipping usually take 4–8 business days. Please note that the timeline may be extended if multiple revisions are requested.",
             "content_richtext": ""
           }
+        },
+        "accordion_item_mAPYYi": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "5. What if I don't like my pet portrait?",
+            "content": "If you aren't 100% in love with your artwork, we will work with you to make it right! We offer unlimited minor revisions to ensure it's perfect. We will never send your portrait to the printer until you give us your official approval.",
+            "content_richtext": ""
+          }
+        },
+        "accordion_item_MeaGhE": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "6. Do you ship worldwide?",
+            "content": "Yes, we do! We ship our custom portraits globally to pet lovers all over the world. Every order is shipped with a full tracking number, so you can easily follow your package's journey right to your doorstep.",
+            "content_richtext": ""
+          }
         }
       },
       "block_order": [
@@ -504,7 +520,9 @@
         "accordion_item_3DPMn6",
         "accordion_item_8MMg6p",
         "accordion_item_BCVmm6",
-        "accordion_item_WRqUR4"
+        "accordion_item_WRqUR4",
+        "accordion_item_mAPYYi",
+        "accordion_item_MeaGhE"
       ],
       "custom_css": [
         ".hdt-custom-col-accordion-content {max-width: 800px; margin-inline: auto;}",

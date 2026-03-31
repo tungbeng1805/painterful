@@ -109,6 +109,7 @@
             },
             "button_fyX7wR": {
               "type": "button",
+              "disabled": true,
               "settings": {
                 "label": "Shop collection",
                 "link": "shopify://collections/royal-portraits",
@@ -228,7 +229,7 @@
       ],
       "custom_css": [
         "@media (max-width: 575px) {hdt-slider-sync, .hdt-button-block {display: none !important; }}",
-        ".hdt-slide_inner {background-color: #F5F1EB;}"
+        ".hdt-slide_inner {background-color: #f5f1eb;}"
       ],
       "name": "Slideshow split",
       "settings": {

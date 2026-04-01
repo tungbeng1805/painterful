@@ -63,18 +63,10 @@
             "content_richtext": "<p>We want you to be 100% in love with your art. That’s why you’re part of the journey!<br/><br/><strong>The Preview</strong>: You’ll receive a digital proof via email.<br/><br/><strong>Unlimited Tweaks</strong>: We offer unlimited minor revisions (adjusting colors, names, or small details) until you’re happy.<br/><br/><strong>Photo/Style Swaps: </strong>You can change your reference photo or artwork style for free <strong>only if our artists have not yet begun working on your portrait</strong>(typically within the first 6 hours of placing your order). Once the illustration process has started, any request to change the photo or style will require a<strong>$10 Artwork Recreation Fee</strong>. This fee goes directly to our artists to compensate them for the time already invested and covers the cost of starting a new piece from scratch.<br/><br/><br/></p>"
           }
         },
-        "accordion_item_ThK4NV": {
-          "type": "accordion_item",
-          "settings": {
-            "title": "3. Is this a filter or hand-drawn?",
-            "content": "No filters or AI shortcuts here! Each portrait is 100% Digital Hand-Drawn. Our artists use an iPad and Apple Pencil to meticulously trace every whisker and capture the unique \"soul\" of your pet, stroke by stroke. This allows for high-resolution details that look stunning on any size.",
-            "content_richtext": ""
-          }
-        },
         "accordion_item_cX8wbH": {
           "type": "accordion_item",
           "settings": {
-            "title": "4. Can I add or remove details (Collars, Crowns, etc.)?",
+            "title": "3. Can I add or remove details (Collars, Crowns, etc.)?",
             "content": "-",
             "content_richtext": "<p><strong>What we CAN remove:</strong> We can easily edit out everyday items like leashes, harnesses, or standard collars to give your portrait a clean, timeless look. We can also clean up minor details like red-eye or small blemishes. Just leave a specific note in the \"Notes to Artist\" box! <em>(Tip: For the best results without a collar, providing a photo of your pet already collar-free is always preferred).</em></p><p><strong>What we CANNOT add or change:</strong> Because our artists illustrate directly from your reference photo to capture your pet's true likeness, we <strong>cannot add new accessories</strong> (like crowns, hats, or props) that aren't in the original picture. We also cannot perform major structural edits, such as opening a closed mouth, adding a smile, or changing ear positions.</p><p><strong>Existing Accessories:</strong> If your pet is already wearing a cute accessory in the photo you provide (like a bandana or hair bow), our artists will happily include it in the artwork!</p>"
           }
@@ -82,7 +74,7 @@
         "accordion_item_ecfWPb": {
           "type": "accordion_item",
           "settings": {
-            "title": "5. Can I have multiple pets in one portrait?",
+            "title": "4. Can I have multiple pets in one portrait?",
             "content": "The more the merrier! We can comfortably fit a whole \"fur family\" into one masterpiece.\n\nThe Big Family Deal: We offer special pricing for multiple pets. For large groups, our 4+ pet option is capped at the same price as 4 pets—making it the best value for large pet families!",
             "content_richtext": ""
           }
@@ -90,7 +82,7 @@
         "accordion_item_NRmtPR": {
           "type": "accordion_item",
           "settings": {
-            "title": "6. Do you only draw dogs and cats?",
+            "title": "5. Do you only draw dogs and cats?",
             "content": "If it has a face, we can draw it! We’ve created masterpieces for dogs, cats, birds, horses, and even reptiles. Humans are welcome too—whether it’s a solo portrait or a \"Pet & Parent\" duo.",
             "content_richtext": ""
           }
@@ -98,7 +90,7 @@
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-3": {
           "type": "accordion_item",
           "settings": {
-            "title": "7. Do you offer human portraits?",
+            "title": "6. Do you offer human portraits?",
             "content": "Yes! We can draw pets with their owners, or even just humans (solo, couples, or families). Our artists are skilled in capturing the essence of both pets and people.",
             "content_richtext": ""
           }
@@ -106,7 +98,7 @@
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-4": {
           "type": "accordion_item",
           "settings": {
-            "title": "8. Can I see the artwork before it gets printed?",
+            "title": "7. Can I see the artwork before it gets printed?",
             "content": "Absolutely! We believe you should be 100% in love with your custom art. That is why you are a part of the process from start to finish. We will send you a digital preview of your portrait to review. If it’s not perfect yet, don't worry—we offer unlimited revisions. We will never send anything to print without your final approval and complete satisfaction!",
             "content_richtext": ""
           }
@@ -114,7 +106,7 @@
         "accordion_item_fwgJ3m": {
           "type": "accordion_item",
           "settings": {
-            "title": "9. Can I change my order after it has been placed?",
+            "title": "8. Can I change my order after it has been placed?",
             "content": "-",
             "content_richtext": "<p>Yes, we understand that changes are sometimes necessary! Please contact us within 12-24 hours of placing your order. Depending on what you need to adjust, here are our guidelines:<br/><br/><strong>Shipping Information:</strong> We can update your shipping address or phone number as long as you reach out before your final artwork is sent to print. Once the order is in the printing and fulfillment phase, we can no longer redirect the package.<br/><br/><strong>Design Details:</strong> Need to fix a typo in your pet's name, switch the background color, or change the frame? Contact us ASAP. These changes must also be requested before the final proof goes to print.<br/><strong><br/>Changing the Pet Photo: </strong>You can swap your reference photo for free only if our artists haven't started illustrating yet. If the drawing process has already begun, changing the photo will require an additional artwork fee. To avoid this, please review our Photo Guide before ordering. If you're unsure, feel free to send us a few photos—our team would be happy to help you pick the perfect one!<br/><br/><strong>Changing Product or Size:</strong> If you want to change the canvas size or switch to a different product entirely, the price will vary. Please reach out to our support team so we can cancel your current order and help you place a new one with the correct details.<br/></p>"
           }
@@ -122,7 +114,7 @@
         "accordion_item_9ecdVa": {
           "type": "accordion_item",
           "settings": {
-            "title": "10. Do you create pet memorial portraits?",
+            "title": "9. Do you create pet memorial portraits?",
             "content": "-",
             "content_richtext": "<p>Yes, we absolutely do. It is a profound honor for our team to help you preserve the memory of a beloved companion who has crossed the rainbow bridge.</p><p>Our artists put extra care and love into these special pieces. Upon request, we can beautifully and respectfully incorporate elements like a delicate halo or angel wings into the portrait. We hope to provide you with a timeless, comforting tribute to the unconditional love they brought into your life. Please just leave a note for our artists when placing your order.</p>"
           }
@@ -239,7 +231,6 @@
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-title-1",
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-1",
         "template--20718015545618__08421e50-b348-46a3-bbb7-5b26be196b6c-accordion_item-2",
-        "accordion_item_ThK4NV",
         "accordion_item_cX8wbH",
         "accordion_item_ecfWPb",
         "accordion_item_NRmtPR",

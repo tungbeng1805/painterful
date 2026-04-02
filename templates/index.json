@@ -1317,7 +1317,7 @@
             "collection": "clothing",
             "image": "shopify://shop_images/1_5_d30aee64-3557-4422-b8c3-a5d76044f21b.jpg",
             "title": "Custom Apparel",
-            "sub_title": "Wear your custom art proudly",
+            "sub_title": "Wear your pet's love and unique spirit with pride.",
             "btn_shop": "SHOP APPAREL",
             "collection_link": "",
             "collection_des": "1",
@@ -1624,6 +1624,7 @@
             "text_GQpm9A": {
               "type": "text",
               "name": "Text",
+              "disabled": true,
               "settings": {
                 "text": "<h6>Trusted by leading publications and pet lovers nationwide</h6>",
                 "hidden_br_mobile": false,

@@ -1925,8 +1925,8 @@
           "type": "_quote",
           "settings": {
             "image": "shopify://shop_images/before-and-after-modern-pet-portrait-painterful.jpg",
-            "heading": "Lacey • Goldendoodle",
-            "content": "<p><em>\"I am absolutely in love with how this turned out! The artist captured Lacey's personality perfectly.\"</em></p>",
+            "heading": "Benny • Boston Terrier",
+            "content": "<p><em>\"I am absolutely in love with how this turned out! The artist captured Benny's personality perfectly.\"</em></p>",
             "author": "Sarah M.",
             "pos": "",
             "enable_verify": false,
@@ -1953,23 +1953,9 @@
           "type": "_quote",
           "settings": {
             "image": "shopify://shop_images/before-and-after-royal-pet-portrait-painterful.jpg",
-            "heading": "The Perfect Couple • Custom Portrait",
-            "content": "<p><em>\"This was the sweetest gift! The minimalist style is exactly what I was looking for\"</em></p>",
+            "heading": "The Happy Family • Custom Portrait",
+            "content": "<p><em>\"This was the sweetest gift! The realistic style is exactly what I was looking for to capture our family bond. \"</em></p>",
             "author": "Chloe P.",
-            "pos": "",
-            "enable_verify": false,
-            "product": "",
-            "rating": 5
-          },
-          "blocks": {}
-        },
-        "quote_3hbWqF": {
-          "type": "_quote",
-          "disabled": true,
-          "settings": {
-            "heading": "Duke • Golden Retriever",
-            "content": "<p><em>\"Absolutely stunning! Brought tears to my eyes.\"</em></p>",
-            "author": "Sarah M.",
             "pos": "",
             "enable_verify": false,
             "product": "",
@@ -2030,8 +2016,7 @@
       "block_order": [
         "quote_XgGiez",
         "quote_d6VEPj",
-        "quote_VeWyG9",
-        "quote_3hbWqF"
+        "quote_VeWyG9"
       ],
       "custom_css": [
         "@media (max-width: 991px) {.hdt-slider__container {height: auto; } .hdt-poropost-image img {max-width: 100%; margin: 0px !important; }}",

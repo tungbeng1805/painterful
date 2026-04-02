@@ -298,8 +298,8 @@
         "accordion_item_hneLYA": {
           "type": "accordion_item",
           "settings": {
-            "title": "Are your portraits created by AI or real artists?",
-            "content": "100% Real Humans!  We NEVER use AI generators or photo filters. Every single portrait is meticulously hand-drawn and painted by our talented artists using a digital pen and drawing tablet. We take pride in putting real human artistry, time, and love into capturing your pet's unique personality.",
+            "title": "How are your portraits created?",
+            "content": "Each portrait is custom-made from your photo and carefully refined by our creative team to match our signature style. Before production, you’ll receive a preview to review and approve, with unlimited revisions available.",
             "content_richtext": ""
           }
         },

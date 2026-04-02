@@ -1294,7 +1294,7 @@
                 "text_zCjAwc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Upload a photo you love. We review it to ensure perfect results.<br/></p>",
+                    "text": "<p>Upload a photo you love. Don't worry about the quality – we accept 98% of smartphone photos! We’ll reach out if we need a better one.<br/></p>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
                     "text_size": "custom",
@@ -1430,7 +1430,7 @@
                 "text_qWPMaw": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Hand-illustrated by artists. You approve the digital proof before printing.<br/></p>",
+                    "text": "<p>Digitally crafted & perfected by our design team. You’ll receive a digital proof to review and approve within 1-3 days.<br/><br/></p>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
                     "text_size": "custom",

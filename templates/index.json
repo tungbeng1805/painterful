@@ -162,7 +162,7 @@
             "heading_rnybyN": {
               "type": "heading",
               "settings": {
-                "heading": "<p>Turn Your Pet into a Masterpiece</p>",
+                "heading": "<p>Turn Your Pet into a Timeless Portrait</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "heading_size": "h_custom",
@@ -188,7 +188,7 @@
             "text_iCczkQ": {
               "type": "text",
               "settings": {
-                "text": "<p>Transform your snapshots into eternal, hand-drawn gallery pieces. A heartfelt, ready-to-hang tribute to your furry best friend.</p>",
+                "text": "<p>Transform your snapshots into timeless gallery-style portraits, carefully refined to match our signature look. A heartfelt, ready-to-hang tribute to your furry best friend.</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "text_size": "custom",
@@ -302,7 +302,7 @@
             "text_wKPUt4": {
               "type": "text",
               "settings": {
-                "text": "<p>Transform your snapshots into eternal, hand-drawn gallery pieces. A heartfelt, ready-to-hang tribute to your furry best friend.</p>",
+                "text": "<p>Transform your snapshots into stunning custom gallery pieces, expertly refined by our design team. A heartfelt, ready-to-hang tribute to your furry best friend.</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "text_size": "custom",
@@ -415,7 +415,7 @@
             "text_4nitzA": {
               "type": "text",
               "settings": {
-                "text": "<p>Custom, hand-drawn portraits capturing the unique essence of your loved ones.</p>",
+                "text": "<p>Custom digital portraits, meticulously perfected by our creative team to capture the true essence of your loved ones.</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "text_size": "custom",
@@ -1024,7 +1024,7 @@
             "heading_GVnBGK": {
               "type": "heading",
               "settings": {
-                "heading": "<p><strong>🎨 Hand-drawn Proof<br/>in 1-3 days</strong></p>",
+                "heading": "<p><strong>🎨 Preview ready</strong> <strong><br/>in 1-3 days</strong></p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "heading_size": "h_custom",
@@ -2482,7 +2482,7 @@
                 "text_UgwfjA": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Hand-illustrated by artists. You’ll receive a digital proof to review and approve within 1-3 days.</p>",
+                    "text": "<p>Digitally crafted & perfected by our design team. You’ll receive a digital proof to review and approve within 1-3 days.<br/></p>",
                     "hidden_br_mobile": false,
                     "hidden_on_mobile": false,
                     "text_size": "lg",
@@ -2753,8 +2753,8 @@
               "name": "Text width image",
               "settings": {
                 "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-palette w-5 h-5 sm:w-6 sm:h-6 text-secondary\"><circle cx=\"13.5\" cy=\"6.5\" r=\".5\" fill=\"currentColor\"></circle><circle cx=\"17.5\" cy=\"10.5\" r=\".5\" fill=\"currentColor\"></circle><circle cx=\"8.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"></circle><circle cx=\"6.5\" cy=\"12.5\" r=\".5\" fill=\"currentColor\"></circle><path d=\"M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z\"></path></svg>",
-                "title": "100% Hand-Drawn Artwork",
-                "sub_title": "Every portrait is digitally hand-drawn by real artists. We don't use automatic apps, ensuring your artwork captures true personality."
+                "title": "Professionally Crafted Portraits",
+                "sub_title": "Every portrait is digitally crafted and carefully refined by our creative team. We meticulously adjust every detail to ensure your final artwork captures true personality and character."
               },
               "blocks": {}
             },
